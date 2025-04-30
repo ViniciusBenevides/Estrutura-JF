@@ -2,13 +2,12 @@ import { Template } from '../../_components/template';
 import { NavMenu } from "../../_components/navmenu";
 import { Footer } from "../../_components/footer";
 
-// Definição segura de tipos para páginas dinâmicas
-type SafePageProps<T = {}> = {
-    params: T;
-    searchParams?: { [key: string]: string | string[] | undefined };
-};
+// Defina o tipo como Promise
+type ParamsType = Promise<{ id: string }>;
 
-export default function ServicoPage({ params }: SafePageProps<{ id: string }>) {
-    const serviceId = parseInt(params.id);
+export default async function ServicoPage({ params }: { params: ParamsType }) {
+    const { id } = await params; // Extrai o id após await
+    const serviceId = parseInt(id);
+
     return <><NavMenu /><Template serviceId={serviceId} /><Footer /></>;
 }
