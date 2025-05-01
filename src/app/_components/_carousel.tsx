@@ -23,19 +23,19 @@ export const CarouselComOverlay: React.FC = () => {
             id: 1,
             imageSrc: "/carousel-1.jpg",
             altText: "Slide 1",
-            title: "Curso de Pós-graduação Lato Sensu em Projetos de Tecnologia e Inovação para o Judiciário Federal",
+            title: "Projeto de Residência em Sistemas e Agentes Inteligentes para o Judiciário Federal",
         },
         {
             id: 2,
             imageSrc: "/carousel-2.jpg",
             altText: "Slide 2",
-            title: "Curso de Pós-graduação Lato Sensu em Projetos de Tecnologia e Inovação para o Judiciário Federal",
+            title: "Projeto de Residência em Sistemas e Agentes Inteligentes para o Judiciário Federal",
         },
         {
             id: 3,
             imageSrc: "/carousel-3.jpg",
             altText: "Slide 3",
-            title: "Curso de Pós-graduação Lato Sensu em Projetos de Tecnologia e Inovação para o Judiciário Federal",
+            title: "Projeto de Residência em Sistemas e Agentes Inteligentes para o Judiciário Federal",
         },
     ];
 

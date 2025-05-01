@@ -57,7 +57,7 @@ export const _Equipe = () => {
     const docentes: Pessoas[] = [
         {
             id: 1,
-            image: "/iwens.jpg",
+            image: "/Iwens-Sene-2.png",
             name: "IWENS GERVASIO SENE JUNIOR",
             position: "Doutor em Engenharia Elétrica",
             description: "Áreas de atuação: Sistemas de Computação (Sistemas Operacionais, Redes de Computadores, Sistemas Distribuídos)",
@@ -66,7 +66,7 @@ export const _Equipe = () => {
         },
         {
             id: 2,
-            image: "/RonaldoMC.jpg",
+            image: "/ronaldoMC.png",
             name: "Ronaldo Martins da Costa",
             position: "Doutor em Engenharia Elétrica",
             description: "Áreas de atuação: Visão Computacional, Processamento de Imagens e Sinais e Linguagens de Programação",
@@ -83,7 +83,7 @@ export const _Equipe = () => {
         },
         {
             id: 4,
-            image: "/eliomar.jpg",
+            image: "/eliomar.png",
             name: "Eliomar Araújo de Lima",
             position: "Doutor em Engenharia Elétrica",
             description: "Áreas de atuação: Engenharia de sistemas de informação",

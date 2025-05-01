@@ -1,7 +1,8 @@
 .servicos-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 4rem 0rem;
+    padding: 7rem 0rem;
+    padding-bottom: 4rem;
 }
 
 .servicos-header {
@@ -98,7 +99,7 @@
     gap: 10px;
     display: flex;
     margin-bottom: 20px;
-    place-self: anchor-center;
+    justify-self: center;
     text-align-last: center;
     width: 200px;
     background: #050505;
@@ -174,7 +175,7 @@
 
 @media (max-width: 576px) {
     .servicos-container {
-        padding: 2rem 0rem;
+        padding: 5rem 0rem;
     }
 
     .servicos-title {
