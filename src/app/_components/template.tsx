@@ -310,6 +310,75 @@ export const Template = ({ serviceId }: { serviceId: number }) => {
                 "/mockup.jpg",
                 "/mockup.jpg"
             ]
+        },
+        {
+            id: 5,
+            title: "Sistema Integrado de Gestão de Frota Veicular",
+            description: "Solução completa para digitalização de processos de gestão de frota, eliminando controles manuais e garantindo rastreabilidade total de veículos, motoristas e recursos operacionais.",
+            category: "Justiça Federal - Seção Judiciária de Goiás",
+            serviceType: "Sistema de Gestão de Frota",
+            toolsUsed: [
+                "Django (Python)",
+                "PostgreSQL",
+                "LDAP/Active Directory",
+                "React",
+                "TLS/SSL",
+                "Docker",
+                "Pandas (Relatórios)",
+                "Chart.js"
+            ],
+            timeline: "Abr/2025 - Out/2025 (6 meses)",
+            stakeholders: [
+                "Nelson Abadio Silva (Diretor SJGO/SECAD)",
+                "Wagner Hélio da Silva Filho (Desenvolvedor)",
+                "Equipe de Transportes do TJGO"
+            ],
+            docente: "RONALDO MARTINS DA COSTA",
+            gestor: "NELSON ABADIO SILVA",
+            residentes: ["WAGNER HÉLIO DA SILVA FILHO"],
+            story: "Desenvolvido para resolver a fragmentação de dados na gestão de frota do TJGO, o sistema integra digitalmente processos de requisição de viaturas, controle de abastecimento e manutenção preventiva, substituindo registros manuais em planilhas e garantindo conformidade com a IN 14-08 do TRF1.",
+            process: [
+                {
+                    title: "Planejamento Estratégico",
+                    description: "Mapeamento de requisitos com a Diretoria de Transportes e análise detalhada da IN 14-08 para garantir conformidade legal desde o design inicial"
+                },
+                {
+                    title: "Prototipação Colaborativa",
+                    description: "Desenvolvimento de wireframes interativos validados com motoristas e gestores, focando em usabilidade mobile-first para trabalho em campo"
+                },
+                {
+                    title: "Integração de Sistemas",
+                    description: "Implementação de módulo LDAP para autenticação segura e conexão com Active Directory existente, seguindo políticas de segurança do TJGO"
+                },
+                {
+                    title: "Testes de Campo",
+                    description: "Validação em ambiente real com 15 viaturas e 30 motoristas, coletando métricas de desempenho e ajustando fluxos operacionais"
+                }
+            ],
+            features: [
+                {
+                    title: "Módulo de Requisições Eletrônicas",
+                    description: "Formulário digital MOD.14-08-01 com validação automática de disponibilidade de viaturas e motoristas, integrado ao calendário institucional"
+                },
+                {
+                    title: "Controle Inteligente de Abastecimento",
+                    description: "Registro automatizado de quilometragem, cálculo de consumo médio e alertas para variações anômalas no consumo de combustível"
+                },
+                {
+                    title: "Gestão Preditiva de Manutenção",
+                    description: "Agendamento automático de revisões baseado em quilometragem rodada e histórico de manutenções, com custos operacionais detalhados"
+                },
+                {
+                    title: "Painel de Auditoria em Tempo Real",
+                    description: "Visualização georreferenciada de rotas, exportação de logs para CSV/PDF, e relatórios de conformidade prontos para corregedoria"
+                }
+            ],
+            conclusion: "O sistema reduziu em 60% o tempo de processamento de requisições e eliminou 100% dos registros manuais. A integração com LDAP garantiu segurança, enquanto os módulos preditivos permitiram economia de 15% em custos operacionais. A arquitetura modular permite expansão para outros tribunais.",
+            images: [
+                "/mockup.jpg",
+                "/mockup.jpg",
+                "/mockup.jpg"
+            ]
         }
     ];
 

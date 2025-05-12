@@ -30,6 +30,12 @@ export const NossosServicos = () => {
             image: "/folha-de-pagamento.jpg",
             title: "Modernização de Sistemas da Folha de Pagamentos",
             description: "Plataforma avançada para gestão de folha de pagamento do judiciário, integrando sistemas de recursos humanos, financeiro e contabilidade com segurança e eficiência.",
+        },
+        {
+            id: 5,
+            image: "/controle-de-frota.png",
+            title: "Sistema Integrado de Gestão de Frota Veicular",
+            description: "Plataforma unificada para controle operacional de frotas oficiais, integrando módulos de requisições, abastecimento, manutenção e auditoria com autenticação LDAP e conformidade à IN 14-08/TRF1.",
         }
     ];
 

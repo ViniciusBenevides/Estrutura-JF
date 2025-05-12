@@ -17,15 +17,6 @@ interface Pessoas {
 export const _Equipe = () => {
     const gestores: Pessoas[] = [
         {
-            id: 2,
-            image: "/Luciana edt1.jpg",
-            name: "Luciana Marinho de Melo",
-            position: "Diretora da 15ª Vara Federal",
-            description: "Vinculada ao projeto de apoio à realização de audiências.",
-            phone: "tel:6236238650",
-            email: "mailto:15vara.go@trf1.jus.br"
-        },
-        {
             id: 1,
             image: "/Caio.jpg",
             name: "Caio Sotero Rosa",
@@ -35,7 +26,7 @@ export const _Equipe = () => {
             email: "malito:nucad.go@trf1.jus.br"
         },
         {
-            id: 3,
+            id: 2,
             image: "/jean.jpg",
             name: "Jean Marcos Cabral",
             position: "Diretor da Divisão de Gestão de Pessoas",
@@ -44,19 +35,46 @@ export const _Equipe = () => {
             email: "mailto:nucgp.go@trf1.jus.br"
         },
         {
+            id: 3,
+            image: "/Luciana edt1.jpg",
+            name: "Luciana Marinho de Melo",
+            position: "Diretora da 15ª Vara Federal",
+            description: "Vinculada ao projeto de apoio à realização de audiências.",
+            phone: "tel:6236238650",
+            email: "mailto:15vara.go@trf1.jus.br"
+        },
+        {
             id: 4,
             image: "/RonaldoJF.jpg",
             name: "Ronaldo Borges Oliveira",
             position: "Diretor do Núcleo de Gestão Estratégica, Ambiental e de Apoio à Inovação",
             description: "Responsável pelo laboratório de inovação da SJGO.",
-            phone: "",
-            email: ""
+            phone: "tel:6232261652",
+            email: "mailto:nutec.go@trf1.jus.br"
         }
     ];
 
     const docentes: Pessoas[] = [
         {
             id: 1,
+            image: "/ronaldoMC.png",
+            name: "Ronaldo Martins da Costa (Coordenador do projeto)",
+            position: "Doutor em Engenharia Elétrica",
+            description: "Áreas de atuação: Visão Computacional, Processamento de Imagens e Sinais e Linguagens de Programação",
+            lattes: "http://lattes.cnpq.br/7080590204832262",
+            email: "malito:ronaldocosta@inf.ufg.br"
+        },
+        {
+            id: 2,
+            image: "/eliomar.png",
+            name: "Eliomar Araújo de Lima",
+            position: "Doutor em Engenharia Elétrica",
+            description: "Áreas de atuação: Engenharia de sistemas de informação",
+            lattes: "http://lattes.cnpq.br/1362170231777201",
+            email: "malito:eliomar@inf.ufg.br"
+        },
+        {
+            id: 3,
             image: "/Iwens-Sene-2.png",
             name: "IWENS GERVASIO SENE JUNIOR",
             position: "Doutor em Engenharia Elétrica",
@@ -65,54 +83,23 @@ export const _Equipe = () => {
             email: "mailto:iwens@inf.ufg.br"
         },
         {
-            id: 2,
-            image: "/ronaldoMC.png",
-            name: "Ronaldo Martins da Costa",
-            position: "Doutor em Engenharia Elétrica",
-            description: "Áreas de atuação: Visão Computacional, Processamento de Imagens e Sinais e Linguagens de Programação",
-            lattes: "http://lattes.cnpq.br/7080590204832262",
-            email: "malito:ronaldocosta@inf.ufg.br"
-        },
-        {
-            id: 3,
+            id: 4,
             image: "/sanderson.jpg",
             name: "Sanderson de Oliveira de Macedo",
             position: "Mestre em Ciência da Computação",
             description: "Áreas de atuação: Aprendizagem de máquina, Deep Learning, Inteligência Artificial e Visão Computacional",
             lattes: "http://lattes.cnpq.br/3014212507684230",
-        },
-        {
-            id: 4,
-            image: "/eliomar.png",
-            name: "Eliomar Araújo de Lima",
-            position: "Doutor em Engenharia Elétrica",
-            description: "Áreas de atuação: Engenharia de sistemas de informação",
-            lattes: "http://lattes.cnpq.br/1362170231777201",
-            email: "malito:eliomar@inf.ufg.br"
+            email: "malito:slvieira@ufg.br"
         }
     ];
 
     const residentes: Pessoas[] = [
         {
-            id: 1,
-            image: "/HD editada.jpg",
+            id: 6,
+            image: "/MV final.jpg",
+            name: "Marcos Vinícius de Morais",
             position: "Pós-graduando em Sistemas e Agentes Inteligentes",
-            name: "Hailton David Lemos",
-            description: "Projetos: Licitafácil e Contratafácil"
-        },
-        {
-            id: 2,
-            image: "/FG.jpg",
-            name: "Felipe Galvão Lagares",
-            position: "Pós-graduando em Sistemas e Agentes Inteligentes",
-            description: "Projetos: Licitafácil e Contratafácil"
-        },
-        {
-            id: 3,
-            image: "/RA editada.jpg",
-            name: "Raphael Abenom dos Santos Silva",
-            position: "Pós-graduando em Sistemas e Agentes Inteligentes",
-            description: "Projetos: Licitafácil e Contratafácil"
+            description: "Projeto: Modernização do Agendamento e Registro de Audiências"
         },
         {
             id: 4,
@@ -129,11 +116,25 @@ export const _Equipe = () => {
             description: "Projeto: Modernização e Automação da Folha de Pagamentos"
         },
         {
-            id: 6,
-            image: "/MV final.jpg",
-            name: "Marcos Vinícius de Morais",
+            id: 3,
+            image: "/Pedro.png",
+            name: "Pedro Koziel",
             position: "Pós-graduando em Sistemas e Agentes Inteligentes",
-            description: "Projeto: Modernização do Agendamento e Registro de Audiências"
+            description: "Projeto: Consulta Estoque"
+        },
+        {
+            id: 1,
+            image: "/HD editada.jpg",
+            position: "Pós-graduando em Sistemas e Agentes Inteligentes",
+            name: "Hailton David Lemos",
+            description: "Projetos: Licitafácil e Contratafácil"
+        },
+        {
+            id: 2,
+            image: "/Wagner.jpg",
+            name: "Wagner Hélio da Silva Filho",
+            position: "Pós-graduando em Sistemas e Agentes Inteligentes",
+            description: "Projeto: Controle de Frota"
         }
     ];
 
