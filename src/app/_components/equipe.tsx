@@ -17,7 +17,7 @@ interface Pessoas {
 export const _Equipe = () => {
     const gestores: Pessoas[] = [
         {
-            id: 1,
+            id: 2,
             image: "/Luciana edt1.jpg",
             name: "Luciana Marinho de Melo",
             position: "Diretora da 15ª Vara Federal",
@@ -26,7 +26,7 @@ export const _Equipe = () => {
             email: "mailto:15vara.go@trf1.jus.br"
         },
         {
-            id: 2,
+            id: 1,
             image: "/Caio.jpg",
             name: "Caio Sotero Rosa",
             position: "Diretor do Núcleo de Administração",
