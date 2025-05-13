@@ -36,6 +36,12 @@ export const NossosServicos = () => {
             image: "/controle-de-frota.png",
             title: "Sistema Integrado de Gestão de Frota Veicular",
             description: "Plataforma unificada para controle operacional de frotas oficiais, integrando módulos de requisições, abastecimento, manutenção e auditoria com autenticação LDAP e conformidade à IN 14-08/TRF1.",
+        },
+        {
+            id: 6,
+            image: "/consulta.webp",
+            title: "Assistência à Consulta de Materiais",
+            description: "Sistema web responsivo para consulta inteligente de materiais institucionais, integrado ao SICAM, com filtros avançados, controle de validade e gestão de itens em desuso.",
         }
     ];
 

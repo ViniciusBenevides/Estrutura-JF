@@ -379,6 +379,73 @@ export const Template = ({ serviceId }: { serviceId: number }) => {
                 "/mockup.jpg",
                 "/mockup.jpg"
             ]
+        },
+        {
+            id: 6,
+            title: "Assistência à Consulta de Materiais",
+            description: "Solução moderna para substituir processos manuais de consulta de materiais, oferecendo busca inteligente por código, categoria ou status, integração com SICAM e relatórios de validade/desuso.",
+            category: "Justiça Federal - SJGO/SECAD - SETMAT",
+            serviceType: "Sistema de Gestão de Materiais",
+            toolsUsed: [
+                "React (Frontend)",
+                "Node.js (Backend)",
+                "PostgreSQL (Banco de dados)",
+                "LDAP/Active Directory (Autenticação)",
+                "Docker (Containerização)",
+                "SICAM API (Integração)"
+            ],
+            timeline: "Abr/2025 - Out/2025 (7 meses)",
+            stakeholders: [
+                "Justiça Federal - SJGO/SECAD - SETMAT",
+                "Servidores requisitantes de materiais",
+                "Gestores de almoxarifado e logística"
+            ],
+            docente: "RONALDO MARTINS DA COSTA",
+            gestor: "NELSON ABADIO SILVA", // Assumindo mesmo gestor do projeto de frota
+            residentes: ["PEDRO KOZIEL DINIZ"],
+            story: "Desenvolvido para eliminar erros na requisição de materiais devido a processos manuais e interfaces obsoletas do SICAM, este sistema centraliza consultas com códigos exatos, status de estoque e prazos de validade, reduzindo retrabalhos e desperdícios.",
+            process: [
+                {
+                    title: "Análise de Sistemas Legados",
+                    description: "Mapeamento detalhado do SICAM e planilhas manuais, com identificação de gaps funcionais e definição de requisitos para a nova solução."
+                },
+                {
+                    title: "Modelagem de Dados",
+                    description: "Estruturação do banco de dados para suportar buscas avançadas, histórico de desuso e integração segura com fontes legadas."
+                },
+                {
+                    title: "Desenvolvimento Modular",
+                    description: "Implementação em sprints dos módulos de: consulta básica, gestão de desuso, validade de perecíveis e painel de consumo."
+                },
+                {
+                    title: "Validação com Usuários-Chave",
+                    description: "Testes iterativos com servidores requisitantes e gestores de almoxarifado para garantir aderência às necessidades operacionais."
+                }
+            ],
+            features: [
+                {
+                    title: "Consulta Unificada de Materiais",
+                    description: "Busca por nome, código ou categoria com exibição clara do status (disponível/em desuso) e código exato para requisição no SICAM."
+                },
+                {
+                    title: "Gestão de Validade",
+                    description: "Alertas automáticos para materiais perecíveis próximos do vencimento, com relatórios para prevenção de desperdícios."
+                },
+                {
+                    title: "Módulo de Desuso",
+                    description: "Registro centralizado de itens descontinuados, com datas de desativação e histórico de substituições."
+                },
+                {
+                    title: "Autenticação Segura",
+                    description: "Integração com Active Directory da Justiça Federal e controle de acesso por perfis (consulta/administração)."
+                }
+            ],
+            conclusion: "O sistema eliminou 100% das consultas manuais, reduzindo em 50% os erros de requisição. A arquitetura modular permite expansão futura para integração direta com pedidos no SICAM, e os relatórios de validade otimizaram o uso de recursos públicos.",
+            images: [
+                "/consulta.png",
+                "/consulta.png",
+                "/consulta.png"
+            ]
         }
     ];
 
