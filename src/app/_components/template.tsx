@@ -116,7 +116,6 @@ export const Template = ({ serviceId }: { serviceId: number }) => {
             docente: "RONALDO MARTINS DA COSTA",
             gestor: "CAIO SOTERO ROSA",
             residentes: [
-                "FELIPE GALVÃO LAGARES",
                 "HAILTON DAVID LEMOS"
             ],
             story: "Criado para eliminar os controles paralelos em planilhas que geravam versões conflitantes e erros críticos na liberação de verbas, o GestãoFácil unifica a gestão contratual em plataforma única. O projeto utiliza modelos de NLP para análise automática de cláusulas e redes neurais para prever atrasos ou inadimplências, transformando dados históricos em insights acionáveis.",
@@ -191,9 +190,7 @@ export const Template = ({ serviceId }: { serviceId: number }) => {
             docente: "RONALDO MARTINS DA COSTA",
             gestor: "CAIO SOTERO ROSA",
             residentes: [
-                "FELIPE GALVÃO LAGARES",
-                "HAILTON DAVID LEMOS",
-                "RAPHAEL ABENOM"
+                "HAILTON DAVID LEMOS"
             ],
             story: "Desenvolvido para superar a dependência de processos manuais no fluxo licitatório, o LicitaFácil implementa automação end-to-end desde a extração de requisitos no SEI até a publicação em sistemas governamentais. A solução surgiu da necessidade de integrar 5 sistemas desconexos (SEI, licitações, busca de preços, tribunal federal e compras) com OCR e visão computacional, eliminando retrabalhos e inconsistências.",
             process: [
