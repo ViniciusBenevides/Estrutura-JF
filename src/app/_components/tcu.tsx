@@ -45,7 +45,7 @@ export const TCU = () => {
         ],
         features: [
             {
-                title: "Relatório de Monitoramento",
+                title: "Lista de Pessoas",
                 description: "Painel completo com lista atualizada de todos os servidores monitorados, incluindo status de aposentadoria, histórico de alterações e ferramentas para gestão (cadastro, edição e exclusão). Visualização consolidada para análise rápida pela equipe de folha."
             },
             {
