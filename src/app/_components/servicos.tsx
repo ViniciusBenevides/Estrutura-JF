@@ -46,9 +46,9 @@ export const NossosServicos = () => {
     ];
 
     return (
-        <section id="servicos" className="servicos-container">
+        <section id="projetos" className="servicos-container">
             <div className="servicos-header">
-                <span className="servicos-subtitle">Nossos Serviços</span>
+                <span className="servicos-subtitle">Nossos Projetos</span>
                 <h2 className="servicos-title">Soluções Tecnológicas para o Judiciário</h2>
                 <p className="servicos-description">
                     Oferecemos especialização em desenvolvimento de sistemas e inovação tecnológica
@@ -72,7 +72,9 @@ export const NossosServicos = () => {
                             </div>
                             <h3 className="card-title">{service.title}</h3>
                             <p className="card-description">{service.description}</p>
-                            <div className="project-button2"><img src="/arrow-up-right-svgrepo-com.svg" id="arrow" />Ver Projeto</div>
+                            <div className="project-button-container">
+                                <div className="project-button2"><img src="/arrow-up-right-svgrepo-com.svg" id="arrow" />Ver Projeto</div>
+                            </div>
                         </div>
                     </Link>
                 ))}

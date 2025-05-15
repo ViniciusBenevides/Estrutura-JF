@@ -74,13 +74,24 @@ export const NavMenu: React.FC = () => {
                         </li>
                         <li>
                             <Link
-                                href="#servicos"
+                                href="#softwares"
                                 onClick={(e) => {
                                     e.preventDefault();
-                                    handleNavigation('servicos');
+                                    handleNavigation('softwares');
                                 }}
                             >
                                 Serviços
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href="#projetos"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    handleNavigation('projetos');
+                                }}
+                            >
+                                Projetos
                             </Link>
                         </li>
                         <li>

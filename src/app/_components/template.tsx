@@ -85,8 +85,6 @@ export const Template = ({ serviceId }: { serviceId: number }) => {
             ],
             conclusion: "O GAJ representa um salto na eficiência processual, eliminando 100% dos controles paralelos e reduzindo em 40% os conflitos de agenda. A arquitetura desacoplada permite sua evolução para sistema independente, futuro foco do projeto.",
             images: [
-                "/mockup.jpg",
-                "/mockup.jpg",
                 "/mockup.jpg"
             ],
         },
@@ -157,8 +155,6 @@ export const Template = ({ serviceId }: { serviceId: number }) => {
             ],
             conclusion: "O GestãoFácil reduziu em 70% o tempo de análise contratual e eliminou 100% das planilhas paralelas. Os algoritmos de IA alcançaram 92% de precisão na previsão de atrasos, permitindo ações preventivas. A solução se tornou referência para outros tribunais, com módulos adaptáveis para diferentes tipos de contratação pública.",
             images: [
-                "/mockup.jpg",
-                "/mockup.jpg",
                 "/mockup.jpg"
             ]
         },
@@ -231,8 +227,6 @@ export const Template = ({ serviceId }: { serviceId: number }) => {
             ],
             conclusion: "O LicitaFácil reduz em 85% o tempo de processos licitatórios e elimina 90% dos erros manuais. A arquitetura híbrida (Node.js + Python) permite fácil adaptação para outros fluxos administrativos, com potencial de economizar R$ 2,3 milhões/ano em eficiência processual. Os módulos de IA garantem conformidade contínua com a legislação.",
             images: [
-                "/mockup.jpg",
-                "/mockup.jpg",
                 "/mockup.jpg"
             ]
         },
@@ -303,8 +297,6 @@ export const Template = ({ serviceId }: { serviceId: number }) => {
             ],
             conclusion: "A solução elimina 100% dos lançamentos manuais na folha de pagamento, reduzindo em 70% o tempo de processamento e erros. Os agentes inteligentes garantem conformidade contínua, com capacidade de detectar 95% das inconsistências antes do fechamento. A arquitetura modular permite expansão para outros tribunais.",
             images: [
-                "/mockup.jpg",
-                "/mockup.jpg",
                 "/mockup.jpg"
             ]
         },
@@ -372,8 +364,6 @@ export const Template = ({ serviceId }: { serviceId: number }) => {
             ],
             conclusion: "O sistema reduziu em 60% o tempo de processamento de requisições e eliminou 100% dos registros manuais. A integração com LDAP garantiu segurança, enquanto os módulos preditivos permitiram economia de 15% em custos operacionais. A arquitetura modular permite expansão para outros tribunais.",
             images: [
-                "/mockup.jpg",
-                "/mockup.jpg",
                 "/mockup.jpg"
             ]
         },
@@ -439,8 +429,6 @@ export const Template = ({ serviceId }: { serviceId: number }) => {
             ],
             conclusion: "O sistema eliminou 100% das consultas manuais, reduzindo em 50% os erros de requisição. A arquitetura modular permite expansão futura para integração direta com pedidos no SICAM, e os relatórios de validade otimizaram o uso de recursos públicos.",
             images: [
-                "/consulta.png",
-                "/consulta.png",
                 "/consulta.png"
             ]
         }
@@ -539,16 +527,6 @@ export const Template = ({ serviceId }: { serviceId: number }) => {
                     </div>
                 </section>
 
-                {/* Imagem Full-width */}
-                <div className="full-width-image">
-                    <Image
-                        src={service.images[1]}
-                        alt={`${service.title} em ação`}
-                        width={1200}
-                        height={600}
-                    />
-                </div>
-
                 {/* Seção Features */}
                 <section className="template-section features-section">
                     <h2>Principais Funcionalidades</h2>
@@ -561,16 +539,6 @@ export const Template = ({ serviceId }: { serviceId: number }) => {
                         ))}
                     </div>
                 </section>
-
-                {/* Última imagem */}
-                <div className="full-width-image">
-                    <Image
-                        src={service.images[2]}
-                        alt={`Resultados do ${service.title}`}
-                        width={1200}
-                        height={600}
-                    />
-                </div>
 
                 {/* Conclusão */}
                 <section className="template-section conclusion-section">
