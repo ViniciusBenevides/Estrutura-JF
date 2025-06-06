@@ -27,10 +27,10 @@ interface ServiceDetails {
     }[];
     conclusion: string;
     images: string[];
+    documentationLink: string;
 }
 
 export const Template = ({ serviceId }: { serviceId: number }) => {
-    // Dados dos serviços (pode ser movido para um arquivo separado ou API)
     const servicesDetails: ServiceDetails[] = [
         {
             id: 1,
@@ -84,9 +84,8 @@ export const Template = ({ serviceId }: { serviceId: number }) => {
                 }
             ],
             conclusion: "O GAJ representa um salto na eficiência processual, eliminando 100% dos controles paralelos e reduzindo em 40% os conflitos de agenda. A arquitetura desacoplada permite sua evolução para sistema independente, futuro foco do projeto.",
-            images: [
-                "/mockup.jpg"
-            ],
+            images: ["/mockup.jpg"],
+            documentationLink: "/PGP-GAJ.pdf"
         },
         {
             id: 2,
@@ -94,28 +93,12 @@ export const Template = ({ serviceId }: { serviceId: number }) => {
             description: "Sistema inteligente para substituir planilhas Excel no gerenciamento de contratos, incorporando IA para análise preditiva de riscos, dashboards interativos e alertas automatizados.",
             category: "Justiça Federal - TRF1ª Região",
             serviceType: "Sistema de Gestão Documental",
-            toolsUsed: [
-                "Python",
-                "Transformers",
-                "OpenCV",
-                "Pandas",
-                "FastAPI",
-                "React",
-                "PostgreSQL",
-                "Elasticsearch",
-                "AWS Textract"
-            ],
+            toolsUsed: ["Python", "Transformers", "OpenCV", "Pandas", "FastAPI", "React", "PostgreSQL", "Elasticsearch", "AWS Textract"],
             timeline: "Nov/2024 - Out/2025 (11 meses)",
-            stakeholders: [
-                "Caio Sotero Rosa (Diretor do Nucad)",
-                "Equipe de fiscalização de contratos",
-                "Departamento financeiro"
-            ],
+            stakeholders: ["Caio Sotero Rosa (Diretor do Nucad)", "Equipe de fiscalização de contratos", "Departamento financeiro"],
             docente: "RONALDO MARTINS DA COSTA",
             gestor: "CAIO SOTERO ROSA",
-            residentes: [
-                "HAILTON DAVID LEMOS"
-            ],
+            residentes: ["HAILTON DAVID LEMOS"],
             story: "Criado para eliminar os controles paralelos em planilhas que geravam versões conflitantes e erros críticos na liberação de verbas, o GestãoFácil unifica a gestão contratual em plataforma única. O projeto utiliza modelos de NLP para análise automática de cláusulas e redes neurais para prever atrasos ou inadimplências, transformando dados históricos em insights acionáveis.",
             process: [
                 {
@@ -154,9 +137,8 @@ export const Template = ({ serviceId }: { serviceId: number }) => {
                 }
             ],
             conclusion: "O GestãoFácil reduziu em 70% o tempo de análise contratual e eliminou 100% das planilhas paralelas. Os algoritmos de IA alcançaram 92% de precisão na previsão de atrasos, permitindo ações preventivas. A solução se tornou referência para outros tribunais, com módulos adaptáveis para diferentes tipos de contratação pública.",
-            images: [
-                "/mockup.jpg"
-            ]
+            images: ["/mockup.jpg"],
+            documentationLink: "/PGP-Contratos.pdf"
         },
         {
             id: 3,
@@ -164,30 +146,12 @@ export const Template = ({ serviceId }: { serviceId: number }) => {
             description: "Solução integrada para digitalizar e automatizar processos licitatórios, eliminando planilhas manuais e reduzindo erros em 90% através de automação robótica e integração multi-sistemas.",
             category: "Justiça Federal - TRF1ª Região",
             serviceType: "Sistema de Automação Processual",
-            toolsUsed: [
-                "Python",
-                "PyAutoGUI",
-                "Node.js",
-                "Flask",
-                "PyPDF2",
-                "Tesseract OCR",
-                "Pandas",
-                "OpenCV",
-                "TensorFlow.js",
-                "Express.js",
-                "PostgreSQL"
-            ],
+            toolsUsed: ["Python", "PyAutoGUI", "Node.js", "Flask", "PyPDF2", "Tesseract OCR", "Pandas", "OpenCV", "TensorFlow.js", "Express.js", "PostgreSQL"],
             timeline: "Nov/2024 - Nov/2025 (12 meses)",
-            stakeholders: [
-                "Caio Sotero Rosa (Diretor do Nucad)",
-                "Neisson Abadio Silva (Supervisor da Sevit)",
-                "Frankmar dos Reis (Nuasg)"
-            ],
+            stakeholders: ["Caio Sotero Rosa (Diretor do Nucad)", "Neisson Abadio Silva (Supervisor da Sevit)", "Frankmar dos Reis (Nuasg)"],
             docente: "RONALDO MARTINS DA COSTA",
             gestor: "CAIO SOTERO ROSA",
-            residentes: [
-                "HAILTON DAVID LEMOS"
-            ],
+            residentes: ["HAILTON DAVID LEMOS"],
             story: "Desenvolvido para superar a dependência de processos manuais no fluxo licitatório, o LicitaFácil implementa automação end-to-end desde a extração de requisitos no SEI até a publicação em sistemas governamentais. A solução surgiu da necessidade de integrar 5 sistemas desconexos (SEI, licitações, busca de preços, tribunal federal e compras) com OCR e visão computacional, eliminando retrabalhos e inconsistências.",
             process: [
                 {
@@ -226,9 +190,8 @@ export const Template = ({ serviceId }: { serviceId: number }) => {
                 }
             ],
             conclusion: "O LicitaFácil reduz em 85% o tempo de processos licitatórios e elimina 90% dos erros manuais. A arquitetura híbrida (Node.js + Python) permite fácil adaptação para outros fluxos administrativos, com potencial de economizar R$ 2,3 milhões/ano em eficiência processual. Os módulos de IA garantem conformidade contínua com a legislação.",
-            images: [
-                "/mockup.jpg"
-            ]
+            images: ["/mockup.jpg"],
+            documentationLink: "/PGP-Contratos.pdf"
         },
         {
             id: 4,
@@ -236,28 +199,12 @@ export const Template = ({ serviceId }: { serviceId: number }) => {
             description: "Solução integrada para automatizar processos manuais da folha de pagamento, eliminando inconsistências e reduzindo retrabalhos em 70% através de integração com sistemas externos e agentes inteligentes de auditoria.",
             category: "Justiça Federal - TRF1ª Região",
             serviceType: "Sistema de Gestão de Pessoal",
-            toolsUsed: [
-                "Django (Python)",
-                "ReactJS",
-                "PostgreSQL",
-                "Celery",
-                "APIs RESTful",
-                "Tesseract OCR",
-                "Python-Requests",
-                "Bcrypt"
-            ],
+            toolsUsed: ["Django (Python)", "ReactJS", "PostgreSQL", "Celery", "APIs RESTful", "Tesseract OCR", "Python-Requests", "Bcrypt"],
             timeline: "Nov/2024 - Out/2025 (12 meses)",
-            stakeholders: [
-                "Jean Marcos Cabral (Diretor DIGEP)",
-                "Kleuber Rodrigues (Supervisor SEPAG)",
-                "Equipe de folha de pagamento do TRF1"
-            ],
+            stakeholders: ["Jean Marcos Cabral (Diretor DIGEP)", "Kleuber Rodrigues (Supervisor SEPAG)", "Equipe de folha de pagamento do TRF1"],
             docente: "IWENS GERVASIO SENE JUNIOR",
             gestor: "JEAN MARCOS CABRAL",
-            residentes: [
-                "PATRICK FERNANDES MARINS",
-                "PAULO ROBERTO VIEIRA"
-            ],
+            residentes: ["PATRICK FERNANDES MARINS", "PAULO ROBERTO VIEIRA"],
             story: "Desenvolvido para resolver problemas críticos no processamento da folha de pagamento do TRF1, este projeto substitui processos manuais por automações inteligentes que integram dados de sistemas como SARH, SAAF, Benner e Zetra. A solução surgiu da necessidade de eliminar erros em cálculos de benefícios, horas extras e provisões que causavam retrabalho e atrasos mensais.",
             process: [
                 {
@@ -296,9 +243,8 @@ export const Template = ({ serviceId }: { serviceId: number }) => {
                 }
             ],
             conclusion: "A solução elimina 100% dos lançamentos manuais na folha de pagamento, reduzindo em 70% o tempo de processamento e erros. Os agentes inteligentes garantem conformidade contínua, com capacidade de detectar 95% das inconsistências antes do fechamento. A arquitetura modular permite expansão para outros tribunais.",
-            images: [
-                "/mockup.jpg"
-            ]
+            images: ["/mockup.jpg"],
+            documentationLink: "/PGP-Folha_de_Pagamento.pdf"
         },
         {
             id: 5,
@@ -306,22 +252,9 @@ export const Template = ({ serviceId }: { serviceId: number }) => {
             description: "Solução completa para digitalização de processos de gestão de frota, eliminando controles manuais e garantindo rastreabilidade total de veículos, motoristas e recursos operacionais.",
             category: "Justiça Federal - Seção Judiciária de Goiás",
             serviceType: "Sistema de Gestão de Frota",
-            toolsUsed: [
-                "Django (Python)",
-                "PostgreSQL",
-                "LDAP/Active Directory",
-                "React",
-                "TLS/SSL",
-                "Docker",
-                "Pandas (Relatórios)",
-                "Chart.js"
-            ],
+            toolsUsed: ["Django (Python)", "PostgreSQL", "LDAP/Active Directory", "React", "TLS/SSL", "Docker", "Pandas (Relatórios)", "Chart.js"],
             timeline: "Abr/2025 - Out/2025 (6 meses)",
-            stakeholders: [
-                "Nelson Abadio Silva (Diretor SJGO/SECAD)",
-                "Wagner Hélio da Silva Filho (Desenvolvedor)",
-                "Equipe de Transportes do TJGO"
-            ],
+            stakeholders: ["Nelson Abadio Silva (Diretor SJGO/SECAD)", "Wagner Hélio da Silva Filho (Desenvolvedor)", "Equipe de Transportes do TJGO"],
             docente: "RONALDO MARTINS DA COSTA",
             gestor: "NELSON ABADIO SILVA",
             residentes: ["WAGNER HÉLIO DA SILVA FILHO"],
@@ -363,9 +296,8 @@ export const Template = ({ serviceId }: { serviceId: number }) => {
                 }
             ],
             conclusion: "O sistema reduziu em 60% o tempo de processamento de requisições e eliminou 100% dos registros manuais. A integração com LDAP garantiu segurança, enquanto os módulos preditivos permitiram economia de 15% em custos operacionais. A arquitetura modular permite expansão para outros tribunais.",
-            images: [
-                "/mockup.jpg"
-            ]
+            images: ["/mockup.jpg"],
+            documentationLink: "/PGP_Controle_Frota_assinado[1].pdf"
         },
         {
             id: 6,
@@ -373,22 +305,11 @@ export const Template = ({ serviceId }: { serviceId: number }) => {
             description: "Solução moderna para substituir processos manuais de consulta de materiais, oferecendo busca inteligente por código, categoria ou status, integração com SICAM e relatórios de validade/desuso.",
             category: "Justiça Federal - SJGO/SECAD - SETMAT",
             serviceType: "Sistema de Gestão de Materiais",
-            toolsUsed: [
-                "React (Frontend)",
-                "Node.js (Backend)",
-                "PostgreSQL (Banco de dados)",
-                "LDAP/Active Directory (Autenticação)",
-                "Docker (Containerização)",
-                "SICAM API (Integração)"
-            ],
+            toolsUsed: ["React (Frontend)", "Node.js (Backend)", "PostgreSQL (Banco de dados)", "LDAP/Active Directory (Autenticação)", "Docker (Containerização)", "SICAM API (Integração)"],
             timeline: "Abr/2025 - Out/2025 (7 meses)",
-            stakeholders: [
-                "Justiça Federal - SJGO/SECAD - SETMAT",
-                "Servidores requisitantes de materiais",
-                "Gestores de almoxarifado e logística"
-            ],
+            stakeholders: ["Justiça Federal - SJGO/SECAD - SETMAT", "Servidores requisitantes de materiais", "Gestores de almoxarifado e logística"],
             docente: "RONALDO MARTINS DA COSTA",
-            gestor: "NELSON ABADIO SILVA", // Assumindo mesmo gestor do projeto de frota
+            gestor: "NELSON ABADIO SILVA",
             residentes: ["PEDRO KOZIEL DINIZ"],
             story: "Desenvolvido para eliminar erros na requisição de materiais devido a processos manuais e interfaces obsoletas do SICAM, este sistema centraliza consultas com códigos exatos, status de estoque e prazos de validade, reduzindo retrabalhos e desperdícios.",
             process: [
@@ -428,13 +349,11 @@ export const Template = ({ serviceId }: { serviceId: number }) => {
                 }
             ],
             conclusion: "O sistema eliminou 100% das consultas manuais, reduzindo em 50% os erros de requisição. A arquitetura modular permite expansão futura para integração direta com pedidos no SICAM, e os relatórios de validade otimizaram o uso de recursos públicos.",
-            images: [
-                "/consulta.png"
-            ]
+            images: ["/consulta.png"],
+            documentationLink: "/PGP_Materiais_ResidenciaJF.docx[1].pdf"
         }
     ];
 
-    // Encontra o serviço pelo ID
     const service = servicesDetails.find(s => s.id === serviceId);
 
     if (!service) {
@@ -444,7 +363,6 @@ export const Template = ({ serviceId }: { serviceId: number }) => {
     return (
         <div className="template-container-pai">
             <div className="template-container">
-                {/* Seção Hero */}
                 <section className="template-hero">
                     <div className="hero-content">
                         <h1>{service.title}</h1>
@@ -481,44 +399,63 @@ export const Template = ({ serviceId }: { serviceId: number }) => {
                     </div>
                 </section>
 
-                {/* Seção Partes do Projeto */}
-                {/* Seção Partes do Projeto */}
                 <section className="template-section">
-                    <h2>Partes do Projeto</h2>
-                    <div className="project-parts">
-                        <div className="part-item">
-                            <span className="part-label">Stakeholders:</span>
-                            <span className="part-value">{service.stakeholders.join(", ")}</span>
+                    <div className="section-header">
+                        <h2>Equipe Responsável</h2>
+                        {service.documentationLink && (
+                            <a
+                                href={service.documentationLink}
+                                download
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="documentation-button"
+                            >
+                                Documentação PGP
+                            </a>
+                        )}
+                    </div>
+                    <div className="team-cards">
+                        <div className="team-card">
+                            <h3>Stakeholders</h3>
+                            <ul>
+                                {service.stakeholders.map((person, index) => (
+                                    <li key={index}>{person}</li>
+                                ))}
+                            </ul>
                         </div>
-                        <div className="part-item">
-                            <span className="part-label">Gestor:</span>
-                            <span className="part-value">{service.gestor}</span>
+                        <div className="team-card">
+                            <h3>Gestor</h3>
+                            <p>{service.gestor}</p>
                         </div>
-                        <div className="part-item">
-                            <span className="part-label">Docente:</span>
-                            <span className="part-value">{service.docente}</span>
+                        <div className="team-card">
+                            <h3>Docente</h3>
+                            <p>{service.docente}</p>
                         </div>
-                        <div className="part-item">
-                            <span className="part-label">Residente:</span>
-                            <span className="part-value">{service.residentes.join(", ")}</span>
+                        <div className="team-card">
+                            <h3>Residentes</h3>
+                            <ul>
+                                {service.residentes.map((person, index) => (
+                                    <li key={index}>{person}</li>
+                                ))}
+                            </ul>
                         </div>
                     </div>
                 </section>
 
-                {/* Seção História */}
                 <section className="template-section">
-                    <h2>Como Começamos</h2>
-                    <p>{service.story}</p>
+                    <div className="story-card">
+                        <h2>Contexto do Projeto</h2>
+                        <p>{service.story}</p>
+                    </div>
                 </section>
 
-                {/* Seção Processo */}
                 <section className="template-section">
-                    <h2>Processo do Projeto</h2>
+                    <h2>Etapas de Desenvolvimento</h2>
                     <div className="process-steps">
                         {service.process.map((step, index) => (
-                            <div key={index} className="process-step">
+                            <div key={index} className="process-card">
                                 <div className="step-number">0{index + 1}</div>
-                                <div>
+                                <div className="step-content">
                                     <h3>{step.title}</h3>
                                     <p>{step.description}</p>
                                 </div>
@@ -527,25 +464,37 @@ export const Template = ({ serviceId }: { serviceId: number }) => {
                     </div>
                 </section>
 
-                {/* Seção Features */}
-                <section className="template-section features-section">
+                <section className="template-section">
                     <h2>Principais Funcionalidades</h2>
                     <div className="features-grid">
                         {service.features.map((feature, index) => (
                             <div key={index} className="feature-card">
-                                <h3>{feature.title}</h3>
-                                <p>{feature.description}</p>
+                                <div className="feature-content">
+                                    <h3>{feature.title}</h3>
+                                    <p>{feature.description}</p>
+                                </div>
+                                {service.images[index + 1] && (
+                                    <div className="feature-image">
+                                        <Image
+                                            src={service.images[index + 1]}
+                                            alt={feature.title}
+                                            width={600}
+                                            height={400}
+                                            className="featured-image"
+                                        />
+                                    </div>
+                                )}
                             </div>
                         ))}
                     </div>
                 </section>
 
-                {/* Conclusão */}
-                <section className="template-section conclusion-section">
-                    <h2>Conclusão</h2>
-                    <p>{service.conclusion}</p>
+                <section className="template-section">
+                    <div className="conclusion-card">
+                        <h2>Resultados Alcançados</h2>
+                        <p>{service.conclusion}</p>
+                    </div>
                 </section>
-
             </div>
         </div>
     );

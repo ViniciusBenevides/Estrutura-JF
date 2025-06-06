@@ -69,7 +69,7 @@ export const TCU = () => {
             "/edição-sevidor.jpg",
             "/Detalhes-servidor.jpg"
         ],
-        accessLink: "#" // Substituir pelo link real quando disponível
+        accessLink: "#"
     };
 
     return (
@@ -112,33 +112,54 @@ export const TCU = () => {
                     </div>
                 </section>
 
-                {/* Seção Partes do Projeto */}
+                {/* Seção Equipe Responsável com Botão */}
                 <section className="template-section">
-                    <h2>Equipe Responsável</h2>
-                    <div className="project-parts">
-                        <div className="part-item">
-                            <span className="part-label">Stakeholders:</span>
-                            <span className="part-value">{serviceDetails.stakeholders.join(", ")}</span>
+                    <div className="section-header">
+                        <h2>Equipe Responsável</h2>
+                        <a
+                            href="/Documentação de utilização do TCU Monitor.pdf"
+                            download
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="documentation-button"
+                        >
+                            Documentação de utilização
+                        </a>
+                    </div>
+                    <div className="team-cards">
+                        <div className="team-card">
+                            <h3>Stakeholders</h3>
+                            <ul>
+                                {serviceDetails.stakeholders.map((person, index) => (
+                                    <li key={index}>{person}</li>
+                                ))}
+                            </ul>
                         </div>
-                        <div className="part-item">
-                            <span className="part-label">Gestor:</span>
-                            <span className="part-value">{serviceDetails.gestor}</span>
+                        <div className="team-card">
+                            <h3>Gestor</h3>
+                            <p>{serviceDetails.gestor}</p>
                         </div>
-                        <div className="part-item">
-                            <span className="part-label">Docente:</span>
-                            <span className="part-value">{serviceDetails.docente}</span>
+                        <div className="team-card">
+                            <h3>Docente</h3>
+                            <p>{serviceDetails.docente}</p>
                         </div>
-                        <div className="part-item">
-                            <span className="part-label">Residente:</span>
-                            <span className="part-value">{serviceDetails.residentes.join(", ")}</span>
+                        <div className="team-card">
+                            <h3>Residentes</h3>
+                            <ul>
+                                {serviceDetails.residentes.map((person, index) => (
+                                    <li key={index}>{person}</li>
+                                ))}
+                            </ul>
                         </div>
                     </div>
                 </section>
 
-                {/* Seção História */}
+                {/* Seção História em Card */}
                 <section className="template-section">
-                    <h2>Contexto do Projeto</h2>
-                    <p>{serviceDetails.story}</p>
+                    <div className="story-card">
+                        <h2>Contexto do Projeto</h2>
+                        <p>{serviceDetails.story}</p>
+                    </div>
                 </section>
 
                 {/* Seção Processo */}
@@ -146,9 +167,9 @@ export const TCU = () => {
                     <h2>Etapas de Desenvolvimento</h2>
                     <div className="process-steps">
                         {serviceDetails.process.map((step, index) => (
-                            <div key={index} className="process-step">
+                            <div key={index} className="process-card">
                                 <div className="step-number">0{index + 1}</div>
-                                <div>
+                                <div className="step-content">
                                     <h3>{step.title}</h3>
                                     <p>{step.description}</p>
                                 </div>
@@ -158,19 +179,21 @@ export const TCU = () => {
                 </section>
 
                 {/* Seção Features */}
-                <section className="template-section features-section">
+                <section className="template-section">
                     <h2>Principais Funcionalidades</h2>
                     <div className="features-grid">
                         {serviceDetails.features.map((feature, index) => (
                             <div key={index} className="feature-card">
-                                <h3>{feature.title}</h3>
-                                <p>{feature.description}</p>
-                                <div className="hero-image">
+                                <div className="feature-content">
+                                    <h3>{feature.title}</h3>
+                                    <p>{feature.description}</p>
+                                </div>
+                                <div className="feature-image">
                                     <Image
                                         src={serviceDetails.images[index + 1]}
-                                        alt={serviceDetails.title}
-                                        width={1200}
-                                        height={500}
+                                        alt={feature.title}
+                                        width={600}
+                                        height={400}
                                         className="featured-image"
                                     />
                                 </div>
@@ -179,8 +202,24 @@ export const TCU = () => {
                     </div>
                 </section>
 
+                {/* Seção Conclusão em Card */}
+                <section className="template-section">
+                    <div className="conclusion-card">
+                        <h2>Resultados Alcançados</h2>
+                        <p>{serviceDetails.conclusion}</p>
+                    </div>
+                </section>
+
+                {/* Botão de Acesso */}
+                {/* {serviceDetails.accessLink && (
+                    <div className="access-button-container">
+                        <a href={serviceDetails.accessLink} className="access-button">
+                            Acessar o Sistema
+                        </a>
+                        <p className="access-note">*Disponível apenas para usuários autorizados</p>
+                    </div>
+                )} */}
             </div>
         </div>
     );
 };
-
