@@ -416,6 +416,17 @@
         padding-left: 40px;
         padding-top: 20px;
     }
+
+    .hero-image {
+        border-radius: 4px;
+    }
+
+    .featured-image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 4px;
+    }
 }
 
 @media (max-width: 480px) {
