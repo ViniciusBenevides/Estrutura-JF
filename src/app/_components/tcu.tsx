@@ -117,8 +117,7 @@ export const TCU = () => {
                     <div className="section-header">
                         <h2>Equipe Responsável</h2>
                         <a
-                            href="/Documentação de utilização do TCU Monitor.pdf"
-                            download
+                            href="/Documentação de Utilização - Folha Fácil Monitor TCU.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="documentation-button"

@@ -21,8 +21,7 @@ export const Footer = () => {
                 textDecoration: "underline"
             }}>
                 <a
-                    href="/Documentação de Manutenção de Servidor para Aplicação.pdf"
-                    download
+                    href="/Documentação de Manutenção de Servidor para Aplicação Next.js com PM2.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                 >

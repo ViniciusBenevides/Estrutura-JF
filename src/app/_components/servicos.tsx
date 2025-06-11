@@ -10,37 +10,37 @@ export const NossosServicos = () => {
         {
             id: 1,
             image: "/law-judge-gavel.jpg",
-            title: "Sistema GAJ (Gerenciamento de Audiências da Justiça Federal)",
+            title: "AgendaFácil - Assistência em Agendamento de Audiências",
             description: "Plataforma integrada para agendamento, controle e acompanhamento de audiências judiciais, otimizando a gestão do calendário forense e reduzindo conflitos de agenda.",
         },
         {
             id: 3,
             image: "/licitacao.webp",
-            title: "Automação de Meios para Realização de Licitações - LicitaFácil",
+            title: "LicitaFácil - Automação e Gerência de Compras e Licitações",
             description: "Sistema completo para digitalização e automação de processos licitatórios, desde a publicação de editais até a homologação, garantindo transparência e conformidade legal.",
         },
         {
             id: 2,
             image: "/automocao-de-contratos.jpg",
-            title: "Automação da Gestão de Contratos - GestãoFácil",
+            title: "GestãoFácil - Automação e Gerência de Gestão de Contratos",
             description: "Solução integrada para criação, acompanhamento e renovação de contratos administrativos, com alertas automáticos para prazos e obrigações contratuais.",
         },
         {
             id: 4,
             image: "/folha-de-pagamento.jpg",
-            title: "Modernização de Sistemas da Folha de Pagamentos",
+            title: "FolhaFácil - Modernização da Folha de Pagamento",
             description: "Plataforma avançada para gestão de folha de pagamento do judiciário, integrando sistemas de recursos humanos, financeiro e contabilidade com segurança e eficiência.",
         },
         {
             id: 5,
             image: "/controle-de-frota.png",
-            title: "Sistema Integrado de Gestão de Frota Veicular",
+            title: "FrotaFácil - Automação e Gerência da Frota de Veículos",
             description: "Plataforma unificada para controle operacional de frotas oficiais, integrando módulos de requisições, abastecimento, manutenção e auditoria com autenticação LDAP e conformidade à IN 14-08/TRF1.",
         },
         {
             id: 6,
             image: "/consulta.webp",
-            title: "Assistência à Consulta de Materiais",
+            title: "RequisiçãoFácil - Automação e Gerência de Requisições de Materiais",
             description: "Sistema web responsivo para consulta inteligente de materiais institucionais, integrado ao SICAM, com filtros avançados, controle de validade e gestão de itens em desuso.",
         }
     ];

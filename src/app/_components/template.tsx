@@ -28,68 +28,82 @@ interface ServiceDetails {
     conclusion: string;
     images: string[];
     documentationLink: string;
+    userDocumentationLink?: string;
+    technicalDocumentationLink?: string;
+    sourceCodeLink?: string;
 }
 
 export const Template = ({ serviceId }: { serviceId: number }) => {
     const servicesDetails: ServiceDetails[] = [
         {
             id: 1,
-            stakeholders: ["Luciana Marinho de Melo (Diretora da 15ª Vara)",
-                "Analistas jurídicos da SJGO",
-                "Equipe de desenvolvimento do PJe+r"],
-            docente: "RONALDO MARTINS DA COSTA",
-            residentes: ["MARCOS VINÍCIUS DE MORAES"],
-            gestor: "LUCIANA MARINHO DE MELO",
-            title: "Sistema GAJ (Gerenciamento de Audiências da Justiça Federal)",
-            description: "Solução integrada para otimizar o agendamento, controle e acompanhamento de audiências judiciais, eliminando a necessidade de métodos paralelos de controle e reduzindo erros operacionais.",
-            category: "Justiça Federal - Seção Judiciária de Goiás",
-            serviceType: "Sistema de Gestão Forense",
-            toolsUsed: ["React", "Node.js", "PostgreSQL", "Docker", "PJe+r API"],
-            timeline: "Nov/2024 - Out/2025 (12 meses)",
-            story: "Desenvolvido para suprir a lacuna do sistema PJe na gestão de calendário forense, o GAJ centraliza o controle de audiências considerando juízes titulares/substitutos, prazos processuais, feriados e recessos. O projeto surgiu da necessidade de eliminar documentos paralelos e retrabalhos dispendiosos no agendamento manual.",
+            stakeholders: [
+                "Luciana Marinho de Melo - Diretora da 15ª Vara do Juizado Especial Federal Cível da SJGO",
+                "Analistas jurídicos responsáveis pelo agendamento de audiências",
+                "Usuários da extensão PJe+r",
+                "Equipe de gestão e desenvolvimento do PJe+r"
+            ],
+            docente: "Prof. Dr. Sanderson Oliveira de Macedo",
+            residentes: ["Marcos Vinícius de Moraes"],
+            gestor: "Luciana Marinho de Melo",
+            title: "AgendaFácil - Assistência em Agendamento de Audiências",
+            description: "O projeto visa desenvolver e implementar uma funcionalidade de assistência no processo de agendamento de audiências no sistema PJe, centralizando e automatizando o controle das datas e horários.",
+            category: "Justiça Federal - Seção Judiciária do Estado de Goiás",
+            serviceType: "Extensão para Sistema de Gestão Forense",
+            toolsUsed: ["React", "JavaScript", "CSS", "Extensão do Chrome"],
+            timeline: "Novembro/2024 - Outubro/2025",
+            story: "Atualmente, o sistema PJe não oferece ferramentas para o controle de datas e horários de audiências, o que exige o uso de métodos paralelos e manuais.  Este projeto desenvolve uma funcionalidade integrada ao PJe+R para automatizar esse controle, facilitando a visualização de datas disponíveis para juízes titulares e substitutos, considerando feriados e recessos, com o objetivo de eliminar o retrabalho e o uso de documentos auxiliares. ",
             process: [
                 {
                     title: "Análise e Planejamento",
-                    description: "Mapeamento detalhado de stakeholders e levantamento de requisitos com analistas jurídicos, incluindo histórias de usuário específicas sobre calendário forense."
+                    description: "Levantamento de requisitos junto aos analistas jurídicos, mapeamento dos stakeholders e planejamento geral do projeto, definindo escopo, cronograma e riscos. "
                 },
                 {
-                    title: "Especificação Técnica",
-                    description: "Desenho de arquitetura desacoplada do PJe+r, com prototipagem de interfaces que destacam visualmente datas disponíveis, reservadas e fora de prazo."
+                    title: "Especificação e Design do Sistema",
+                    description: "Refinamento dos requisitos, criação de diagramas do sistema (UML), desenvolvimento de mockups e protótipos interativos para validação com os stakeholders. "
                 },
                 {
-                    title: "Desenvolvimento Ágil",
-                    description: "Implementação modular com: agendamento inteligente, gestão de margens, tratamento automático de cancelamentos e integração com calendário do TRF."
+                    title: "Desenvolvimento e Integração",
+                    description: "Codificação da lógica de negócio e da interface do usuário, seguida pela integração da funcionalidade como uma extensão no sistema PJe+r. "
                 },
                 {
-                    title: "Validação Contínua",
-                    description: "Testes funcionais e de usabilidade com os analistas jurídicos, garantindo conformidade com os critérios de aceitação definidos."
+                    title: "Validação e Testes",
+                    description: "Disponibilização de uma versão de testes para validação funcional, de usabilidade e de aceitação junto aos usuários finais e stakeholders. "
+                },
+                {
+                    title: "Implantação e Monitoramento",
+                    description: "Planejamento do lançamento, criação da documentação de uso para os usuários finais e acompanhamento inicial do software em produção. "
                 }
             ],
             features: [
                 {
-                    title: "Visualização Inteligente de Calendário",
-                    description: "Exibição diferenciada por cores de: horários vagos, reservas de margem, datas fora de prazo e períodos de juízes titulares/substitutos."
+                    title: "Visualização Clara do Calendário",
+                    description: "O calendário exibe datas com cores distintas: verde para dias com horários vagos e vermelho para dias totalmente ocupados.  Ao clicar em um dia, o usuário vê os horários disponíveis e ocupados. "
                 },
                 {
-                    title: "Gestão Flexível de Agendas",
-                    description: "Troca dinâmica entre juízes, reserva estratégica de horários para audiências extensas e liberação automática de cancelamentos."
+                    title: "Filtro por Juiz",
+                    description: "Permite filtrar a visualização de datas disponíveis por Juiz Titular, Juiz Substituto ou visualizar todos, facilitando o agendamento conforme a necessidade. "
                 },
                 {
-                    title: "Conformidade Forense",
-                    description: "Integração automática com feriados nacionais/regionais, recessos judiciais e prazos processuais do TRF."
+                    title: "Gestão de Horários e Cancelamentos",
+                    description: "O sistema gerencia automaticamente os horários de audiências canceladas, tornando-os novamente disponíveis, incluindo as reservas de margem para audiências extensas. "
                 },
                 {
-                    title: "Controle de Configuração",
-                    description: "Ativação/desativação via PJe+r, mantendo total desacoplamento do sistema principal."
+                    title: "Integração com o Calendário do Tribunal",
+                    description: "A funcionalidade considera automaticamente feriados, recessos forenses e dias úteis, alinhada ao calendário oficial do Tribunal Regional Federal para garantir a precisão das datas. "
                 }
             ],
-            conclusion: "O GAJ representa um salto na eficiência processual, eliminando 100% dos controles paralelos e reduzindo em 40% os conflitos de agenda. A arquitetura desacoplada permite sua evolução para sistema independente, futuro foco do projeto.",
-            images: ["/mockup.jpg"],
-            documentationLink: "/PGP-GAJ.pdf"
+            conclusion: "A implementação da assistência de agendamento visa fornecer uma visão clara do calendário forense e um controle simplificado das datas, eliminando o uso de documentos paralelos e o retrabalho.  A solução foi projetada de forma desacoplada para garantir sua independência e viabilizar futuras evoluções, como um sistema próprio. ",
+            images: ["/PJe+R.png"
+            ],
+            documentationLink: "/PGP-GAJ.pdf",
+            userDocumentationLink: "/Documentação de software - Documentação de Usuário.pdf",
+            technicalDocumentationLink: "/Documentação Técnica.pdf"
+            // sourceCodeLink: ""
         },
         {
             id: 2,
-            title: "Automação da Gestão de Contratos (GestãoFácil)",
+            title: "GestãoFácil - Automação e Gerência de Gestão de Contratos",
             description: "Sistema inteligente para substituir planilhas Excel no gerenciamento de contratos, incorporando IA para análise preditiva de riscos, dashboards interativos e alertas automatizados.",
             category: "Justiça Federal - TRF1ª Região",
             serviceType: "Sistema de Gestão Documental",
@@ -142,7 +156,7 @@ export const Template = ({ serviceId }: { serviceId: number }) => {
         },
         {
             id: 3,
-            title: "Automação do Processo de Licitação (LicitaFácil)",
+            title: "LicitaFácil - Automação e Gerência de Compras e Licitações",
             description: "Solução integrada para digitalizar e automatizar processos licitatórios, eliminando planilhas manuais e reduzindo erros em 90% através de automação robótica e integração multi-sistemas.",
             category: "Justiça Federal - TRF1ª Região",
             serviceType: "Sistema de Automação Processual",
@@ -195,7 +209,7 @@ export const Template = ({ serviceId }: { serviceId: number }) => {
         },
         {
             id: 4,
-            title: "Automatização da Folha de Pagamento da Justiça Federal do TRF1ª",
+            title: "FolhaFácil - Modernização da Folha de Pagamento",
             description: "Solução integrada para automatizar processos manuais da folha de pagamento, eliminando inconsistências e reduzindo retrabalhos em 70% através de integração com sistemas externos e agentes inteligentes de auditoria.",
             category: "Justiça Federal - TRF1ª Região",
             serviceType: "Sistema de Gestão de Pessoal",
@@ -248,7 +262,7 @@ export const Template = ({ serviceId }: { serviceId: number }) => {
         },
         {
             id: 5,
-            title: "Sistema Integrado de Gestão de Frota Veicular",
+            title: "FrotaFácil - Automação e Gerência da Frota de Veículos",
             description: "Solução completa para digitalização de processos de gestão de frota, eliminando controles manuais e garantindo rastreabilidade total de veículos, motoristas e recursos operacionais.",
             category: "Justiça Federal - Seção Judiciária de Goiás",
             serviceType: "Sistema de Gestão de Frota",
@@ -301,7 +315,7 @@ export const Template = ({ serviceId }: { serviceId: number }) => {
         },
         {
             id: 6,
-            title: "Assistência à Consulta de Materiais",
+            title: "RequisiçãoFácil - Automação e Gerência de Requisições de Materiais",
             description: "Solução moderna para substituir processos manuais de consulta de materiais, oferecendo busca inteligente por código, categoria ou status, integração com SICAM e relatórios de validade/desuso.",
             category: "Justiça Federal - SJGO/SECAD - SETMAT",
             serviceType: "Sistema de Gestão de Materiais",
@@ -350,7 +364,7 @@ export const Template = ({ serviceId }: { serviceId: number }) => {
             ],
             conclusion: "O sistema eliminou 100% das consultas manuais, reduzindo em 50% os erros de requisição. A arquitetura modular permite expansão futura para integração direta com pedidos no SICAM, e os relatórios de validade otimizaram o uso de recursos públicos.",
             images: ["/consulta.png"],
-            documentationLink: "/PGP_Materiais_ResidenciaJF.docx[1].pdf"
+            documentationLink: "/PGP_Materiais_ResidenciaJF.docx.pdf"
         }
     ];
 
@@ -401,11 +415,10 @@ export const Template = ({ serviceId }: { serviceId: number }) => {
 
                 <section className="template-section">
                     <div className="section-header">
-                        <h2>Equipe Responsável</h2>
+                        {/* Botão Original */}
                         {service.documentationLink && (
                             <a
                                 href={service.documentationLink}
-                                download
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="documentation-button"
@@ -413,6 +426,46 @@ export const Template = ({ serviceId }: { serviceId: number }) => {
                                 Documentação PGP
                             </a>
                         )}
+
+                        {/* --- Novos Botões Adicionados --- */}
+                        {service.userDocumentationLink && (
+                            <a
+                                href={service.userDocumentationLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="documentation-button"
+                            >
+                                Documentação de Usuário
+                            </a>
+                        )}
+
+                        {service.technicalDocumentationLink && (
+                            <a
+                                href={service.technicalDocumentationLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="documentation-button"
+                            >
+                                Documentação Técnica
+                            </a>
+                        )}
+
+                        {service.sourceCodeLink && (
+                            <a
+                                href={service.sourceCodeLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="documentation-button"
+                            >
+                                Código Fonte
+                            </a>
+                        )}
+                    </div>
+                </section>
+
+                <section className="template-section">
+                    <div className="section-header">
+                        <h2>Equipe Responsável</h2>
                     </div>
                     <div className="team-cards">
                         <div className="team-card">
