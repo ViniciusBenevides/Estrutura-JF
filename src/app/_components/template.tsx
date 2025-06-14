@@ -98,8 +98,8 @@ export const Template = ({ serviceId }: { serviceId: number }) => {
             ],
             documentationLink: "/PGP-GAJ.pdf",
             userDocumentationLink: "/Documentação de software - Documentação de Usuário.pdf",
-            technicalDocumentationLink: "/Documentação Técnica.pdf"
-            // sourceCodeLink: ""
+            technicalDocumentationLink: "/Documentação Técnica.pdf",
+            sourceCodeLink: "https://github.com/ronaldocostaufg/PJe-R/archive/refs/heads/main.zip"
         },
         {
             id: 2,
