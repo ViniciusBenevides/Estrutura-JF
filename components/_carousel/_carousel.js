@@ -2,19 +2,19 @@
 const _carouselItems = [
   {
     id: 1,
-    imageSrc: "../assets/carousel-1.jpg", // ajuste de caminho p/ sua estrutura
+    imageSrc: "assets/carousel-1.jpg", // ajuste de caminho p/ sua estrutura
     altText: "Slide 1",
     title: "Projeto de Residência em Sistemas e Agentes Inteligentes para o Judiciário Federal",
   },
   {
     id: 2,
-    imageSrc: "../assets/carousel-2.jpg",
+    imageSrc: "assets/carousel-2.jpg",
     altText: "Slide 2",
     title: "Projeto de Residência em Sistemas e Agentes Inteligentes para o Judiciário Federal",
   },
   {
     id: 3,
-    imageSrc: "../assets/carousel-3.jpg",
+    imageSrc: "assets/carousel-3.jpg",
     altText: "Slide 3",
     title: "Projeto de Residência em Sistemas e Agentes Inteligentes para o Judiciário Federal",
   },
