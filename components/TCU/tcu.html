@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TCU Monitor - Sistema de Monitoramento de Aposentadorias</title>
+
+  <!-- Define raiz do site -->
+  <base href="/">
+
+  <!-- CSS da página -->
+  <link rel="stylesheet" href="/components/TCU/tcu.css">
+
+  <!-- CSS do nav -->
+  <link rel="stylesheet" href="/components/navmenu/navmenu.css">
+</head>
+<body>
+  <!-- NAV dinâmico -->
+  <div id="nav-placeholder"></div>
+
+  <div class="tcu-container-pai">
+    <div class="tcu-container">
+      
+      <!-- Seção Hero -->
+      <section class="tcu-hero">
+        <div class="hero-content">
+          <h1>TCU Monitor - Sistema de Monitoramento de Aposentadorias</h1>
+          <p class="hero-description">
+            Solução automatizada para consulta e monitoramento do status de aposentadoria de servidores no sistema do TCU, com notificação automática de alterações para os gestores da área de folha de pagamento.
+          </p>
+
+          <div class="hero-image">
+            <img src="/assets/relatorio-monitoramento2.jpg" alt="TCU Monitor" class="featured-image">
+          </div>
+
+          <div class="meta-grid">
+            <div class="meta-item" id="first">
+              <span class="meta-label">Setor</span>
+              <span class="meta-value">Justiça Federal - TRF1ª Região</span>
+            </div>
+            <div class="meta-item" id="second">
+              <span class="meta-label">Tipo de Serviço</span>
+              <span class="meta-value">Sistema de Monitoramento</span>
+            </div>
+            <div class="meta-item" id="third">
+              <span class="meta-label">Ferramentas</span>
+              <span class="meta-value">React, Node.js, PostgreSQL, API TCU, Sistema de Notificações</span>
+            </div>
+            <div class="meta-item" id="last">
+              <span class="meta-label">Timeline</span>
+              <span class="meta-value">Mai/2025 - Jun/2025 (2 meses)</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção Equipe Responsável -->
+      <section class="tcu-section">
+  <div class="section-header">
+    <a href="../assets/Documentação de Utilização - Folha Fácil Monitor TCU.pdf" target="_blank" class="documentation-button">Documentação de Utilização</a>
+    <a href="../assets/relatorios_mensais.pdf" target="_blank" class="documentation-button">Relatórios Mensais</a>
+  </div>
+</section>
+
+        <div class="team-cards">
+          <div class="team-card">
+            <h3>Stakeholders</h3>
+            <ul>
+              <li>Jean Marcos Cabral (Diretor DIGEP)</li>
+              <li>Kleuber Rodrigues (Supervisor SEPAG)</li>
+              <li>Equipe de folha de pagamento do TRF1</li>
+            </ul>
+          </div>
+          <div class="team-card">
+            <h3>Gestor</h3>
+            <p>JEAN MARCOS CABRAL</p>
+          </div>
+          <div class="team-card">
+            <h3>Docente</h3>
+            <p>IWENS GERVASIO SENE JUNIOR</p>
+          </div>
+          <div class="team-card">
+            <h3>Residentes</h3>
+            <ul>
+              <li>PATRICK FERNANDES MARINS</li>
+              <li>PAULO ROBERTO VIEIRA</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contexto do Projeto -->
+      <section class="tcu-section">
+        <h2>Contexto do Projeto</h2>
+        <div class="content-card">
+          <p>
+            Desenvolvido para eliminar o processo manual de verificação individual de cada servidor no sistema do TCU, o TCU Monitor realiza consultas automáticas periódicas e atualiza os status em tempo real. O projeto surgiu da necessidade de agilizar a identificação de servidores com direito à aposentadoria aprovada, permitindo ações rápidas por parte da equipe de folha de pagamento.
+          </p>
+        </div>
+      </section>
+
+      <!-- Etapas do Desenvolvimento -->
+      <section class="tcu-section">
+        <h2>Etapas de Desenvolvimento</h2>
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-number">01</div>
+            <div class="step-content">
+              <h3>Integração com API do TCU</h3>
+              <p>Desenvolvimento da conexão segura com o sistema do TCU para consulta automatizada dos status de aposentadoria.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-number">02</div>
+            <div class="step-content">
+              <h3>Sistema de Monitoramento Contínuo</h3>
+              <p>Implementação de rotinas automatizadas para verificação periódica dos servidores cadastrados.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-number">03</div>
+            <div class="step-content">
+              <h3>Módulo de Notificações</h3>
+              <p>Configuração de alertas automáticos para os gestores quando houver mudança no status de qualquer servidor monitorado.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-number">04</div>
+            <div class="step-content">
+              <h3>Interface de Gestão</h3>
+              <p>Desenvolvimento de painéis intuitivos para visualização dos status e histórico de alterações.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Principais Funcionalidades -->
+      <section class="tcu-section">
+        <h2>Principais Funcionalidades</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-content">
+              <h3>Lista de Pessoas</h3>
+              <p>Painel completo com lista atualizada de todos os servidores monitorados, apresentando de forma clara e organizada o status, CPF, matrícula e outras informações relevantes de cada um.</p>
+            </div>
+            <div class="feature-image">
+              <img src="/assets/relatorio-monitoramento.jpg" alt="Lista de Pessoas" class="featured-image">
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-content">
+              <h3>Cadastro de Servidores</h3>
+              <p>Sistema inteligente de cadastro com validação em tempo real, garantindo que os dados informados estejam corretos e completos, evitando inconsistências e erros futuros.</p>
+            </div>
+            <div class="feature-image">
+              <img src="/assets/cadastro-servidor.jpg" alt="Cadastro de Servidores" class="featured-image">
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-content">
+              <h3>Edição de Servidores</h3>
+              <p>Fluxo seguro para atualização de dados dos servidores, com histórico de alterações e controle de permissões para garantir a integridade das informações.</p>
+            </div>
+            <div class="feature-image">
+              <img src="/assets/edição-sevidor.jpg" alt="Edição de Servidores" class="featured-image">
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-content">
+              <h3>Detalhes Pessoais</h3>
+              <p>Visão detalhada de cada servidor com todas as informações relevantes para análise, incluindo dados pessoais, históricos e status de aposentadoria.</p>
+            </div>
+            <div class="feature-image">
+              <img src="/assets/Detalhes-servidor.jpg" alt="Detalhes Pessoais" class="featured-image">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Resultados -->
+      <section class="tcu-section">
+        <h2>Resultados Alcançados</h2>
+        <div class="content-card">
+          <p>O TCU Monitor reduziu em 90% o tempo gasto com verificações manuais no sistema do TCU e eliminou atrasos no processamento de aposentadorias, permitindo maior agilidade, eficiência e segurança na gestão de processos.</p>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- JS da página -->
+  <script src="/js/tcu.js"></script>
+
+  <!-- Injeta o nav e o JS do nav -->
+  <script>
+    (async () => {
+      try {
+        const res = await fetch('/components/navmenu/navmenu.html');
+        document.getElementById('nav-placeholder').innerHTML = await res.text();
+
+        if (!document.querySelector('script[src="/components/navmenu/navmenu.js"]')) {
+          const s = document.createElement('script');
+          s.src = '/components/navmenu/navmenu.js';
+          document.body.appendChild(s);
+        }
+      } catch (e) {
+        console.error('Falha ao carregar o nav:', e);
+      }
+    })();
+  </script>
+</body>
+</html>

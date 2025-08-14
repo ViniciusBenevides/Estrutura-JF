@@ -1,0 +1,200 @@
+.servicos-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 2rem 4rem;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.servicos-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.servicos-subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #4d60a5;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.servicos-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1a1a1a;
+  margin: 0 0 1rem 0;
+}
+
+.servicos-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #4a4a4a;
+  margin: 0;
+}
+
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* o CARD é um <a> (clicável inteiro) */
+.service-card-link {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+}
+
+.service-card-link:hover,
+.service-card-link:focus-visible {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  outline: none;
+}
+
+.service-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* imagem */
+.card-image-container {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.service-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+
+.service-card-link:hover .service-image {
+  transform: scale(1.08);
+}
+
+/* texto */
+.card-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: .75rem;
+  line-height: 1.4;
+}
+
+.card-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+/* “botão” visual (fica embaixo, como nos outros) */
+.project-button-container {
+  margin-top: auto;
+}
+
+.project-button2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  padding: .9rem 1.4rem;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: .95rem;
+  transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, .12);
+  /* importantíssimo: o clique passa para o <a> do card */
+  pointer-events: none;
+}
+
+.service-card-link:hover .project-button2 {
+  background: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, .2);
+}
+
+.project-button2 img {
+  width: 16px;
+  height: 16px;
+  transform: translateX(0);
+  transition: transform .2s ease;
+}
+
+.service-card-link:hover .project-button2 img {
+  transform: translateX(3px);
+}
+
+/* ========== REMOVIDO o botão flutuante antigo ==========
+   (garantimos que todos os cards, inclusive o TCU, usem o mesmo botão de baixo)
+   .project-button { ... }
+   .service-card-link:hover .project-button { ... }
+*/
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  .servicos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .servicos-container {
+    padding: 4rem 1.5rem;
+  }
+
+  .servicos-title {
+    font-size: 2rem;
+  }
+
+  .servicos-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .servicos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .servicos-title {
+    font-size: 1.8rem;
+  }
+
+  .card-image-container {
+    height: 200px;
+  }
+}

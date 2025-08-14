@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Equipe — Residência em TI</title>
+
+  <!-- CSS Global (opcional) -->
+  <link rel="stylesheet" href="css/global.css">
+
+  <!-- CSS dos componentes usados nesta página -->
+  <link rel="stylesheet" href="components/navmenu/navmenu.css">
+  <link rel="stylesheet" href="components/equipe/equipe.css">
+  <link rel="stylesheet" href="components/footer/footer.css">
+</head>
+<body>
+  <div id="navmenu-slot"></div>
+
+  <main style="min-height:60vh">
+    <section id="equipe" class="equipe-section">
+      <div id="equipe-slot"></div>
+    </section>
+  </main>
+
+  <div id="footer-slot"></div>
+
+  <script>
+    const includes = [
+      { selector: "#navmenu-slot", file: "components/navmenu/navmenu.html" },
+      { selector: "#equipe-slot",  file: "components/equipe/equipe.html" },
+      { selector: "#footer-slot",  file: "components/footer/footer.html" },
+    ];
+
+    async function loadPartials() {
+      for (const inc of includes) {
+        const host = document.querySelector(inc.selector);
+        if (!host) continue;
+        try {
+          const res = await fetch(inc.file);
+          host.innerHTML = await res.text();
+        } catch (e) {
+          host.innerHTML = "<!-- erro ao carregar " + inc.file + " -->";
+          console.error("Falha ao carregar:", inc.file, e);
+        }
+      }
+    }
+
+    function injectScripts() {
+      const scripts = [
+        "components/navmenu/navmenu.js",
+        "components/equipe/equipe.js",
+        "components/footer/footer.js",
+      ];
+      for (const src of scripts) {
+        const s = document.createElement("script");
+        s.src = src;
+        document.body.appendChild(s);
+      }
+    }
+
+    // No equipe.html, links do menu que apontam pra seções do index devem ir para index.html#...
+    // (já está assim no seu navmenu.html, então não precisa interceptar nada aqui)
+
+    loadPartials().then(() => {
+      injectScripts();
+    });
+  </script>
+</body>
+</html>

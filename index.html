@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LAB JFGO</title>
+
+  <link rel="icon" type="image/png" href="../../assets/favicon.ico">
+
+  <!-- CSS Global (opcional) -->
+  <link rel="stylesheet" href="css/global.css">
+
+  <!-- CSS dos Componentes -->
+  <link rel="stylesheet" href="components/navmenu/navmenu.css">
+  <link rel="stylesheet" href="components/_carousel/_carousel.css">
+  <link rel="stylesheet" href="components/sobrenos/sobrenos.css">
+  <link rel="stylesheet" href="components/nossosSoftwares/nossosSoftwares.css">
+  <link rel="stylesheet" href="components/servicos/servicos.css">
+  <link rel="stylesheet" href="components/footer/footer.css">
+</head>
+
+<body>
+  <!-- Slots para injetar parciais -->
+  <!-- <div id="navmenu-slot"></div> -->
+
+  <div id="carousel-slot"></div>
+
+  <section id="sobre-nos">
+    <div id="sobrenos-slot"></div>
+  </section>
+
+  <section id="softwares">
+    <div id="nossossoftwares-slot"></div>
+  </section>
+
+  <section id="projetos">
+    <div id="servicos-slot"></div>
+  </section>
+
+  <div id="footer-slot"></div>
+
+  <!-- Loader de parciais + scripts -->
+  <script>
+    const includes = [
+      { selector: "#navmenu-slot", file: "components/navmenu/navmenu.html" },
+      { selector: "#carousel-slot", file: "components/_carousel/_carousel.html" },
+      { selector: "#sobrenos-slot", file: "components/sobrenos/sobrenos.html" },
+      { selector: "#nossossoftwares-slot", file: "components/nossosSoftwares/nossosSoftwares.html" },
+      { selector: "#servicos-slot", file: "components/servicos/servicos.html" },
+      { selector: "#footer-slot", file: "components/footer/footer.html" },
+    ];
+
+    async function loadPartials() {
+      for (const inc of includes) {
+        const host = document.querySelector(inc.selector);
+        if (!host) continue;
+        try {
+          const res = await fetch(inc.file);
+          host.innerHTML = await res.text();
+        } catch (e) {
+          host.innerHTML = "<!-- erro ao carregar " + inc.file + " -->";
+          console.error("Falha ao carregar:", inc.file, e);
+        }
+      }
+    }
+
+    loadPartials().then(() => {
+      const scripts = [
+        "components/navmenu/navmenu.js",
+        "components/_carousel/_carousel.js",
+        "components/sobrenos/sobrenos.js",
+        "components/nossosSoftwares/nossosSoftwares.js",
+        "components/servicos/servicos.js",
+        "components/footer/footer.js",
+      ];
+      for (const src of scripts) {
+        const s = document.createElement("script");
+        s.src = src;
+        document.body.appendChild(s);
+      }
+    });
+  </script>
+</body>
+
+</html>

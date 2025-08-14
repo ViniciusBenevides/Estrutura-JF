@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FolhaFácil — Residência em TI</title>
+
+  <link rel="stylesheet" href="../components/template/template.css">
+  <link rel="stylesheet" href="../components/navmenu/navmenu.css">
+  <link rel="stylesheet" href="../components/footer/footer.css">
+</head>
+<body>
+  <div id="navmenu-slot"></div>
+
+  <div class="template-container-pai">
+    <div class="template-container">
+      <section class="template-hero">
+        <div class="hero-content">
+          <h1>FolhaFácil - Modernização da Folha de Pagamento</h1>
+          <p class="hero-description">Solução integrada para automatizar processos manuais da folha de pagamento, eliminando inconsistências e reduzindo retrabalhos em 70% através de integração com sistemas externos e agentes inteligentes de auditoria.</p>
+
+          <div class="hero-image">
+            <img src="../assets/mockup.jpg" alt="FolhaFácil" class="featured-image" width="1200" height="500">
+          </div>
+
+          <div class="meta-grid">
+            <div class="meta-item" id="first"><span class="meta-label">Setor</span><span class="meta-value">Justiça Federal - TRF1ª Região</span></div>
+            <div class="meta-item" id="second"><span class="meta-label">Tipo de Serviço</span><span class="meta-value">Sistema de Gestão de Pessoal</span></div>
+            <div class="meta-item" id="third"><span class="meta-label">Ferramentas</span><span class="meta-value">Django, ReactJS, PostgreSQL, Celery, REST, Tesseract OCR, Python-Requests, Bcrypt</span></div>
+            <div class="meta-item" id="last"><span class="meta-label">Timeline</span><span class="meta-value">Nov/2024 - Out/2025 (12 meses)</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="template-section">
+        <div class="section-header">
+          <a href="../assets/PGP-Folha_de_Pagamento.pdf" target="_blank" class="documentation-button">Documentação PGP</a>
+          <a href="../assets/Folha_Relatorio.pdf" target="_blank" class="documentation-button">Relatórios Mensais</a>
+        </div>
+      </section>
+
+      <section class="template-section">
+        <div class="section-header"><h2>Equipe Responsável</h2></div>
+        <div class="team-cards">
+          <div class="team-card">
+            <h3>Stakeholders</h3>
+            <ul>
+              <li>Jean Marcos Cabral (Diretor DIGEP)</li>
+              <li>Kleuber Rodrigues (Supervisor SEPAG)</li>
+              <li>Equipe de folha de pagamento do TRF1</li>
+            </ul>
+          </div>
+          <div class="team-card"><h3>Gestor</h3><p>JEAN MARCOS CABRAL</p></div>
+          <div class="team-card"><h3>Docente</h3><p>IWENS GERVASIO SENE JUNIOR</p></div>
+          <div class="team-card"><h3>Residentes</h3><ul><li>PATRICK FERNANDES MARINS</li><li>PAULO ROBERTO VIEIRA</li></ul></div>
+        </div>
+      </section>
+
+      <section class="template-section">
+        <div class="story-card">
+          <h2>Contexto do Projeto</h2>
+          <p>Desenvolvido para resolver problemas críticos no processamento da folha de pagamento do TRF1, este projeto substitui processos manuais por automações inteligentes que integram dados de sistemas como SARH, SAAF, Benner e Zetra. A solução surgiu da necessidade de eliminar erros em cálculos de benefícios, horas extras e provisões que causavam retrabalho e atrasos mensais.</p>
+        </div>
+      </section>
+
+      <section class="template-section">
+        <h2>Etapas de Desenvolvimento</h2>
+        <div class="process-steps">
+          <div class="process-card"><div class="step-number">01</div><div class="step-content"><h3>Análise de Requisitos</h3><p>Mapeamento detalhado dos sistemas envolvidos (SARH, Consulta Folha, SAAF, Benner) e documentação dos fluxos atuais com identificação de pontos críticos de falha manual.</p></div></div>
+          <div class="process-card"><div class="step-number">02</div><div class="step-content"><h3>Modelagem Arquitetural</h3><p>Definição da arquitetura MVC com Django no back-end e React no front-end, incluindo design de APIs para integração e sistema de filas com Celery para processamento assíncrono.</p></div></div>
+          <div class="process-card"><div class="step-number">03</div><div class="step-content"><h3>Desenvolvimento de Módulos</h3><p>Implementação em sprints dos módulos de: integração ETL, cálculo automático de rubricas, validação de dados, provisões e relatórios customizados.</p></div></div>
+          <div class="process-card"><div class="step-number">04</div><div class="step-content"><h3>Implementação de Agentes IA</h3><p>Desenvolvimento dos agentes inteligentes para auditoria automatizada e validação de alterações manuais, com treinamento de modelos para detecção de anomalias.</p></div></div>
+        </div>
+      </section>
+
+      <section class="template-section">
+        <h2>Principais Funcionalidades</h2>
+        <div class="features-grid">
+          <div class="feature-card"><div class="feature-content"><h3>Integração Multi-sistemas</h3><p>Processos ETL robustos para extração e transformação de dados de sistemas heterogêneos (SAAF, Benner, Zetra) para o SARH, com tratamento de formatos variados (CSV, TXT, PDF).</p></div></div>
+          <div class="feature-card"><div class="feature-content"><h3>Cálculo Automatizado</h3><p>Motor de cálculos para rubricas complexas como horas extras, substituições de férias, planos de saúde e empréstimos consignados, com validação em tempo real.</p></div></div>
+          <div class="feature-card"><div class="feature-content"><h3>Módulo de Provisões</h3><p>Cálculo e armazenamento automático de valores provisionados para férias, 13º salário e gratificações, com ajuste dinâmico conforme mudanças legislativas.</p></div></div>
+          <div class="feature-card"><div class="feature-content"><h3>Agentes Inteligentes</h3><p>Sistema de agentes IA para: auditoria contínua (detecção de anomalias), validação de alterações manuais e geração de relatórios preditivos de despesas.</p></div></div>
+        </div>
+      </section>
+
+      <section class="template-section">
+        <div class="conclusion-card">
+          <h2>Resultados Alcançados</h2>
+          <p>A solução elimina 100% dos lançamentos manuais na folha de pagamento, reduzindo em 70% o tempo de processamento e erros. Os agentes inteligentes garantem conformidade contínua, com capacidade de detectar 95% das inconsistências antes do fechamento. A arquitetura modular permite expansão para outros tribunais.</p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div id="footer-slot"></div>
+
+  <script>
+    (async () => {
+      try {
+        const nav = await (await fetch('../components/navmenu/navmenu.html')).text();
+        document.getElementById('navmenu-slot').innerHTML = nav;
+        const s = document.createElement('script');
+        s.src = '../components/navmenu/navmenu.js';
+        document.body.appendChild(s);
+      } catch(e){ console.error('Nav falhou', e); }
+
+      try {
+        const footer = await (await fetch('../components/footer/footer.html')).text();
+        document.getElementById('footer-slot').innerHTML = footer;
+      } catch(e){ console.error('Footer falhou', e); }
+    })();
+  </script>
+</body>
+</html>
