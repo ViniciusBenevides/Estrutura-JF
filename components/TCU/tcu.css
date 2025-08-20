@@ -335,3 +335,33 @@ body {
         font-size: 16px;
     }
 }
+.header-with-button {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.header-with-button h1 {
+    margin: 0;
+}
+.access-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: linear-gradient(to right, #ffffff 0%, #ffffff 100%);
+  color: #00020f;
+  text-decoration: none;
+  border-radius: 3rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(0, 242, 254, 0.3);
+  border: none;
+  cursor: pointer;
+}
+
+.access-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255,255,255,0.4);
+}
