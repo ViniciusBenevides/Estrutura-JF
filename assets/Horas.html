@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Manual de Usuário - Horas</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Manual de Usuário - Horas</h1>
+</header>
+<h1
+id="manual-do-usuário---sistema-de-processamento-de-horas-extras">Manual
+do Usuário - Sistema de Processamento de Horas Extras</h1>
+<h2 id="visão-geral">📋 Visão Geral</h2>
+<p>O <strong>Sistema de Processamento de Horas Extras</strong> é uma
+aplicação web desenvolvida em Django que permite processar e analisar
+dados de horas trabalhadas de funcionários. O sistema suporta dois tipos
+principais de processamento:</p>
+<ol type="1">
+<li><strong>Arquivos CSV de Catraca Eletrônica</strong> - Processa dados
+de entrada e saída de funcionários</li>
+<li><strong>Arquivos PDF do Sistema SEI</strong> - Extrai informações de
+relatórios de ponto eletrônico</li>
+</ol>
+<h2 id="funcionalidades-principais">🎯 Funcionalidades Principais</h2>
+<h3 id="processamento-de-dados">✅ Processamento de Dados</h3>
+<ul>
+<li>Upload e processamento de arquivos CSV (catraca eletrônica)</li>
+<li>Upload e processamento de arquivos PDF (sistema SEI)</li>
+<li>Extração automática de dados usando OCR (Tesseract)</li>
+<li>Geração de relatórios consolidados</li>
+</ul>
+<h3 id="análise-e-visualização">✅ Análise e Visualização</h3>
+<ul>
+<li>Dashboard com estatísticas de horas trabalhadas</li>
+<li>Visualização de dados por funcionário</li>
+<li>Relatórios em formato CSV e Excel</li>
+<li>Cálculo automático de horas extras</li>
+</ul>
+<h3 id="gerenciamento-de-arquivos">✅ Gerenciamento de Arquivos</h3>
+<ul>
+<li>Download de arquivos processados</li>
+<li>Limpeza de dados processados</li>
+<li>Processamento em lote de arquivos</li>
+</ul>
+<h2 id="como-acessar-o-sistema">🚀 Como Acessar o Sistema</h2>
+<h3 id="acesso-via-navegador">1. Acesso via Navegador</h3>
+<pre><code>http://seu_servidor/folhafacil/horas/</code></pre>
+<h3 id="interface-principal">2. Interface Principal</h3>
+<p>A interface principal do sistema apresenta: -
+<strong>Header</strong>: Título do sistema e informações técnicas -
+<strong>Seção de Upload</strong>: Área para envio de arquivos -
+<strong>Dashboard</strong>: Estatísticas e dados processados -
+<strong>Lista de Arquivos</strong>: Arquivos já processados</p>
+<h2 id="tipos-de-arquivos-suportados">📁 Tipos de Arquivos
+Suportados</h2>
+<h3 id="arquivos-csv---catraca-eletrônica">📄 Arquivos CSV - Catraca
+Eletrônica</h3>
+<p><strong>Formato aceito</strong>: Arquivos CSV com dados de
+entrada/saída de funcionários</p>
+<p><strong>Estrutura esperada</strong>:</p>
+<pre class="csv"><code>CPF;Doc. Prov.;Sentido;Cartao;Catraca;Horario do Evento
+12345678901;123456;Entrada;001;001;08:00:00
+12345678901;123456;Saída;001;001;17:00:00</code></pre>
+<p><strong>Características</strong>: - Separador: ponto e vírgula (;) ou
+vírgula (,) - Cabeçalho: 5 linhas de cabeçalho (serão ignoradas) -
+Colunas: CPF, Documento Provisório, Sentido, Cartão, Catraca, Horário -
+Encoding: UTF-8</p>
+<h3 id="arquivos-pdf---sistema-sei">📄 Arquivos PDF - Sistema SEI</h3>
+<p><strong>Formato aceito</strong>: Relatórios de ponto eletrônico em
+PDF</p>
+<p><strong>Características</strong>: - Relatórios gerados pelo sistema
+SEI - Contém dados de funcionários e horários - Processamento via OCR
+(Tesseract) - Extração automática de CPF, nome e horários</p>
+<h2 id="como-usar-o-sistema">🔧 Como Usar o Sistema</h2>
+<h3 id="passo-1-acessar-o-sistema">Passo 1: Acessar o Sistema</h3>
+<ol type="1">
+<li>Abra seu navegador web</li>
+<li>Digite o endereço:
+<code>http://seu_servidor/folhafacil/horas/</code></li>
+<li>Aguarde o carregamento da página principal</li>
+</ol>
+<h3 id="passo-2-selecionar-o-tipo-de-processamento">Passo 2: Selecionar
+o Tipo de Processamento</h3>
+<p>Na seção “Upload de Arquivos”:</p>
+<ol type="1">
+<li><strong>Para arquivos CSV (Catraca Eletrônica)</strong>:
+<ul>
+<li>Selecione “Catraca Eletrônica (CSV)”</li>
+<li>Clique no botão de upload</li>
+<li>Escolha o arquivo CSV com os dados da catraca</li>
+</ul></li>
+<li><strong>Para arquivos PDF (Sistema SEI)</strong>:
+<ul>
+<li>Selecione “Sistema SEI (PDF)”</li>
+<li>Clique no botão de upload</li>
+<li>Escolha o arquivo PDF do relatório SEI</li>
+</ul></li>
+</ol>
+<h3 id="passo-3-processar-o-arquivo">Passo 3: Processar o Arquivo</h3>
+<ol type="1">
+<li>Após selecionar o arquivo, clique em <strong>“Processar
+Arquivo”</strong></li>
+<li>Aguarde o processamento (pode levar alguns minutos para PDFs)</li>
+<li>O sistema mostrará uma mensagem de sucesso ou erro</li>
+</ol>
+<h3 id="passo-4-visualizar-resultados">Passo 4: Visualizar
+Resultados</h3>
+<p>Após o processamento bem-sucedido:</p>
+<ol type="1">
+<li><strong>Dashboard</strong>: Visualize estatísticas gerais</li>
+<li><strong>Arquivos Processados</strong>: Veja a lista de arquivos
+gerados</li>
+<li><strong>Download</strong>: Baixe os arquivos processados</li>
+</ol>
+<h2 id="dashboard-e-estatísticas">📊 Dashboard e Estatísticas</h2>
+<h3 id="informações-exibidas">Informações Exibidas</h3>
+<ul>
+<li><strong>Total de Funcionários</strong>: Número de funcionários
+processados</li>
+<li><strong>Arquivos Processados</strong>: Lista de arquivos
+gerados</li>
+<li><strong>Dados por Funcionário</strong>: CPF, data, horas
+trabalhadas</li>
+</ul>
+<h3 id="dados-do-dashboard">Dados do Dashboard</h3>
+<p>Para cada funcionário processado, o sistema mostra: -
+<strong>CPF</strong>: Documento do funcionário - <strong>Data</strong>:
+Data do registro - <strong>Horas</strong>: Total de horas trabalhadas
+(formato HH:MM:SS) - <strong>Horas Decimais</strong>: Horas convertidas
+para formato decimal</p>
+<h2 id="download-de-arquivos">📥 Download de Arquivos</h2>
+<h3 id="arquivos-gerados">Arquivos Gerados</h3>
+<p>O sistema gera os seguintes tipos de arquivo:</p>
+<ol type="1">
+<li><strong>Total_Horas_[CPF].csv</strong>: Relatório individual por
+funcionário</li>
+<li><strong>Total_Horas_[CPF].xlsx</strong>: Relatório em Excel por
+funcionário</li>
+<li><strong>Arquivos consolidados</strong>: Relatórios com todos os
+funcionários</li>
+</ol>
+<h3 id="como-baixar">Como Baixar</h3>
+<ol type="1">
+<li>Na seção “Arquivos Processados”, clique no nome do arquivo</li>
+<li>O download será iniciado automaticamente</li>
+<li>Salve o arquivo em sua pasta de destino</li>
+</ol>
+<h2 id="limpeza-de-dados">🧹 Limpeza de Dados</h2>
+<h3 id="quando-usar">Quando Usar</h3>
+<ul>
+<li>Para remover arquivos antigos</li>
+<li>Para liberar espaço no servidor</li>
+<li>Antes de processar novos dados</li>
+</ul>
+<h3 id="como-limpar">Como Limpar</h3>
+<ol type="1">
+<li>Clique no botão <strong>“Limpar Dados Processados”</strong></li>
+<li>Confirme a ação</li>
+<li>O sistema removerá todos os arquivos processados</li>
+</ol>
+<p><strong>⚠️ Atenção</strong>: Esta ação é irreversível!</p>
+<h2 id="processamento-em-lote">🔍 Processamento em Lote</h2>
+<h3 id="processar-pasta-media">Processar Pasta Media</h3>
+<p>Para processar múltiplos arquivos PDF de uma vez:</p>
+<ol type="1">
+<li>Adicione os arquivos PDF na pasta <code>media</code> do
+servidor</li>
+<li>Use a funcionalidade de processamento em lote</li>
+<li>O sistema processará todos os PDFs automaticamente</li>
+</ol>
+<h2 id="solução-de-problemas">⚠️ Solução de Problemas</h2>
+<h3 id="erro-nenhum-arquivo-enviado">Erro: “Nenhum arquivo enviado”</h3>
+<p><strong>Causa</strong>: Nenhum arquivo foi selecionado
+<strong>Solução</strong>: Selecione um arquivo antes de clicar em
+“Processar”</p>
+<h3 id="erro-tipo-de-arquivo-não-suportado">Erro: “Tipo de arquivo não
+suportado”</h3>
+<p><strong>Causa</strong>: Arquivo com extensão incorreta
+<strong>Solução</strong>: - Para catraca: use arquivos .csv - Para SEI:
+use arquivos .pdf</p>
+<h3 id="erro-erro-no-processamento">Erro: “Erro no processamento”</h3>
+<p><strong>Causa</strong>: Problema na estrutura do arquivo
+<strong>Solução</strong>: - Verifique se o arquivo CSV tem o formato
+correto - Verifique se o PDF não está corrompido - Tente com outro
+arquivo</p>
+<h3 id="erro-tesseract-não-encontrado">Erro: “Tesseract não
+encontrado”</h3>
+<p><strong>Causa</strong>: OCR não instalado (apenas para PDFs)
+<strong>Solução</strong>: Entre em contato com o administrador do
+sistema</p>
+<h3 id="processamento-lento">Processamento Lento</h3>
+<p><strong>Causa</strong>: Arquivos grandes ou servidor sobrecarregado
+<strong>Solução</strong>: - Aguarde o processamento - Evite processar
+múltiplos arquivos simultaneamente - Use arquivos menores quando
+possível</p>
+<h2 id="dicas-de-uso">📋 Dicas de Uso</h2>
+<h3 id="para-melhor-performance">Para Melhor Performance</h3>
+<ol type="1">
+<li><strong>Arquivos CSV</strong>: Use arquivos com até 10.000
+linhas</li>
+<li><strong>Arquivos PDF</strong>: Processe um por vez</li>
+<li><strong>Limpeza</strong>: Faça limpeza regular dos dados
+antigos</li>
+</ol>
+<h3 id="para-dados-precisos">Para Dados Precisos</h3>
+<ol type="1">
+<li><strong>Verificação</strong>: Sempre verifique os dados após o
+processamento</li>
+<li><strong>Backup</strong>: Mantenha cópias dos arquivos originais</li>
+<li><strong>Validação</strong>: Confirme se os CPFs estão corretos</li>
+</ol>
+<h3 id="para-organização">Para Organização</h3>
+<ol type="1">
+<li><strong>Nomenclatura</strong>: Use nomes descritivos para os
+arquivos</li>
+<li><strong>Data</strong>: Inclua a data no nome do arquivo</li>
+<li><strong>Versões</strong>: Mantenha versões dos relatórios
+importantes</li>
+</ol>
+<h2 id="configurações-técnicas">🔧 Configurações Técnicas</h2>
+<h3 id="requisitos-do-sistema">Requisitos do Sistema</h3>
+<ul>
+<li><strong>Navegador</strong>: Chrome, Firefox, Safari, Edge (versões
+recentes)</li>
+<li><strong>JavaScript</strong>: Habilitado</li>
+<li><strong>Cookies</strong>: Habilitados</li>
+<li><strong>Upload</strong>: Suporte a arquivos até 50MB</li>
+</ul>
+<h3 id="formatos-suportados">Formatos Suportados</h3>
+<ul>
+<li><strong>CSV</strong>: UTF-8, separador ; ou ,</li>
+<li><strong>PDF</strong>: PDF 1.4 ou superior</li>
+<li><strong>Saída</strong>: CSV, Excel (XLSX)</li>
+</ul>
+<h3 id="limitações">Limitações</h3>
+<ul>
+<li><strong>Tamanho máximo</strong>: 50MB por arquivo</li>
+<li><strong>Linhas CSV</strong>: Até 100.000 linhas</li>
+<li><strong>Páginas PDF</strong>: Até 50 páginas</li>
+<li><strong>Processamento simultâneo</strong>: 1 arquivo por vez</li>
+</ul>
+<h2 id="suporte-e-contato">📞 Suporte e Contato</h2>
+<h3 id="em-caso-de-problemas">Em Caso de Problemas</h3>
+<ol type="1">
+<li><strong>Verifique</strong>: Se o problema está listado na seção
+“Solução de Problemas”</li>
+<li><strong>Teste</strong>: Com um arquivo diferente</li>
+<li><strong>Contate</strong>: O administrador do sistema</li>
+</ol>
+<h3 id="informações-para-suporte">Informações para Suporte</h3>
+<p>Ao reportar um problema, inclua: - Tipo de arquivo (CSV ou PDF) -
+Tamanho do arquivo - Mensagem de erro exata - Data e hora do erro -
+Navegador utilizado</p>
+<h2 id="histórico-de-versões">📝 Histórico de Versões</h2>
+<h3 id="versão-1.0-dezembro-2024">Versão 1.0 (Dezembro 2024)</h3>
+<ul>
+<li>Processamento de arquivos CSV de catraca eletrônica</li>
+<li>Processamento de arquivos PDF do sistema SEI</li>
+<li>Dashboard com estatísticas</li>
+<li>Download de arquivos processados</li>
+<li>Limpeza de dados</li>
+<li>Interface responsiva</li>
+</ul>
+<hr />
+<p><strong>Desenvolvido por</strong>: Equipe de Desenvolvimento
+TRF1<br />
+<strong>Versão</strong>: 1.0<br />
+<strong>Última atualização</strong>: Dezembro 2024<br />
+<strong>Compatível com</strong>: Django 3.2.25+, Python 3.12+</p>
+</body>
+</html>

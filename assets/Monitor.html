@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Manual de Usuário - Monitor</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Manual de Usuário - Monitor</h1>
+</header>
+<h1 id="manual-do-usuário---sistema-de-monitoramento-tcu">Manual do
+Usuário - Sistema de Monitoramento TCU</h1>
+<h2 id="visão-geral">📋 Visão Geral</h2>
+<p>O <strong>Sistema de Monitoramento TCU</strong> é uma aplicação web
+desenvolvida em Django que permite monitorar e acompanhar o status de
+aposentadoria de funcionários através de consultas automáticas ao
+Tribunal de Contas da União (TCU). O sistema oferece funcionalidades de
+cadastro, monitoramento contínuo e geração de relatórios.</p>
+<h2 id="funcionalidades-principais">🎯 Funcionalidades Principais</h2>
+<h3 id="cadastro-e-gestão-de-pessoas">✅ Cadastro e Gestão de
+Pessoas</h3>
+<ul>
+<li>Cadastro de funcionários com dados pessoais</li>
+<li>Edição e exclusão de registros</li>
+<li>Ativação/desativação de monitoramento</li>
+<li>Visualização de histórico de consultas</li>
+</ul>
+<h3 id="monitoramento-automático">✅ Monitoramento Automático</h3>
+<ul>
+<li>Consultas automáticas ao TCU</li>
+<li>Verificação de alterações de status</li>
+<li>Notificações por e-mail</li>
+<li>Dashboard com estatísticas em tempo real</li>
+</ul>
+<h3 id="relatórios-e-análises">✅ Relatórios e Análises</h3>
+<ul>
+<li>Relatórios detalhados por período</li>
+<li>Exportação em formato CSV</li>
+<li>Histórico de consultas por pessoa</li>
+<li>Estatísticas de alterações de status</li>
+</ul>
+<h3 id="sistema-de-notificações">✅ Sistema de Notificações</h3>
+<ul>
+<li>Alertas automáticos por e-mail</li>
+<li>Notificações de alterações de status</li>
+<li>Logs de atividades do sistema</li>
+</ul>
+<h2 id="como-acessar-o-sistema">🚀 Como Acessar o Sistema</h2>
+<h3 id="acesso-via-navegador">1. Acesso via Navegador</h3>
+<pre><code>http://seu_servidor/folhafacil/monitor/</code></pre>
+<h3 id="interface-principal">2. Interface Principal</h3>
+<p>A interface principal do sistema apresenta: -
+<strong>Dashboard</strong>: Estatísticas gerais e ações rápidas -
+<strong>Menu de Navegação</strong>: Acesso às diferentes funcionalidades
+- <strong>Alertas</strong>: Notificações de alterações detectadas -
+<strong>Botões de Ação</strong>: Verificação manual e outras
+operações</p>
+<h2 id="cadastro-de-pessoas">👥 Cadastro de Pessoas</h2>
+<h3 id="como-cadastrar-uma-nova-pessoa">Como Cadastrar uma Nova
+Pessoa</h3>
+<h4 id="passo-1-acessar-o-cadastro">Passo 1: Acessar o Cadastro</h4>
+<ol type="1">
+<li>Na página inicial, clique em <strong>“Nova Pessoa”</strong></li>
+<li>Ou acesse diretamente:
+<code>http://seu_servidor/folhafacil/monitor/cadastrar/</code></li>
+</ol>
+<h4 id="passo-2-preencher-os-dados">Passo 2: Preencher os Dados</h4>
+<p>Preencha os campos obrigatórios:</p>
+<ul>
+<li><strong>Nome Completo</strong>: Nome completo da pessoa</li>
+<li><strong>CPF</strong>: CPF da pessoa (formato: 000.000.000-00)</li>
+<li><strong>Matrícula</strong>: Número de matrícula da pessoa</li>
+<li><strong>Ativo</strong>: Marque esta opção para incluir no
+monitoramento</li>
+</ul>
+<h4 id="passo-3-salvar-cadastro">Passo 3: Salvar Cadastro</h4>
+<ol type="1">
+<li>Clique em <strong>“Cadastrar”</strong></li>
+<li>O sistema validará os dados</li>
+<li>Se houver sucesso, uma mensagem de confirmação será exibida</li>
+</ol>
+<h3 id="validações-do-sistema">Validações do Sistema</h3>
+<ul>
+<li><strong>CPF Único</strong>: Não é possível cadastrar CPFs
+duplicados</li>
+<li><strong>Campos Obrigatórios</strong>: Nome, CPF e matrícula são
+obrigatórios</li>
+<li><strong>Formato CPF</strong>: O sistema aceita CPF com ou sem
+pontuação</li>
+</ul>
+<h2 id="dashboard-e-monitoramento">📊 Dashboard e Monitoramento</h2>
+<h3 id="dashboard-principal">Dashboard Principal</h3>
+<p>O dashboard exibe as seguintes informações:</p>
+<h4 id="estatísticas-gerais">Estatísticas Gerais</h4>
+<ul>
+<li><strong>Total de Pessoas</strong>: Número total de pessoas
+cadastradas</li>
+<li><strong>Pessoas Ativas</strong>: Pessoas sendo monitoradas
+atualmente</li>
+<li><strong>Pessoas Inativas</strong>: Pessoas não monitoradas</li>
+</ul>
+<h4 id="ações-rápidas">Ações Rápidas</h4>
+<ul>
+<li><strong>Nova Pessoa</strong>: Cadastrar nova pessoa</li>
+<li><strong>Listar Pessoas</strong>: Ver todas as pessoas
+cadastradas</li>
+<li><strong>Relatório</strong>: Gerar relatórios</li>
+</ul>
+<h4 id="verificação-manual">Verificação Manual</h4>
+<ul>
+<li><strong>Botão “Verificar Agora”</strong>: Executa consulta manual ao
+TCU</li>
+<li><strong>Última Verificação</strong>: Data e hora da última consulta
+realizada</li>
+</ul>
+<h3 id="monitoramento-automático-1">Monitoramento Automático</h3>
+<p>O sistema realiza consultas automáticas ao TCU para verificar
+alterações de status:</p>
+<h4 id="como-funciona">Como Funciona</h4>
+<ol type="1">
+<li><strong>Consultas Periódicas</strong>: O sistema consulta o TCU em
+intervalos regulares</li>
+<li><strong>Detecção de Alterações</strong>: Compara o status atual com
+o anterior</li>
+<li><strong>Notificações</strong>: Envia e-mails quando detecta
+alterações</li>
+<li><strong>Histórico</strong>: Mantém registro de todas as
+consultas</li>
+</ol>
+<h4 id="alertas-de-alterações">Alertas de Alterações</h4>
+<p>Quando uma alteração é detectada, o sistema exibe: - <strong>Nome da
+pessoa</strong> - <strong>Status anterior</strong> - <strong>Novo
+status</strong> - <strong>Data da alteração</strong></p>
+<h2 id="gestão-de-pessoas">👥 Gestão de Pessoas</h2>
+<h3 id="listar-pessoas">Listar Pessoas</h3>
+<p>Para visualizar todas as pessoas cadastradas:</p>
+<ol type="1">
+<li>Clique em <strong>“Listar Pessoas”</strong> no dashboard</li>
+<li>Ou acesse:
+<code>http://seu_servidor/folhafacil/monitor/pessoas/</code></li>
+</ol>
+<p>A lista mostra: - <strong>Nome</strong> da pessoa -
+<strong>CPF</strong> (mascarado) - <strong>Matrícula</strong> -
+<strong>Status</strong> (Ativo/Inativo) - <strong>Última
+Atualização</strong> - <strong>Ações</strong> disponíveis</p>
+<h3 id="visualizar-detalhes">Visualizar Detalhes</h3>
+<p>Para ver detalhes de uma pessoa específica:</p>
+<ol type="1">
+<li>Na lista de pessoas, clique no <strong>nome</strong> da pessoa</li>
+<li>Ou acesse:
+<code>http://seu_servidor/folhafacil/monitor/pessoas/{id}/</code></li>
+</ol>
+<p>A página de detalhes mostra: - <strong>Dados pessoais</strong>
+completos - <strong>Status atual</strong> no TCU - <strong>Histórico de
+consultas</strong> - <strong>URL de consulta</strong> no TCU -
+<strong>Opções de edição</strong></p>
+<h3 id="editar-pessoa">Editar Pessoa</h3>
+<p>Para editar dados de uma pessoa:</p>
+<ol type="1">
+<li>Na página de detalhes, clique em <strong>“Editar”</strong></li>
+<li>Modifique os campos desejados</li>
+<li>Clique em <strong>“Salvar”</strong></li>
+</ol>
+<p><strong>Campos editáveis</strong>: - Nome - CPF - Matrícula - Status
+(Ativo/Inativo)</p>
+<h3 id="excluir-pessoa">Excluir Pessoa</h3>
+<p>Para remover uma pessoa do sistema:</p>
+<ol type="1">
+<li>Na lista de pessoas, clique em <strong>“Excluir”</strong></li>
+<li>Confirme a exclusão</li>
+<li>A pessoa será removida permanentemente</li>
+</ol>
+<p><strong>⚠️ Atenção</strong>: Esta ação é irreversível e remove todo o
+histórico!</p>
+<h2 id="relatórios">📈 Relatórios</h2>
+<h3 id="gerar-relatórios">Gerar Relatórios</h3>
+<p>Para acessar os relatórios:</p>
+<ol type="1">
+<li>Clique em <strong>“Relatório”</strong> no dashboard</li>
+<li>Ou acesse:
+<code>http://seu_servidor/folhafacil/monitor/relatorio/</code></li>
+</ol>
+<h3 id="tipos-de-relatório">Tipos de Relatório</h3>
+<p>O sistema oferece relatórios com:</p>
+<h4 id="informações-incluídas">Informações Incluídas</h4>
+<ul>
+<li><strong>Nome</strong> da pessoa</li>
+<li><strong>CPF</strong> completo</li>
+<li><strong>Matrícula</strong></li>
+<li><strong>Status</strong> no sistema (Ativo/Inativo)</li>
+<li><strong>Situação</strong> no TCU</li>
+<li><strong>Última Atualização</strong></li>
+</ul>
+<h4 id="filtros-disponíveis">Filtros Disponíveis</h4>
+<ul>
+<li><strong>Período</strong>: Filtrar por data de cadastro</li>
+<li><strong>Status</strong>: Filtrar por pessoas ativas/inativas</li>
+<li><strong>Formato</strong>: Visualizar na tela ou exportar CSV</li>
+</ul>
+<h3 id="exportar-relatório">Exportar Relatório</h3>
+<p>Para exportar um relatório em CSV:</p>
+<ol type="1">
+<li>Na página de relatórios, defina os filtros desejados</li>
+<li>Clique em <strong>“Exportar CSV”</strong></li>
+<li>O arquivo será baixado automaticamente</li>
+</ol>
+<p><strong>Nome do arquivo</strong>:
+<code>relatorio_tcu_YYYYMMDD_HHMMSS.csv</code></p>
+<h2 id="sistema-de-notificações-1">🔔 Sistema de Notificações</h2>
+<h3 id="notificações-por-e-mail">Notificações por E-mail</h3>
+<p>O sistema envia notificações automáticas quando detecta
+alterações:</p>
+<h4 id="quando-são-enviadas">Quando são Enviadas</h4>
+<ul>
+<li><strong>Alteração de Status</strong>: Quando o status no TCU
+muda</li>
+<li><strong>Erro de Consulta</strong>: Quando não consegue consultar o
+TCU</li>
+<li><strong>Problemas Técnicos</strong>: Quando há falhas no
+sistema</li>
+</ul>
+<h4 id="conteúdo-do-e-mail">Conteúdo do E-mail</h4>
+<ul>
+<li><strong>Assunto</strong>: “Alteração no Status do TCU - [Nome da
+Pessoa]”</li>
+<li><strong>Mensagem</strong>: Detalhes da alteração</li>
+<li><strong>Link</strong>: Acesso direto aos detalhes da pessoa</li>
+<li><strong>Data/Hora</strong>: Momento da alteração</li>
+</ul>
+<h3 id="configuração-de-e-mails">Configuração de E-mails</h3>
+<p>As notificações são enviadas para os administradores configurados no
+sistema.</p>
+<h2 id="solução-de-problemas">⚠️ Solução de Problemas</h2>
+<h3 id="erro-cpf-já-cadastrado">Erro: “CPF já cadastrado”</h3>
+<p><strong>Causa</strong>: Tentativa de cadastrar CPF duplicado
+<strong>Solução</strong>: - Verifique se a pessoa já está cadastrada -
+Use a busca na lista de pessoas - Edite o registro existente se
+necessário</p>
+<h3 id="erro-erro-na-consulta-ao-tcu">Erro: “Erro na consulta ao
+TCU”</h3>
+<p><strong>Causa</strong>: Problema de conexão ou serviço indisponível
+<strong>Solução</strong>: - Aguarde alguns minutos e tente novamente -
+Verifique se o site do TCU está acessível - Entre em contato com o
+administrador</p>
+<h3 id="erro-pessoa-não-encontrada">Erro: “Pessoa não encontrada”</h3>
+<p><strong>Causa</strong>: CPF não encontrado no TCU
+<strong>Solução</strong>: - Verifique se o CPF está correto - Confirme
+se a pessoa tem processo no TCU - Consulte manualmente no site do
+TCU</p>
+<h3 id="problemas-de-performance">Problemas de Performance</h3>
+<p><strong>Causa</strong>: Muitas consultas simultâneas
+<strong>Solução</strong>: - Evite fazer muitas verificações manuais -
+Use o monitoramento automático - Aguarde entre as consultas</p>
+<h2 id="dicas-de-uso">📋 Dicas de Uso</h2>
+<h3 id="para-melhor-organização">Para Melhor Organização</h3>
+<ol type="1">
+<li><strong>Nomes Padronizados</strong>: Use nomes completos e
+padronizados</li>
+<li><strong>CPFs Válidos</strong>: Sempre verifique se o CPF está
+correto</li>
+<li><strong>Matrículas Únicas</strong>: Use matrículas que identifiquem
+a pessoa</li>
+<li><strong>Status Ativo</strong>: Mantenha apenas pessoas relevantes
+como ativas</li>
+</ol>
+<h3 id="para-monitoramento-eficiente">Para Monitoramento Eficiente</h3>
+<ol type="1">
+<li><strong>Verificações Regulares</strong>: Use o botão “Verificar
+Agora” periodicamente</li>
+<li><strong>Acompanhe Alertas</strong>: Monitore as notificações de
+alterações</li>
+<li><strong>Histórico</strong>: Consulte o histórico para acompanhar
+mudanças</li>
+<li><strong>Relatórios</strong>: Gere relatórios mensais para
+análise</li>
+</ol>
+<h3 id="para-manutenção-do-sistema">Para Manutenção do Sistema</h3>
+<ol type="1">
+<li><strong>Limpeza Regular</strong>: Remova pessoas que não precisam
+ser monitoradas</li>
+<li><strong>Backup</strong>: Mantenha cópias dos relatórios
+importantes</li>
+<li><strong>Validação</strong>: Confirme periodicamente se os dados
+estão corretos</li>
+<li><strong>Atualizações</strong>: Mantenha o sistema atualizado</li>
+</ol>
+<h2 id="configurações-técnicas">🔧 Configurações Técnicas</h2>
+<h3 id="requisitos-do-sistema">Requisitos do Sistema</h3>
+<ul>
+<li><strong>Navegador</strong>: Chrome, Firefox, Safari, Edge (versões
+recentes)</li>
+<li><strong>JavaScript</strong>: Habilitado</li>
+<li><strong>Cookies</strong>: Habilitados</li>
+<li><strong>Conexão</strong>: Internet para consultas ao TCU</li>
+</ul>
+<h3 id="limitações">Limitações</h3>
+<ul>
+<li><strong>Consultas Simultâneas</strong>: Máximo de 10 consultas por
+minuto</li>
+<li><strong>Tamanho de Dados</strong>: Até 10.000 pessoas
+cadastradas</li>
+<li><strong>Histórico</strong>: Mantido por 2 anos</li>
+<li><strong>E-mails</strong>: Máximo de 100 notificações por dia</li>
+</ul>
+<h3 id="segurança">Segurança</h3>
+<ul>
+<li><strong>Dados Sensíveis</strong>: CPFs são mascarados na
+interface</li>
+<li><strong>Acesso</strong>: Restrito a usuários autorizados</li>
+<li><strong>Logs</strong>: Todas as ações são registradas</li>
+<li><strong>Backup</strong>: Dados são protegidos contra perda</li>
+</ul>
+<h2 id="suporte-e-contato">📞 Suporte e Contato</h2>
+<h3 id="em-caso-de-problemas">Em Caso de Problemas</h3>
+<ol type="1">
+<li><strong>Verifique</strong>: Se o problema está listado na seção
+“Solução de Problemas”</li>
+<li><strong>Teste</strong>: Com uma pessoa diferente</li>
+<li><strong>Contate</strong>: O administrador do sistema</li>
+</ol>
+<h3 id="informações-para-suporte">Informações para Suporte</h3>
+<p>Ao reportar um problema, inclua: - <strong>Nome da pessoa</strong>
+(se aplicável) - <strong>CPF</strong> (se aplicável) - <strong>Mensagem
+de erro</strong> exata - <strong>Data e hora</strong> do erro -
+<strong>Navegador</strong> utilizado - <strong>Ação</strong> que estava
+sendo executada</p>
+<h2 id="histórico-de-versões">📝 Histórico de Versões</h2>
+<h3 id="versão-1.0-dezembro-2024">Versão 1.0 (Dezembro 2024)</h3>
+<ul>
+<li>Cadastro e gestão de pessoas</li>
+<li>Monitoramento automático do TCU</li>
+<li>Sistema de notificações por e-mail</li>
+<li>Relatórios e exportação CSV</li>
+<li>Dashboard com estatísticas</li>
+<li>Interface responsiva</li>
+<li>Histórico de consultas</li>
+<li>Filtros e busca</li>
+</ul>
+<hr />
+<p><strong>Desenvolvido por</strong>: Equipe de Desenvolvimento
+TRF1<br />
+<strong>Versão</strong>: 1.0<br />
+<strong>Última atualização</strong>: Dezembro 2024<br />
+<strong>Compatível com</strong>: Django 3.2.25+, Python 3.12+</p>
+</body>
+</html>
