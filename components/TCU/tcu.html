@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TCU Monitor - Sistema de Monitoramento de Aposentadorias</title>
 
-  <!-- Define raiz do site -->
-  <base href="/">
+  <!-- CSS específico da página -->
+  <link rel="stylesheet" href="./tcu.css">
 
-  <!-- CSS da página -->
-  <link rel="stylesheet" href="/components/TCU/tcu.css">
-
-  <!-- CSS do nav -->
-  <link rel="stylesheet" href="/components/navmenu/navmenu.css">
-  <link rel="stylesheet" href="/components/footer/footer.css">
+  <!-- CSS do nav e do footer (caminhos relativos a partir de /components/TCU/) -->
+  <link rel="stylesheet" href="../navmenu/navmenu.css">
+  <link rel="stylesheet" href="../footer/footer.css">
 </head>
 
 <body>
@@ -28,72 +24,79 @@
       <section class="tcu-hero">
         <div class="hero-content">
           <div class="header-content">
-          <h1>TCU Monitor - Sistema de Monitoramento de Aposentadorias</h1>
-    
-          <p class="hero-description">
-            Solução automatizada para consulta e monitoramento do status de aposentadoria de servidores no sistema do
-            TCU, com notificação automática de alterações para os gestores da área de folha de pagamento.
-          </p>
+            <h1>TCU Monitor - Sistema de Monitoramento de Aposentadorias</h1>
 
-          <div class="hero-image">
-            <img src="/assets/relatorio-monitoramento2.jpg" alt="TCU Monitor" class="featured-image">
-          </div>
+            <p class="hero-description">
+              Solução automatizada para consulta e monitoramento do status de aposentadoria de servidores no sistema do
+              TCU, com notificação automática de alterações para os gestores da área de folha de pagamento.
+            </p>
 
-          <div class="meta-grid">
-            <div class="meta-item" id="first">
-              <span class="meta-label">Setor</span>
-              <span class="meta-value">Justiça Federal - TRF1ª Região</span>
+            <div class="hero-image">
+              <!-- Imagens ficam na pasta /assets na raiz do projeto -->
+              <img src="../../assets/relatorio-monitoramento2.jpg" alt="TCU Monitor" class="featured-image">
             </div>
-            <div class="meta-item" id="second">
-              <span class="meta-label">Tipo de Serviço</span>
-              <span class="meta-value">Sistema de Monitoramento</span>
-            </div>
-            <div class="meta-item" id="third">
-              <span class="meta-label">Ferramentas</span>
-              <span class="meta-value">React, Node.js, PostgreSQL, API TCU, Sistema de Notificações</span>
-            </div>
-            <div class="meta-item" id="last">
-              <span class="meta-label">Timeline</span>
-              <span class="meta-value">Mai/2025 - Jun/2025 (2 meses)</span>
+
+            <div class="meta-grid">
+              <div class="meta-item" id="first">
+                <span class="meta-label">Setor</span>
+                <span class="meta-value">Justiça Federal - TRF1ª Região</span>
+              </div>
+              <div class="meta-item" id="second">
+                <span class="meta-label">Tipo de Serviço</span>
+                <span class="meta-value">Sistema de Monitoramento</span>
+              </div>
+              <div class="meta-item" id="third">
+                <span class="meta-label">Ferramentas</span>
+                <span class="meta-value">React, Node.js, PostgreSQL, API TCU, Sistema de Notificações</span>
+              </div>
+              <div class="meta-item" id="last">
+                <span class="meta-label">Timeline</span>
+                <span class="meta-value">Mai/2025 - Jun/2025 (2 meses)</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Seção Equipe Responsável -->
+      <!-- Seção Documentação -->
       <section class="tcu-section">
         <div class="section-header">
-          <a href="../assets/Documentação de Utilização - Folha Fácil Monitor TCU.pdf" target="_blank"
-            class="documentation-button">Documentação de Utilização</a>
-          <a href="../assets/relatorios_mensais.pdf" target="_blank" class="documentation-button">Relatórios Mensais</a>
+          <a href="../../assets/Documentação de Utilização - Folha Fácil Monitor TCU.pdf" target="_blank" class="documentation-button">
+            Documentação de Utilização
+          </a>
+          <a href="../../assets/relatorios_mensais.pdf" target="_blank" class="documentation-button">
+            Relatórios Mensais
+          </a>
         </div>
       </section>
 
-      <div class="team-cards">
-        <div class="team-card">
-          <h3>Stakeholders</h3>
-          <ul>
-            <li>Jean Marcos Cabral (Diretor DIGEP)</li>
-            <li>Kleuber Rodrigues (Supervisor SEPAG)</li>
-            <li>Equipe de folha de pagamento do TRF1</li>
-          </ul>
+      <!-- Equipe -->
+      <section class="tcu-section">
+        <div class="team-cards">
+          <div class="team-card">
+            <h3>Stakeholders</h3>
+            <ul>
+              <li>Jean Marcos Cabral (Diretor DIGEP)</li>
+              <li>Kleuber Rodrigues (Supervisor SEPAG)</li>
+              <li>Equipe de folha de pagamento do TRF1</li>
+            </ul>
+          </div>
+          <div class="team-card">
+            <h3>Gestor</h3>
+            <p>JEAN MARCOS CABRAL</p>
+          </div>
+          <div class="team-card">
+            <h3>Docente</h3>
+            <p>IWENS GERVASIO SENE JUNIOR</p>
+          </div>
+          <div class="team-card">
+            <h3>Residentes</h3>
+            <ul>
+              <li>PATRICK FERNANDES MARINS</li>
+              <li>PAULO ROBERTO VIEIRA</li>
+            </ul>
+          </div>
         </div>
-        <div class="team-card">
-          <h3>Gestor</h3>
-          <p>JEAN MARCOS CABRAL</p>
-        </div>
-        <div class="team-card">
-          <h3>Docente</h3>
-          <p>IWENS GERVASIO SENE JUNIOR</p>
-        </div>
-        <div class="team-card">
-          <h3>Residentes</h3>
-          <ul>
-            <li>PATRICK FERNANDES MARINS</li>
-            <li>PAULO ROBERTO VIEIRA</li>
-          </ul>
-        </div>
-      </div>
       </section>
 
       <!-- Contexto do Projeto -->
@@ -157,7 +160,7 @@
                 organizada o status, CPF, matrícula e outras informações relevantes de cada um.</p>
             </div>
             <div class="feature-image">
-              <img src="/assets/relatorio-monitoramento.jpg" alt="Lista de Pessoas" class="featured-image">
+              <img src="../../assets/relatorio-monitoramento.jpg" alt="Lista de Pessoas" class="featured-image">
             </div>
           </div>
           <div class="feature-card">
@@ -167,7 +170,7 @@
                 corretos e completos, evitando inconsistências e erros futuros.</p>
             </div>
             <div class="feature-image">
-              <img src="/assets/cadastro-servidor.jpg" alt="Cadastro de Servidores" class="featured-image">
+              <img src="../../assets/cadastro-servidor.jpg" alt="Cadastro de Servidores" class="featured-image">
             </div>
           </div>
           <div class="feature-card">
@@ -177,7 +180,7 @@
                 permissões para garantir a integridade das informações.</p>
             </div>
             <div class="feature-image">
-              <img src="/assets/edic╠ºa╠âo-sevidor.jpg" alt="Edição de Servidores" class="featured-image">
+              <img src="../../assets/edição-sevidor.jpg" alt="Edição de Servidores" class="featured-image">
             </div>
           </div>
           <div class="feature-card">
@@ -187,7 +190,7 @@
                 pessoais, históricos e status de aposentadoria.</p>
             </div>
             <div class="feature-image">
-              <img src="/assets/Detalhes-servidor.jpg" alt="Detalhes Pessoais" class="featured-image">
+              <img src="../../assets/Detalhes-servidor.jpg" alt="Detalhes Pessoais" class="featured-image">
             </div>
           </div>
         </div>
@@ -197,7 +200,10 @@
       <section class="tcu-section">
         <h2>Resultados Alcançados</h2>
         <div class="content-card">
-          <p>O O TCU Monitor reduziu em 90% o tempo gasto com verificações manuais no sistema do TCU e eliminou atrasos no processamento de aposentadorias. A automatização das consultas e notificações permitiu que a equipe de folha de pagamento atue proativamente, melhorando significativamente a eficiência do processo.
+          <p>
+            O TCU Monitor reduziu em 90% o tempo gasto com verificações manuais no sistema do TCU e eliminou atrasos no
+            processamento de aposentadorias. A automatização das consultas e notificações permitiu que a equipe de folha de
+            pagamento atue proativamente, melhorando significativamente a eficiência do processo.
           </p>
         </div>
       </section>
@@ -211,19 +217,21 @@
     </div>
   </footer>
 
-  <!-- JS da página -->
-  <script src="/js/tcu.js"></script>
+  <!-- JS específico da página (se existir nesta pasta) -->
+  <script src="./tcu.js"></script>
 
   <!-- Injeta o nav e o JS do nav -->
   <script>
     (async () => {
       try {
-        const res = await fetch('/components/navmenu/navmenu.html');
+        // carrega o HTML do nav (subindo um nível: /components/navmenu/)
+        const res = await fetch('../navmenu/navmenu.html');
         document.getElementById('nav-placeholder').innerHTML = await res.text();
 
-        if (!document.querySelector('script[src="/components/navmenu/navmenu.js"]')) {
+        // injeta o JS do nav se ainda não estiver na página
+        if (!document.querySelector('script[src="../navmenu/navmenu.js"]')) {
           const s = document.createElement('script');
-          s.src = '/components/navmenu/navmenu.js';
+          s.src = '../navmenu/navmenu.js';
           document.body.appendChild(s);
         }
       } catch (e) {
@@ -232,5 +240,4 @@
     })();
   </script>
 </body>
-
 </html>
