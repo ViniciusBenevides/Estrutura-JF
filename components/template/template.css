@@ -450,17 +450,7 @@
         grid-template-columns: 1fr;
     }
 }
-.header-with-button {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
-    flex-wrap: wrap;
-}
 
-.header-with-button h1 {
-    margin: 0;
-}
 .dropdown-servicos-unico {
   position: relative;
   display: inline-block;
@@ -496,4 +486,29 @@
 .dropdown-servicos-opcoes a:hover {
   background: #202256;
   color: #baf1f6;
+}
+.docs-buttons {
+  display: flex;
+  flex-wrap: wrap;        
+  gap: 14px;              
+  justify-content: center;
+}
+
+.documentation-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 280px;
+  padding: 12px 20px;
+  border: 1px solid #e6e6e6;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  background: transparent;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.documentation-button:hover {
+  background: #1f2a44;
+  transform: translateY(-2px);
 }

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>MANUAL_USUARIO_MONITOR</title>
+  <style>
+   body {
+  margin: 0;
+  background: #0b1220;
+  color: #e6eaf3;
+  font: 16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+}
+
+main {
+  max-width: 960px;
+  margin: 32px auto 72px;
+  background: #121a2b;
+  border: 1px solid #1f2a44;
+  border-radius: 14px;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, .35);
+  padding: 28px;
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+  margin: 24px 0 12px;
+}
+
+h1 {
+  font-size: 2.1rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  border-bottom: 1px solid #1f2a44;
+  padding-bottom: 6px;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+a {
+  color: #60a5fa;
+}
+
+blockquote {
+  background: #0f172a;
+  border-left: 4px solid #60a5fa;
+  color: #b5c0d1;
+  padding: 10px 14px;
+  border-radius: 10px;
+}
+
+pre {
+  background: #0f172a;
+  color: #dbe7ff;
+  border: 1px solid #1f2a44;
+  border-radius: 10px;
+  padding: 12px;
+  overflow: auto;
+}
+
+code {
+  background: #0f172a;
+  color: #dbe7ff;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+ul, ol {
+  padding-left: 1.25rem;
+}
+
+.mermaid {
+  background: #0f172a;
+  border: 1px solid #1f2a44;
+  border-radius: 10px;
+  padding: 12px;
+  overflow: auto;
+}
+
+  </style>
+</head>
+<body>
+<main>
+<h1 id="manual-do-usuário---sistema-monitor-tcu">Manual do Usuário -
+Sistema Monitor TCU</h1>
+<h2 id="visão-geral">📋 Visão Geral</h2>
+<p>O <strong>Sistema Monitor TCU</strong> é uma ferramenta de
+monitoramento automatizado para acompanhar o status de aposentadoria de
+servidores junto ao Tribunal de Contas da União (TCU). O sistema
+consulta periodicamente a base de dados do TCU e notifica
+automaticamente sobre alterações no status de aposentadoria dos
+funcionários cadastrados.</p>
+<h3 id="objetivos-do-sistema">🎯 Objetivos do Sistema</h3>
+<ul>
+<li><strong>Monitorar</strong> status de aposentadoria no TCU
+automaticamente</li>
+<li><strong>Notificar</strong> alterações de status por e-mail</li>
+<li><strong>Manter</strong> histórico de consultas e alterações</li>
+<li><strong>Gerar</strong> relatórios de acompanhamento</li>
+<li><strong>Facilitar</strong> o controle de servidores ativos e
+inativos</li>
+<li><strong>Automatizar</strong> verificações periódicas</li>
+</ul>
+<h2 id="como-acessar-o-sistema">🚀 Como Acessar o Sistema</h2>
+<h3 id="url-de-acesso">URL de Acesso</h3>
+<pre><code>http://seu-servidor/folhafacil/monitor/</code></pre>
+<h3 id="requisitos-do-navegador">Requisitos do Navegador</h3>
+<ul>
+<li>Google Chrome, Firefox, Safari ou Edge (versões recentes)</li>
+<li>JavaScript habilitado</li>
+<li>Conexão com internet</li>
+</ul>
+<h2 id="interface-principal">📊 Interface Principal</h2>
+<h3 id="menu-de-navegação">1. Menu de Navegação</h3>
+<ul>
+<li><strong>Início</strong>: Dashboard principal</li>
+<li><strong>Pessoas</strong>: Lista de servidores cadastrados</li>
+<li><strong>Cadastrar</strong>: Adicionar nova pessoa</li>
+<li><strong>Relatório</strong>: Gerar relatórios</li>
+</ul>
+<h3 id="área-principal">2. Área Principal</h3>
+<ul>
+<li><strong>Dashboard</strong>: Estatísticas e ações rápidas</li>
+<li><strong>Mensagens</strong>: Alertas e notificações</li>
+<li><strong>Conteúdo</strong>: Dados e formulários específicos</li>
+</ul>
+<h2 id="dashboard---visão-geral">🏠 Dashboard - Visão Geral</h2>
+<h3 id="cards-de-estatísticas">Cards de Estatísticas</h3>
+<ul>
+<li><strong>Total de Pessoas</strong>: Quantidade total de servidores
+cadastrados</li>
+<li><strong>Pessoas Ativas</strong>: Servidores sendo monitorados
+ativamente</li>
+<li><strong>Pessoas Inativas</strong>: Servidores não monitorados</li>
+</ul>
+<h3 id="botão-verificar-agora">Botão “Verificar Agora”</h3>
+<ul>
+<li><strong>Função</strong>: Executa verificação manual de todas as
+pessoas ativas</li>
+<li><strong>Processo</strong>: Consulta o TCU para cada servidor
+ativo</li>
+<li><strong>Resultado</strong>: Atualiza status e detecta
+alterações</li>
+</ul>
+<h3 id="ações-rápidas">Ações Rápidas</h3>
+<p>Botões para acesso direto às principais funcionalidades: -
+<strong>Nova Pessoa</strong>: Cadastrar servidor - <strong>Listar
+Pessoas</strong>: Ver todos os cadastros - <strong>Relatório</strong>:
+Gerar relatórios</p>
+<h3 id="alertas-de-alterações">Alertas de Alterações</h3>
+<p>Quando há mudanças de status detectadas: - <strong>Card
+amarelo</strong> com detalhes das alterações - <strong>Nome da
+pessoa</strong> afetada - <strong>Status anterior</strong> e
+<strong>novo status</strong> - <strong>Data e hora</strong> da
+alteração</p>
+<h2 id="gestão-de-pessoas">👥 Gestão de Pessoas</h2>
+<h3 id="lista-de-pessoas">Lista de Pessoas</h3>
+<ul>
+<li><strong>Visualização</strong>: Todos os servidores cadastrados</li>
+<li><strong>Ordenação</strong>: Por nome (alfabética)</li>
+<li><strong>Ações</strong>: Ver detalhes, editar, excluir</li>
+</ul>
+<h3 id="cadastrar-nova-pessoa">Cadastrar Nova Pessoa</h3>
+<p><strong>Campos obrigatórios:</strong> - <strong>Nome</strong>: Nome
+completo do servidor - <strong>CPF</strong>: Número do CPF (formato
+livre) - <strong>Matrícula</strong>: Número de matrícula -
+<strong>Ativo</strong>: Checkbox para ativar monitoramento</p>
+<h3 id="editar-pessoa">Editar Pessoa</h3>
+<ul>
+<li>Acesse a lista de pessoas</li>
+<li>Clique em “Editar” ao lado do registro</li>
+<li>Modifique os campos necessários</li>
+<li>Salve as alterações</li>
+</ul>
+<h3 id="excluir-pessoa">Excluir Pessoa</h3>
+<ul>
+<li>Acesse a lista de pessoas</li>
+<li>Clique em “Excluir” ao lado do registro</li>
+<li>Confirme a exclusão</li>
+<li>⚠️ <strong>Atenção</strong>: Esta ação remove todo o histórico</li>
+</ul>
+<h3 id="detalhes-da-pessoa">Detalhes da Pessoa</h3>
+<p>Ao clicar em uma pessoa, você verá: - <strong>Informações
+básicas</strong>: Nome, CPF, Matrícula - <strong>Status atual</strong>:
+Situação no TCU - <strong>URL de consulta</strong>: Link direto para o
+TCU - <strong>Histórico completo</strong>: Todas as consultas
+realizadas</p>
+<h2 id="histórico-de-consultas">📊 Histórico de Consultas</h2>
+<h3 id="informações-do-histórico">Informações do Histórico</h3>
+<p>Para cada consulta realizada: - <strong>Data e Hora</strong>: Quando
+foi feita a consulta - <strong>Status</strong>: Situação encontrada no
+TCU - <strong>Detalhes</strong>: Informações adicionais do ato -
+<strong>URL</strong>: Link para consulta no TCU</p>
+<h3 id="tipos-de-status">Tipos de Status</h3>
+<ul>
+<li><strong>Status não disponível</strong>: Nenhuma informação
+encontrada</li>
+<li><strong>Em análise</strong>: Processo em andamento</li>
+<li><strong>Aprovado</strong>: Aposentadoria aprovada</li>
+<li><strong>Deferido</strong>: Processo deferido</li>
+<li><strong>Indeferido</strong>: Processo indeferido</li>
+<li><strong>Erro na consulta</strong>: Problema técnico</li>
+</ul>
+<h2 id="relatórios">📈 Relatórios</h2>
+<h3 id="tipos-de-relatório">Tipos de Relatório</h3>
+<ul>
+<li><strong>Relatório Geral</strong>: Todas as pessoas cadastradas</li>
+<li><strong>Relatório por Período</strong>: Filtrado por data de
+cadastro</li>
+<li><strong>Exportação CSV</strong>: Dados em formato de planilha</li>
+</ul>
+<h3 id="gerar-relatório">Gerar Relatório</h3>
+<ol type="1">
+<li>Acesse a seção “Relatório”</li>
+<li>Configure filtros (opcional)</li>
+<li>Clique em “Exportar CSV”</li>
+<li>Faça o download do arquivo</li>
+</ol>
+<h3 id="filtros-disponíveis">Filtros Disponíveis</h3>
+<ul>
+<li><strong>Data de Início</strong>: Data inicial do período</li>
+<li><strong>Data de Fim</strong>: Data final do período</li>
+<li><strong>Status</strong>: Filtrar por situação atual</li>
+</ul>
+<h3 id="conteúdo-do-relatório-csv">Conteúdo do Relatório CSV</h3>
+<ul>
+<li><strong>Nome</strong>: Nome completo do servidor</li>
+<li><strong>CPF</strong>: Número do CPF</li>
+<li><strong>Matrícula</strong>: Número de matrícula</li>
+<li><strong>Status</strong>: Situação atual (Ativo/Inativo)</li>
+<li><strong>Situação</strong>: Status no TCU</li>
+<li><strong>Última Atualização</strong>: Data da última consulta</li>
+</ul>
+<h2 id="sistema-de-notificações">🔔 Sistema de Notificações</h2>
+<h3 id="notificações-por-e-mail">Notificações por E-mail</h3>
+<p>O sistema envia automaticamente e-mails quando: - <strong>Alteração
+de status</strong> é detectada - <strong>Nova consulta</strong> é
+realizada - <strong>Erro</strong> ocorre durante a consulta</p>
+<h3 id="conteúdo-do-e-mail">Conteúdo do E-mail</h3>
+<ul>
+<li><strong>Assunto</strong>: “Alteração no Status do TCU - [Nome]”</li>
+<li><strong>Detalhes</strong>:
+<ul>
+<li>Nome do servidor</li>
+<li>Status anterior</li>
+<li>Novo status</li>
+<li>Data da alteração</li>
+<li>Link para detalhes no sistema</li>
+</ul></li>
+</ul>
+<h3 id="configuração-de-e-mails">Configuração de E-mails</h3>
+<ul>
+<li><strong>Remetente</strong>: Sistema de Monitoramento TCU</li>
+<li><strong>Destinatários</strong>: Administradores configurados</li>
+<li><strong>Frequência</strong>: Apenas quando há alterações</li>
+</ul>
+<h2 id="funcionalidades-automáticas">⚙️ Funcionalidades Automáticas</h2>
+<h3 id="verificação-automática">Verificação Automática</h3>
+<ul>
+<li><strong>Frequência</strong>: Configurável via agendador</li>
+<li><strong>Escopo</strong>: Apenas pessoas ativas</li>
+<li><strong>Processo</strong>: Consulta TCU para cada servidor</li>
+<li><strong>Resultado</strong>: Atualiza status e histórico</li>
+</ul>
+<h3 id="detecção-de-alterações">Detecção de Alterações</h3>
+<ul>
+<li><strong>Comparação</strong>: Status anterior vs. atual</li>
+<li><strong>Notificação</strong>: E-mail automático</li>
+<li><strong>Registro</strong>: Histórico de alterações</li>
+<li><strong>Interface</strong>: Alertas visuais no dashboard</li>
+</ul>
+<h3 id="tratamento-de-erros">Tratamento de Erros</h3>
+<ul>
+<li><strong>Timeout</strong>: 30 segundos por consulta</li>
+<li><strong>Retry</strong>: 3 tentativas automáticas</li>
+<li><strong>Log</strong>: Registro de erros detalhado</li>
+<li><strong>Fallback</strong>: Status “Erro na consulta”</li>
+</ul>
+<h2 id="consulta-ao-tcu">🔍 Consulta ao TCU</h2>
+<h3 id="processo-de-consulta">Processo de Consulta</h3>
+<ol type="1">
+<li><strong>Limpeza do CPF</strong>: Remove pontuação</li>
+<li><strong>Consulta à API</strong>: Acesso ao sistema TCU</li>
+<li><strong>Análise de Resultados</strong>: Busca por atos de
+aposentadoria</li>
+<li><strong>Atualização</strong>: Salva novo status</li>
+<li><strong>Histórico</strong>: Registra consulta</li>
+</ol>
+<h3 id="dados-consultados">Dados Consultados</h3>
+<ul>
+<li><strong>Tipo de Ato</strong>: Aposentadoria</li>
+<li><strong>Situação</strong>: Status do processo</li>
+<li><strong>Data de Vigência</strong>: Quando entra em vigor</li>
+<li><strong>Unidade Responsável</strong>: Órgão responsável</li>
+<li><strong>Data de Encaminhamento</strong>: Quando foi enviado ao
+TCU</li>
+</ul>
+<h3 id="url-de-consulta">URL de Consulta</h3>
+<ul>
+<li><strong>Formato</strong>: Link direto para o TCU</li>
+<li><strong>Acesso</strong>: Consulta manual no site oficial</li>
+<li><strong>Dados</strong>: Mesma informação da API</li>
+</ul>
+<h2 id="responsividade">📱 Responsividade</h2>
+<h3 id="dispositivos-suportados">Dispositivos Suportados</h3>
+<ul>
+<li><strong>Desktop</strong>: Interface completa</li>
+<li><strong>Tablet</strong>: Layout adaptado</li>
+<li><strong>Mobile</strong>: Menu responsivo</li>
+</ul>
+<h3 id="navegação-mobile">Navegação Mobile</h3>
+<ul>
+<li><strong>Cards responsivos</strong>: Estatísticas adaptadas</li>
+<li><strong>Tabelas scrolláveis</strong>: Dados em formato mobile</li>
+<li><strong>Botões touch-friendly</strong>: Interface otimizada</li>
+</ul>
+<h2 id="segurança-e-privacidade">🔒 Segurança e Privacidade</h2>
+<h3 id="proteção-de-dados">Proteção de Dados</h3>
+<ul>
+<li><strong>CPF</strong>: Armazenado sem pontuação</li>
+<li><strong>Logs</strong>: Registro de ações dos usuários</li>
+<li><strong>Sessões</strong>: Expiração automática</li>
+<li><strong>Validação</strong>: Verificação de dados</li>
+</ul>
+<h3 id="controle-de-acesso">Controle de Acesso</h3>
+<ul>
+<li><strong>Autenticação</strong>: Login obrigatório</li>
+<li><strong>Permissões</strong>: Controle de acesso</li>
+<li><strong>Auditoria</strong>: Log de atividades</li>
+</ul>
+<h2 id="solução-de-problemas">🔍 Solução de Problemas</h2>
+<h3 id="erro-cpf-já-cadastrado">Erro: “CPF já cadastrado”</h3>
+<p><strong>Causa</strong>: Tentativa de cadastrar CPF duplicado
+<strong>Solução</strong>: Use a busca para verificar se já existe</p>
+<h3 id="erro-erro-na-consulta">Erro: “Erro na consulta”</h3>
+<p><strong>Causas possíveis</strong>: - Problema de conectividade -
+Servidor TCU indisponível - Timeout na consulta</p>
+<p><strong>Soluções</strong>: 1. Verifique a conexão com internet 2.
+Tente novamente em alguns minutos 3. Consulte manualmente no site do
+TCU</p>
+<h3 id="erro-status-não-disponível">Erro: “Status não disponível”</h3>
+<p><strong>Causa</strong>: Nenhuma informação encontrada no TCU
+<strong>Solução</strong>: Verifique se o CPF está correto</p>
+<h3 id="erro-e-mail-não-enviado">Erro: “E-mail não enviado”</h3>
+<p><strong>Causas possíveis</strong>: - Configuração de e-mail incorreta
+- Servidor de e-mail indisponível - Firewall bloqueando</p>
+<p><strong>Soluções</strong>: 1. Verifique configurações de e-mail 2.
+Consulte logs do sistema 3. Entre em contato com TI</p>
+<h2 id="dicas-de-uso">📋 Dicas de Uso</h2>
+<h3 id="boas-práticas">✅ Boas Práticas</h3>
+<ol type="1">
+<li><strong>Cadastre apenas pessoas ativas</strong> que precisam ser
+monitoradas</li>
+<li><strong>Verifique CPFs</strong> antes do cadastro</li>
+<li><strong>Monitore alterações</strong> regularmente</li>
+<li><strong>Mantenha dados atualizados</strong></li>
+<li><strong>Faça backup</strong> dos relatórios importantes</li>
+</ol>
+<h3 id="otimizações">⚡ Otimizações</h3>
+<ul>
+<li><strong>Use verificação manual</strong> para consultas urgentes</li>
+<li><strong>Monitore o dashboard</strong> regularmente</li>
+<li><strong>Configure notificações</strong> adequadamente</li>
+<li><strong>Gere relatórios</strong> periodicamente</li>
+</ul>
+<h3 id="fluxo-recomendado">🔄 Fluxo Recomendado</h3>
+<ol type="1">
+<li>Cadastrar pessoas que precisam ser monitoradas</li>
+<li>Ativar monitoramento (checkbox “Ativo”)</li>
+<li>Executar verificação inicial</li>
+<li>Configurar verificação automática</li>
+<li>Monitorar dashboard diariamente</li>
+<li>Acompanhar notificações por e-mail</li>
+<li>Gerar relatórios mensais</li>
+</ol>
+<h2 id="suporte-técnico">📞 Suporte Técnico</h2>
+<h3 id="informações-para-suporte">Informações para Suporte</h3>
+<p>Quando precisar de ajuda, tenha em mãos: - <strong>Versão do
+navegador</strong> - <strong>Mensagem de erro</strong> (se houver) -
+<strong>CPF da pessoa</strong> (se aplicável) - <strong>Data e
+hora</strong> do problema - <strong>Passos para reproduzir</strong></p>
+<h3 id="contatos">Contatos</h3>
+<ul>
+<li><strong>Equipe de TI</strong>: [email/telefone]</li>
+<li><strong>Documentação</strong>: Este manual</li>
+<li><strong>Logs do sistema</strong>:
+<code>/var/www/html/sistemas/folhafacil/logs/</code></li>
+</ul>
+<h2 id="glossário">📝 Glossário</h2>
+<h3 id="termos-técnicos">Termos Técnicos</h3>
+<ul>
+<li><strong>TCU</strong>: Tribunal de Contas da União</li>
+<li><strong>API</strong>: Interface de programação para consulta</li>
+<li><strong>Status</strong>: Situação do processo de aposentadoria</li>
+<li><strong>Ato</strong>: Documento oficial do TCU</li>
+<li><strong>Vigência</strong>: Data de início da aposentadoria</li>
+<li><strong>Dashboard</strong>: Painel de controle com estatísticas</li>
+</ul>
+<h3 id="status-do-sistema">Status do Sistema</h3>
+<ul>
+<li><strong>Ativo</strong>: Pessoa sendo monitorada</li>
+<li><strong>Inativo</strong>: Pessoa não monitorada</li>
+<li><strong>Em análise</strong>: Processo em andamento no TCU</li>
+<li><strong>Aprovado</strong>: Aposentadoria aprovada</li>
+<li><strong>Deferido</strong>: Processo deferido</li>
+<li><strong>Indeferido</strong>: Processo indeferido</li>
+<li><strong>Erro na consulta</strong>: Problema técnico</li>
+</ul>
+<h3 id="tipos-de-ato">Tipos de Ato</h3>
+<ul>
+<li><strong>Aposentadoria</strong>: Processo de aposentadoria</li>
+<li><strong>Pensão</strong>: Processo de pensão</li>
+<li><strong>Revisão</strong>: Revisão de processo anterior</li>
+</ul>
+<hr />
+<p><strong>Versão do Manual</strong>: 1.0<br />
+<strong>Data</strong>: Dezembro 2024<br />
+<strong>Sistema</strong>: FolhaFácil - Módulo Monitor TCU<br />
+<strong>Desenvolvido por</strong>: Equipe de TI - TRF</p>
+</main>
+</body>
+</html>

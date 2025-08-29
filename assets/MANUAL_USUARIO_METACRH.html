@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="stylesheet" href="../assets/docs.css">
+
+  <title>-</title>
+  <style>
+body {
+  margin: 0;
+  background: #0b1220;
+  color: #e6eaf3;
+  font: 16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+}
+
+main {
+  max-width: 960px;
+  margin: 32px auto 72px;
+  background: #121a2b;
+  border: 1px solid #1f2a44;
+  border-radius: 14px;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, .35);
+  padding: 28px;
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+  margin: 24px 0 12px;
+}
+
+h1 {
+  font-size: 2.1rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  border-bottom: 1px solid #1f2a44;
+  padding-bottom: 6px;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+a {
+  color: #60a5fa;
+}
+
+blockquote {
+  background: #0f172a;
+  border-left: 4px solid #60a5fa;
+  color: #b5c0d1;
+  padding: 10px 14px;
+  border-radius: 10px;
+}
+
+pre {
+  background: #0f172a;
+  color: #dbe7ff;
+  border: 1px solid #1f2a44;
+  border-radius: 10px;
+  padding: 12px;
+  overflow: auto;
+}
+
+code {
+  background: #0f172a;
+  color: #dbe7ff;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+ul, ol {
+  padding-left: 1.25rem;
+}
+
+.mermaid {
+  background: #0f172a;
+  border: 1px solid #1f2a44;
+  border-radius: 10px;
+  padding: 12px;
+  overflow: auto;
+}
+
+  </style>
+</head>
+<body>
+<h1 id="manual-do-usuário---sistema-metacrh">Manual do Usuário - Sistema
+MetaCRH</h1>
+<h2 id="visão-geral">📋 Visão Geral</h2>
+<p>O <strong>Sistema MetaCRH</strong> é uma ferramenta de gestão
+completa para controle de cursos e capacitação de servidores,
+desenvolvida para gerenciar metas anuais de capacitação e acompanhar a
+participação dos funcionários em atividades de desenvolvimento
+profissional.</p>
+<h3 id="objetivos-do-sistema">🎯 Objetivos do Sistema</h3>
+<ul>
+<li><strong>Gerenciar</strong> cadastro de servidores e suas
+lotações</li>
+<li><strong>Controlar</strong> cursos internos e externos</li>
+<li><strong>Registrar</strong> participações em atividades de
+capacitação</li>
+<li><strong>Acompanhar</strong> metas anuais de capacitação</li>
+<li><strong>Gerar</strong> relatórios detalhados de desempenho</li>
+<li><strong>Monitorar</strong> indicadores de desenvolvimento
+profissional</li>
+</ul>
+<h2 id="como-acessar-o-sistema">🚀 Como Acessar o Sistema</h2>
+<h3 id="url-de-acesso">URL de Acesso</h3>
+<pre><code>http://seu-servidor/folhafacil/metacrh/</code></pre>
+<h3 id="requisitos-do-navegador">Requisitos do Navegador</h3>
+<ul>
+<li>Google Chrome, Firefox, Safari ou Edge (versões recentes)</li>
+<li>JavaScript habilitado</li>
+<li>Conexão com internet</li>
+</ul>
+<h2 id="interface-principal">📊 Interface Principal</h2>
+<h3 id="menu-lateral-sidebar">1. Menu Lateral (Sidebar)</h3>
+<ul>
+<li><strong>Dashboard</strong>: Visão geral e estatísticas</li>
+<li><strong>Servidores</strong>: Gestão de funcionários</li>
+<li><strong>Cursos</strong>: Cadastro de atividades de capacitação</li>
+<li><strong>Participações</strong>: Registro de presença em cursos</li>
+<li><strong>Metas Anuais</strong>: Controle de objetivos</li>
+<li><strong>Relatórios</strong>: Geração de relatórios</li>
+</ul>
+<h3 id="área-principal">2. Área Principal</h3>
+<ul>
+<li><strong>Cabeçalho</strong>: Título da página e ações</li>
+<li><strong>Mensagens</strong>: Alertas e notificações</li>
+<li><strong>Conteúdo</strong>: Dados e formulários específicos</li>
+</ul>
+<h2 id="dashboard---visão-geral">🏠 Dashboard - Visão Geral</h2>
+<h3 id="cards-de-estatísticas">Cards de Estatísticas</h3>
+<ul>
+<li><strong>Total Servidores</strong>: Quantidade de funcionários
+cadastrados</li>
+<li><strong>Total Cursos</strong>: Número de atividades de
+capacitação</li>
+<li><strong>Total Participações</strong>: Registros de presença em
+cursos</li>
+<li><strong>Cursos do Mês</strong>: Atividades do mês atual</li>
+</ul>
+<h3 id="estatísticas-do-mês-atual">Estatísticas do Mês Atual</h3>
+<ul>
+<li><strong>Custo Sim</strong>: Participações com recursos do CRH</li>
+<li><strong>Custo Não</strong>: Participações sem custo</li>
+<li><strong>Complementar</strong>: Participações de outras
+subseções</li>
+</ul>
+<h3 id="participações-recentes">Participações Recentes</h3>
+<p>Tabela com as últimas 10 participações registradas: -
+<strong>Servidor</strong>: Nome do funcionário - <strong>Curso</strong>:
+Nome da atividade - <strong>Data</strong>: Data de participação -
+<strong>Fonte Recurso</strong>: Tipo de financiamento - <strong>Status
+Meta</strong>: Se conta para a meta anual</p>
+<h3 id="ações-rápidas">Ações Rápidas</h3>
+<p>Botões para acesso direto às principais funcionalidades: -
+<strong>Novo Servidor</strong>: Cadastrar funcionário - <strong>Novo
+Curso</strong>: Criar atividade de capacitação - <strong>Nova
+Participação</strong>: Registrar presença - <strong>Gerar
+Relatório</strong>: Criar relatórios</p>
+<h2 id="gestão-de-servidores">👥 Gestão de Servidores</h2>
+<h3 id="lista-de-servidores">Lista de Servidores</h3>
+<ul>
+<li><strong>Busca</strong>: Por nome, matrícula ou lotação</li>
+<li><strong>Filtros</strong>: Por situação (ativo/inativo) e
+lotação</li>
+<li><strong>Paginação</strong>: 20 registros por página</li>
+<li><strong>Ações</strong>: Editar, excluir e visualizar detalhes</li>
+</ul>
+<h3 id="cadastrar-novo-servidor">Cadastrar Novo Servidor</h3>
+<p><strong>Campos obrigatórios:</strong> - <strong>Nome
+Completo</strong>: Nome completo do funcionário -
+<strong>Matrícula</strong>: Número de matrícula (único) -
+<strong>Lotação</strong>: Seção/Subseção de lotação -
+<strong>Situação</strong>: Ativo ou Inativo</p>
+<h3 id="importar-servidores">Importar Servidores</h3>
+<p><strong>Formato aceito</strong>: Planilha Excel (.xlsx)
+<strong>Colunas esperadas:</strong> - Nome Completo - Matrícula -
+Lotação - Situação</p>
+<h3 id="editar-servidor">Editar Servidor</h3>
+<ul>
+<li>Acesse a lista de servidores</li>
+<li>Clique em “Editar” ao lado do registro</li>
+<li>Modifique os campos necessários</li>
+<li>Salve as alterações</li>
+</ul>
+<h3 id="excluir-servidor">Excluir Servidor</h3>
+<ul>
+<li>Acesse a lista de servidores</li>
+<li>Clique em “Excluir” ao lado do registro</li>
+<li>Confirme a exclusão</li>
+<li>⚠️ <strong>Atenção</strong>: Esta ação remove todas as participações
+associadas</li>
+</ul>
+<h2 id="gestão-de-cursos">🎓 Gestão de Cursos</h2>
+<h3 id="lista-de-cursos">Lista de Cursos</h3>
+<ul>
+<li><strong>Busca</strong>: Por nome do curso ou instituição</li>
+<li><strong>Filtros</strong>: Por tipo (interno/externo) e período</li>
+<li><strong>Ordenação</strong>: Por data de início (mais recentes
+primeiro)</li>
+</ul>
+<h3 id="cadastrar-novo-curso">Cadastrar Novo Curso</h3>
+<p><strong>Campos obrigatórios:</strong> - <strong>Nome do
+Curso</strong>: Título da atividade - <strong>Instituição
+Promotora</strong>: Organização responsável - <strong>Data de
+Início</strong>: Data de início do curso - <strong>Data de Fim</strong>:
+Data de término do curso - <strong>Carga Horária</strong>: Total de
+horas (mínimo 1) - <strong>Tipo de Curso</strong>: Interno ou
+Externo</p>
+<h3 id="tipos-de-curso">Tipos de Curso</h3>
+<ul>
+<li><strong>Interno</strong>: Realizado pela própria instituição</li>
+<li><strong>Externo</strong>: Realizado por instituição externa</li>
+</ul>
+<h3 id="editar-curso">Editar Curso</h3>
+<ul>
+<li>Acesse a lista de cursos</li>
+<li>Clique em “Editar” ao lado do registro</li>
+<li>Modifique os campos necessários</li>
+<li>Salve as alterações</li>
+</ul>
+<h3 id="excluir-curso">Excluir Curso</h3>
+<ul>
+<li>Acesse a lista de cursos</li>
+<li>Clique em “Excluir” ao lado do registro</li>
+<li>Confirme a exclusão</li>
+<li>⚠️ <strong>Atenção</strong>: Esta ação remove todas as participações
+associadas</li>
+</ul>
+<h2 id="gestão-de-participações">📅 Gestão de Participações</h2>
+<h3 id="lista-de-participações">Lista de Participações</h3>
+<ul>
+<li><strong>Busca</strong>: Por servidor ou curso</li>
+<li><strong>Filtros</strong>: Por fonte de recurso, período e
+status</li>
+<li><strong>Ordenação</strong>: Por data de participação (mais recentes
+primeiro)</li>
+</ul>
+<h3 id="registrar-nova-participação">Registrar Nova Participação</h3>
+<p><strong>Campos obrigatórios:</strong> - <strong>Servidor</strong>:
+Funcionário participante - <strong>Curso</strong>: Atividade de
+capacitação - <strong>Data de Participação</strong>: Data da presença -
+<strong>Fonte de Recurso</strong>: Tipo de financiamento</p>
+<h3 id="fontes-de-recurso">Fontes de Recurso</h3>
+<ul>
+<li><strong>CRH (Custo Sim)</strong>: Recursos do Centro de Recursos
+Humanos</li>
+<li><strong>Sem Custo (Custo Não)</strong>: Atividades gratuitas</li>
+<li><strong>Complementar (outra subseção)</strong>: Recursos de outras
+áreas</li>
+</ul>
+<h3 id="status-da-meta">Status da Meta</h3>
+<ul>
+<li><strong>Conta para Meta</strong>: Participação considerada no
+cálculo da meta anual</li>
+<li><strong>Não conta</strong>: Participação não considerada na
+meta</li>
+</ul>
+<h3 id="regras-de-negócio">Regras de Negócio</h3>
+<ul>
+<li><strong>Custo Sim</strong>: Apenas a primeira participação com
+“Custo Sim” por ano conta para a meta</li>
+<li><strong>Participações duplicadas</strong>: Mesmo servidor no mesmo
+curso na mesma data não é permitido</li>
+</ul>
+<h3 id="editar-participação">Editar Participação</h3>
+<ul>
+<li>Acesse a lista de participações</li>
+<li>Clique em “Editar” ao lado do registro</li>
+<li>Modifique os campos necessários</li>
+<li>Salve as alterações</li>
+</ul>
+<h3 id="excluir-participação">Excluir Participação</h3>
+<ul>
+<li>Acesse a lista de participações</li>
+<li>Clique em “Excluir” ao lado do registro</li>
+<li>Confirme a exclusão</li>
+</ul>
+<h2 id="metas-anuais">📊 Metas Anuais</h2>
+<h3 id="lista-de-metas">Lista de Metas</h3>
+<ul>
+<li><strong>Ano</strong>: Ano de referência</li>
+<li><strong>Metas por tipo</strong>: Custo Sim, Custo Não,
+Complementar</li>
+<li><strong>Meta Total</strong>: Soma de todas as metas</li>
+<li><strong>Percentual de Atingimento</strong>: Progresso em relação à
+meta</li>
+</ul>
+<h3 id="criar-nova-meta-anual">Criar Nova Meta Anual</h3>
+<p><strong>Campos obrigatórios:</strong> - <strong>Ano</strong>: Ano de
+referência (único) - <strong>Meta Custo Sim</strong>: Objetivo para
+participações com recursos CRH - <strong>Meta Custo Não</strong>:
+Objetivo para participações sem custo - <strong>Meta
+Complementar</strong>: Objetivo para participações complementares -
+<strong>Meta Total</strong>: Soma automática das metas -
+<strong>Observações</strong>: Notas adicionais</p>
+<h3 id="cálculo-de-atingimento">Cálculo de Atingimento</h3>
+<p>O sistema calcula automaticamente: - <strong>Realizado</strong>:
+Número de participações registradas - <strong>Percentual</strong>:
+(Realizado / Meta) × 100 - <strong>Status</strong>: Verde (atingido),
+Amarelo (em andamento), Vermelho (atrasado)</p>
+<h3 id="editar-meta">Editar Meta</h3>
+<ul>
+<li>Acesse a lista de metas anuais</li>
+<li>Clique em “Editar” ao lado do registro</li>
+<li>Modifique os valores das metas</li>
+<li>Salve as alterações</li>
+</ul>
+<h3 id="excluir-meta">Excluir Meta</h3>
+<ul>
+<li>Acesse a lista de metas anuais</li>
+<li>Clique em “Excluir” ao lado do registro</li>
+<li>Confirme a exclusão</li>
+</ul>
+<h2 id="relatórios">📈 Relatórios</h2>
+<h3 id="tipos-de-relatório">Tipos de Relatório</h3>
+<ul>
+<li><strong>Relatório Geral</strong>: Visão consolidada de todas as
+informações</li>
+<li><strong>Relatório por Período</strong>: Dados filtrados por período
+específico</li>
+<li><strong>Relatório por Servidor</strong>: Participações de
+funcionário específico</li>
+<li><strong>Relatório por Curso</strong>: Participantes de curso
+específico</li>
+<li><strong>Relatório de Metas</strong>: Atingimento das metas
+anuais</li>
+</ul>
+<h3 id="gerar-relatório">Gerar Relatório</h3>
+<ol type="1">
+<li>Acesse a seção “Relatórios”</li>
+<li>Selecione o tipo de relatório</li>
+<li>Configure os filtros desejados</li>
+<li>Clique em “Gerar Relatório”</li>
+<li>Escolha o formato (PDF ou Excel)</li>
+<li>Faça o download do arquivo</li>
+</ol>
+<h3 id="filtros-disponíveis">Filtros Disponíveis</h3>
+<ul>
+<li><strong>Período</strong>: Data inicial e final</li>
+<li><strong>Servidor</strong>: Funcionário específico</li>
+<li><strong>Curso</strong>: Atividade específica</li>
+<li><strong>Fonte de Recurso</strong>: Tipo de financiamento</li>
+<li><strong>Lotação</strong>: Seção/Subseção específica</li>
+<li><strong>Status Meta</strong>: Se conta ou não para meta</li>
+</ul>
+<h3 id="formatos-de-saída">Formatos de Saída</h3>
+<ul>
+<li><strong>PDF</strong>: Relatório formatado para impressão</li>
+<li><strong>Excel</strong>: Planilha com dados para análise</li>
+</ul>
+<h2 id="funcionalidades-avançadas">🔍 Funcionalidades Avançadas</h2>
+<h3 id="busca-e-filtros">Busca e Filtros</h3>
+<ul>
+<li><strong>Busca por texto</strong>: Encontre registros por
+palavras-chave</li>
+<li><strong>Filtros múltiplos</strong>: Combine diferentes
+critérios</li>
+<li><strong>Ordenação</strong>: Organize dados por diferentes
+campos</li>
+<li><strong>Paginação</strong>: Navegue por grandes volumes de
+dados</li>
+</ul>
+<h3 id="importação-em-lote">Importação em Lote</h3>
+<ul>
+<li><strong>Servidores</strong>: Importe lista de funcionários via
+planilha</li>
+<li><strong>Formato</strong>: Excel (.xlsx) com colunas específicas</li>
+<li><strong>Validação</strong>: Sistema verifica dados antes da
+importação</li>
+<li><strong>Resultado</strong>: Relatório de sucessos e erros</li>
+</ul>
+<h3 id="apis">APIs</h3>
+<ul>
+<li><strong>API Servidores</strong>: Acesso programático aos dados de
+servidores</li>
+<li><strong>API Cursos</strong>: Acesso programático aos dados de
+cursos</li>
+<li><strong>Formato</strong>: JSON para integração com outros
+sistemas</li>
+</ul>
+<h2 id="responsividade">📱 Responsividade</h2>
+<h3 id="dispositivos-suportados">Dispositivos Suportados</h3>
+<ul>
+<li><strong>Desktop</strong>: Interface completa com sidebar</li>
+<li><strong>Tablet</strong>: Layout adaptado para telas médias</li>
+<li><strong>Mobile</strong>: Menu colapsável para telas pequenas</li>
+</ul>
+<h3 id="navegação-mobile">Navegação Mobile</h3>
+<ul>
+<li><strong>Menu hambúrguer</strong>: Acesse o menu lateral</li>
+<li><strong>Cards responsivos</strong>: Estatísticas adaptadas</li>
+<li><strong>Tabelas scrolláveis</strong>: Dados em formato
+mobile-friendly</li>
+</ul>
+<h2 id="segurança-e-permissões">🔒 Segurança e Permissões</h2>
+<h3 id="controle-de-acesso">Controle de Acesso</h3>
+<ul>
+<li><strong>Autenticação</strong>: Login obrigatório</li>
+<li><strong>Sessões</strong>: Expiração automática por inatividade</li>
+<li><strong>Logs</strong>: Registro de ações dos usuários</li>
+</ul>
+<h3 id="proteção-de-dados">Proteção de Dados</h3>
+<ul>
+<li><strong>Validação</strong>: Verificação de dados antes do
+salvamento</li>
+<li><strong>Integridade</strong>: Relacionamentos protegidos</li>
+<li><strong>Backup</strong>: Dados salvos automaticamente</li>
+</ul>
+<h2 id="solução-de-problemas">🔍 Solução de Problemas</h2>
+<h3 id="erro-matrícula-já-existe">Erro: “Matrícula já existe”</h3>
+<p><strong>Causa</strong>: Tentativa de cadastrar matrícula duplicada
+<strong>Solução</strong>: Use a função de busca para verificar se o
+servidor já existe</p>
+<h3 id="erro-data-de-fim-anterior-à-data-de-início">Erro: “Data de fim
+anterior à data de início”</h3>
+<p><strong>Causa</strong>: Data de término do curso anterior ao início
+<strong>Solução</strong>: Verifique e corrija as datas do curso</p>
+<h3 id="erro-participação-duplicada">Erro: “Participação duplicada”</h3>
+<p><strong>Causa</strong>: Mesmo servidor no mesmo curso na mesma data
+<strong>Solução</strong>: Verifique se a participação já foi
+registrada</p>
+<h3 id="erro-meta-anual-já-existe-para-este-ano">Erro: “Meta anual já
+existe para este ano”</h3>
+<p><strong>Causa</strong>: Tentativa de criar meta duplicada
+<strong>Solução</strong>: Edite a meta existente ou exclua antes de
+criar nova</p>
+<h3 id="erro-arquivo-de-importação-inválido">Erro: “Arquivo de
+importação inválido”</h3>
+<p><strong>Causas possíveis</strong>: - Formato de arquivo incorreto -
+Colunas ausentes ou com nomes diferentes - Dados malformados</p>
+<p><strong>Soluções</strong>: 1. Use o template de importação fornecido
+2. Verifique se todas as colunas estão presentes 3. Confirme se os dados
+estão no formato correto</p>
+<h2 id="dicas-de-uso">📋 Dicas de Uso</h2>
+<h3 id="boas-práticas">✅ Boas Práticas</h3>
+<ol type="1">
+<li><strong>Cadastre servidores primeiro</strong> antes de registrar
+participações</li>
+<li><strong>Use nomes padronizados</strong> para cursos similares</li>
+<li><strong>Verifique datas</strong> antes de registrar
+participações</li>
+<li><strong>Monitore metas</strong> regularmente</li>
+<li><strong>Faça backup</strong> dos relatórios importantes</li>
+</ol>
+<h3 id="otimizações">⚡ Otimizações</h3>
+<ul>
+<li><strong>Importe servidores</strong> em lote para economizar
+tempo</li>
+<li><strong>Use filtros</strong> para encontrar dados rapidamente</li>
+<li><strong>Gere relatórios</strong> periodicamente para
+acompanhamento</li>
+<li><strong>Configure metas</strong> no início do ano</li>
+</ul>
+<h3 id="fluxo-recomendado">🔄 Fluxo Recomendado</h3>
+<ol type="1">
+<li>Cadastrar servidores (individual ou importação)</li>
+<li>Cadastrar cursos do ano</li>
+<li>Registrar participações conforme ocorrem</li>
+<li>Configurar metas anuais</li>
+<li>Acompanhar dashboard regularmente</li>
+<li>Gerar relatórios mensais/trimestrais</li>
+</ol>
+<h2 id="suporte-técnico">📞 Suporte Técnico</h2>
+<h3 id="informações-para-suporte">Informações para Suporte</h3>
+<p>Quando precisar de ajuda, tenha em mãos: - <strong>Versão do
+navegador</strong> - <strong>Mensagem de erro</strong> (se houver) -
+<strong>Passos para reproduzir</strong> o problema - <strong>Data e
+hora</strong> do problema</p>
+<h3 id="contatos">Contatos</h3>
+<ul>
+<li><strong>Equipe de TI</strong>: [email/telefone]</li>
+<li><strong>Documentação</strong>: Este manual</li>
+<li><strong>Logs do sistema</strong>:
+<code>/var/www/html/sistemas/folhafacil/logs/</code></li>
+</ul>
+<h2 id="glossário">📝 Glossário</h2>
+<h3 id="termos-técnicos">Termos Técnicos</h3>
+<ul>
+<li><strong>CRH</strong>: Centro de Recursos Humanos</li>
+<li><strong>Custo Sim</strong>: Recursos financeiros do CRH</li>
+<li><strong>Custo Não</strong>: Atividades sem custo financeiro</li>
+<li><strong>Complementar</strong>: Recursos de outras subseções</li>
+<li><strong>Meta Anual</strong>: Objetivo de participações por ano</li>
+<li><strong>Dashboard</strong>: Painel de controle com estatísticas</li>
+</ul>
+<h3 id="status-do-sistema">Status do Sistema</h3>
+<ul>
+<li><strong>Ativo</strong>: Servidor em exercício</li>
+<li><strong>Inativo</strong>: Servidor afastado ou aposentado</li>
+<li><strong>Conta para Meta</strong>: Participação considerada no
+cálculo</li>
+<li><strong>Não conta</strong>: Participação não considerada na
+meta</li>
+<li><strong>Atingido</strong>: Meta cumprida (100% ou mais)</li>
+<li><strong>Em andamento</strong>: Meta parcialmente cumprida</li>
+<li><strong>Atrasado</strong>: Meta abaixo do esperado</li>
+</ul>
+<hr />
+<p><strong>Versão do Manual</strong>: 1.0<br />
+<strong>Data</strong>: Dezembro 2024<br />
+<strong>Sistema</strong>: FolhaFácil - Módulo MetaCRH<br />
+<strong>Desenvolvido por</strong>: Equipe de TI - TRF</p>
+</body>
+</html>

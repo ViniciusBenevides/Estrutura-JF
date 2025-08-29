@@ -1,0 +1,276 @@
+<!DOCTYPE html><html lang='pt-BR'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Documento</title>
+<style>
+body {
+  margin: 0;
+  background: #0b1220;
+  color: #e6eaf3;
+  font: 16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+}
+
+main {
+  max-width: 960px;
+  margin: 32px auto 72px;
+  background: #121a2b;
+  border: 1px solid #1f2a44;
+  border-radius: 14px;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, .35);
+  padding: 28px;
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+  margin: 24px 0 12px;
+}
+
+h1 {
+  font-size: 2.1rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  border-bottom: 1px solid #1f2a44;
+  padding-bottom: 6px;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+a {
+  color: #60a5fa;
+}
+
+blockquote {
+  background: #0f172a;
+  border-left: 4px solid #60a5fa;
+  color: #b5c0d1;
+  padding: 10px 14px;
+  border-radius: 10px;
+}
+
+pre {
+  background: #0f172a;
+  color: #dbe7ff;
+  border: 1px solid #1f2a44;
+  border-radius: 10px;
+  padding: 12px;
+  overflow: auto;
+}
+
+code {
+  background: #0f172a;
+  color: #dbe7ff;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+ul, ol {
+  padding-left: 1.25rem;
+}
+
+.mermaid {
+  background: #0f172a;
+  border: 1px solid #1f2a44;
+  border-radius: 10px;
+  padding: 12px;
+  overflow: auto;
+}
+
+</style>
+</head><body><main><h1>📥 Guia de Instalação - Extensão de Captura</h1>
+
+<h2>🎯 O que é esta extensão?</h2>
+
+<p>A <strong>Extensão de Captura</strong> permite capturar páginas web completas e convertê-las automaticamente em arquivos PDF. Com apenas um clique, você pode salvar qualquer página da internet como PDF, incluindo todo o conteúdo que precisa de rolagem.</p>
+
+<h2>📋 Requisitos</h2>
+
+<ul>
+<li><strong>Google Chrome</strong> (versão 88 ou superior)</li>
+<li><strong>Sistema Operacional</strong>: Windows, macOS ou Linux</li>
+<li><strong>Espaço em disco</strong>: Mínimo 5MB livres</li>
+</ul>
+
+<h2>🚀 Instalação Passo a Passo</h2>
+
+<h3>Passo 1: Baixar os Arquivos</h3>
+<ol>
+<li>Baixe todos os arquivos da extensão</li>
+<li>Extraia em uma pasta no seu computador (ex: <code>C:\extensao-captura\</code>)</li>
+<li>Certifique-se de que a pasta contém os seguintes arquivos:</li>
+</ol>
+<ul>
+<li><code>manifest.json</code></li>
+<li><code>background.js</code></li>
+<li><code>popup.html</code></li>
+<li><code>popup.js</code></li>
+<li><code>icon.png</code></li>
+</ul>
+
+<h3>Passo 2: Abrir o Chrome</h3>
+<ol>
+<li>Abra o navegador <strong>Google Chrome</strong></li>
+<li>Na barra de endereços, digite: <code>chrome://extensions/</code></li>
+<li>Pressione <strong>Enter</strong></li>
+</ol>
+
+<h3>Passo 3: Ativar Modo Desenvolvedor</h3>
+<ol>
+<li>No canto superior direito da página, você verá um botão <strong>&quot;Modo do desenvolvedor&quot;</strong></li>
+<li><strong>Clique</strong> para ativá-lo (deve ficar azul/ativo)</li>
+</ol>
+
+<p>!<a href="https://via.placeholder.com/400x100/4285f4/ffffff?text=Modo+do+Desenvolvedor+ATIVO">Modo Desenvolvedor</a></p>
+
+<h3>Passo 4: Instalar a Extensão</h3>
+<ol>
+<li>Clique no botão <strong>&quot;Carregar sem compactação&quot;</strong></li>
+<li>Na janela que abrir, navegue até a pasta onde você extraiu os arquivos</li>
+<li><strong>Selecione a pasta</strong> (não os arquivos individuais)</li>
+<li>Clique em <strong>&quot;Selecionar pasta&quot;</strong></li>
+</ol>
+
+<h3>Passo 5: Verificar Instalação</h3>
+<ol>
+<li>A extensão deve aparecer na lista com o nome <strong>&quot;Extensão de Captura&quot;</strong></li>
+<li>Certifique-se de que o botão está <strong>ativado</strong> (azul)</li>
+<li>Se aparecer algum erro, verifique se todos os arquivos estão na pasta</li>
+</ol>
+
+<h3>Passo 6: Fixar na Barra de Ferramentas</h3>
+<ol>
+<li>Clique no ícone de <strong>extensões</strong> (🧩) na barra de ferramentas do Chrome</li>
+<li>Encontre <strong>&quot;Extensão de Captura&quot;</strong> na lista</li>
+<li>Clique no ícone de <strong>alfinete</strong> (📌) ao lado do nome</li>
+<li>O ícone da extensão aparecerá na barra de ferramentas</li>
+</ol>
+
+<h2>✅ Como Usar Após a Instalação</h2>
+
+<h3>Capturar uma Página</h3>
+<ol>
+<li><strong>Navegue</strong> até a página que deseja capturar</li>
+<li><strong>Aguarde</strong> o carregamento completo da página</li>
+<li><strong>Clique</strong> no ícone da extensão na barra de ferramentas</li>
+<li><strong>Aguarde</strong> o processamento (a página irá rolar automaticamente)</li>
+<li>O <strong>PDF será baixado</strong> automaticamente para sua pasta de Downloads</li>
+</ol>
+
+<h3>Localizar o Arquivo</h3>
+<ul>
+<li>O arquivo será salvo como <code>pagina_capturada.pdf</code></li>
+<li>Verifique sua pasta de <strong>Downloads</strong></li>
+<li>O Chrome pode mostrar o download na parte inferior da tela</li>
+</ul>
+
+<h2>🔧 Solução de Problemas</h2>
+
+<h3>❌ &quot;Extensão não aparece na lista&quot;</h3>
+<p><strong>Solução:</strong></p>
+<ul>
+<li>Verifique se todos os arquivos estão na pasta</li>
+<li>Certifique-se de que o arquivo <code>manifest.json</code> está presente</li>
+<li>Tente desativar e reativar o &quot;Modo do desenvolvedor&quot;</li>
+</ul>
+
+<h3>❌ &quot;Erro ao carregar extensão&quot;</h3>
+<p><strong>Solução:</strong></p>
+<ul>
+<li>Verifique se a pasta contém todos os arquivos necessários</li>
+<li>Certifique-se de que não há arquivos corrompidos</li>
+<li>Tente extrair os arquivos novamente</li>
+</ul>
+
+<h3>❌ &quot;Ícone não aparece na barra&quot;</h3>
+<p><strong>Solução:</strong></p>
+<ul>
+<li>Clique no ícone de extensões (🧩)</li>
+<li>Procure por &quot;Extensão de Captura&quot;</li>
+<li>Clique no alfinete (📌) para fixar</li>
+</ul>
+
+<h3>❌ &quot;Não consegue capturar a página&quot;</h3>
+<p><strong>Solução:</strong></p>
+<ul>
+<li>Recarregue a página e tente novamente</li>
+<li>Verifique se a página carregou completamente</li>
+<li>Algumas páginas podem bloquear capturas por segurança</li>
+</ul>
+
+<h3>❌ &quot;PDF não é gerado&quot;</h3>
+<p><strong>Solução:</strong></p>
+<ul>
+<li>Verifique se o Chrome permite downloads</li>
+<li>Desative bloqueadores de popup temporariamente</li>
+<li>Certifique-se de que há espaço em disco suficiente</li>
+</ul>
+
+<h2>🔄 Atualizando a Extensão</h2>
+
+<h3>Quando há uma nova versão:</h3>
+<ol>
+<li>Substitua os arquivos antigos pelos novos na mesma pasta</li>
+<li>Vá em <code>chrome://extensions/</code></li>
+<li>Encontre a &quot;Extensão de Captura&quot;</li>
+<li>Clique no botão <strong>🔄 (atualizar)</strong></li>
+<li>Ou desative e reative a extensão</li>
+</ol>
+
+<h2>⚠️ Limitações Importantes</h2>
+
+<ul>
+<li><strong>Páginas protegidas</strong>: Alguns sites podem bloquear capturas</li>
+<li><strong>Conteúdo dinâmico</strong>: Elementos que mudam constantemente podem não aparecer</li>
+<li><strong>Páginas muito longas</strong>: Podem demorar mais para processar</li>
+<li><strong>Popups</strong>: Janelas flutuantes podem interferir na captura</li>
+</ul>
+
+<h2>🆘 Precisa de Ajuda?</h2>
+
+<h3>Verificações Básicas:</h3>
+<ol>
+<li>✅ Chrome atualizado (versão 88+)?</li>
+<li>✅ Modo desenvolvedor ativado?</li>
+<li>✅ Todos os arquivos na pasta?</li>
+<li>✅ Extensão ativada na lista?</li>
+<li>✅ Ícone fixado na barra?</li>
+</ol>
+
+<h3>Se ainda não funcionar:</h3>
+<ol>
+<li><strong>Reinicie</strong> o Chrome completamente</li>
+<li><strong>Desinstale</strong> e <strong>reinstale</strong> a extensão</li>
+<li><strong>Verifique</strong> se não há antivírus bloqueando</li>
+<li><strong>Teste</strong> em uma página simples primeiro</li>
+</ol>
+
+<h2>📞 Informações Técnicas</h2>
+
+<ul>
+<li><strong>Versão</strong>: 1.0</li>
+<li><strong>Compatibilidade</strong>: Chrome 88+</li>
+<li><strong>Tamanho</strong>: ~50KB</li>
+<li><strong>Permissões</strong>: Captura de tela, Downloads, Acesso a abas</li>
+<li><strong>Idioma</strong>: Português</li>
+</ul>
+
+<p>---</p>
+
+<h2>🎉 Pronto para Usar!</h2>
+
+<p>Após seguir todos os passos, sua extensão estará instalada e pronta para capturar páginas web em PDF. Experimente capturar esta própria página como teste!</p>
+
+<p><strong>Dica</strong>: Para melhores resultados, sempre aguarde o carregamento completo da página antes de capturar.</p></main>
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+  // Decode HTML entities inside .mermaid blocks (because we escaped content)
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.mermaid').forEach(el => {
+      el.textContent = el.textContent; // keeps raw text for mermaid
+    });
+    if (window.mermaid) {
+      mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+    }
+  });
+</script>
+</body></html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html><html lang='pt-BR'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Documento</title>
+<style>
+body {
+  margin: 0;
+  background: #0b1220;
+  color: #e6eaf3;
+  font: 16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+}
+
+main {
+  max-width: 960px;
+  margin: 32px auto 72px;
+  background: #121a2b;
+  border: 1px solid #1f2a44;
+  border-radius: 14px;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, .35);
+  padding: 28px;
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+  margin: 24px 0 12px;
+}
+
+h1 {
+  font-size: 2.1rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  border-bottom: 1px solid #1f2a44;
+  padding-bottom: 6px;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+a {
+  color: #60a5fa;
+}
+
+blockquote {
+  background: #0f172a;
+  border-left: 4px solid #60a5fa;
+  color: #b5c0d1;
+  padding: 10px 14px;
+  border-radius: 10px;
+}
+
+pre {
+  background: #0f172a;
+  color: #dbe7ff;
+  border: 1px solid #1f2a44;
+  border-radius: 10px;
+  padding: 12px;
+  overflow: auto;
+}
+
+code {
+  background: #0f172a;
+  color: #dbe7ff;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+ul, ol {
+  padding-left: 1.25rem;
+}
+
+.mermaid {
+  background: #0f172a;
+  border: 1px solid #1f2a44;
+  border-radius: 10px;
+  padding: 12px;
+  overflow: auto;
+}
+
+</style>
+</head><body><main><h1>📖 Manual do Usuário - Extensão Capturar Página para PDF</h1>
+
+<h2>🎯 O que é esta extensão?</h2>
+
+<p>A <strong>Extensão Capturar Página para PDF</strong> permite que você converta qualquer página da web em um arquivo PDF de alta qualidade, diretamente do seu navegador Chrome, sem precisar de programas externos ou conexão com a internet.</p>
+
+<p>---</p>
+
+<h2>🚀 Instalação Passo a Passo</h2>
+
+<h3>Passo 1: Preparar os arquivos</h3>
+<ol>
+<li>Certifique-se de que você tem todos os arquivos da extensão em uma pasta</li>
+<li>Os arquivos necessários são:</li>
+</ol>
+<ul>
+<li><code>manifest.json</code></li>
+<li><code>background.js</code></li>
+<li><code>content.js</code></li>
+<li><code>popup.html</code></li>
+<li><code>popup.js</code></li>
+<li><code>icon.png</code></li>
+</ul>
+
+<h3>Passo 2: Instalar no Chrome</h3>
+<ol>
+<li><strong>Abra o Google Chrome</strong></li>
+<li><strong>Digite na barra de endereços</strong>: <code>chrome://extensions/</code></li>
+<li><strong>Ative o &quot;Modo do desenvolvedor&quot;</strong> (botão no canto superior direito)</li>
+<li><strong>Clique em &quot;Carregar sem compactação&quot;</strong></li>
+<li><strong>Selecione a pasta</strong> onde estão os arquivos da extensão</li>
+<li><strong>Pronto!</strong> A extensão aparecerá na sua barra de ferramentas</li>
+</ol>
+
+<p>---</p>
+
+<h2>🎮 Como Usar</h2>
+
+<h3>Método 1: Usando o Popup (Recomendado)</h3>
+
+<ol>
+<li><strong>Navegue para a página</strong> que você quer converter em PDF</li>
+<li><strong>Clique no ícone da extensão</strong> na barra de ferramentas do Chrome</li>
+<li><strong>Escolha uma das opções</strong>:</li>
+</ol>
+<ul>
+<li>📥 <strong>Capturar Página Completa</strong>: Converte toda a página (incluindo partes que não estão visíveis)</li>
+<li>👁️ <strong>Capturar Área Visível</strong>: Converte apenas o que está aparecendo na tela</li>
+</ul>
+<ol>
+<li><strong>Aguarde o processamento</strong> (você verá uma mensagem &quot;Processando...&quot;)</li>
+<li><strong>O PDF será baixado automaticamente</strong> na sua pasta de Downloads</li>
+</ol>
+
+<h3>Método 2: Clique Direto (Captura Completa)</h3>
+
+<ol>
+<li><strong>Navegue para a página</strong> desejada</li>
+<li><strong>Clique uma vez no ícone</strong> da extensão</li>
+<li><strong>A captura completa será iniciada automaticamente</strong></li>
+<li><strong>O PDF será baixado</strong> quando estiver pronto</li>
+</ol>
+
+<p>---</p>
+
+<h2>📋 Interface do Popup</h2>
+
+<p>Quando você clica no ícone da extensão, verá uma janela com:</p>
+
+<h3>Informações da Página</h3>
+<ul>
+<li><strong>Título da página</strong> atual</li>
+<li><strong>URL da página</strong> atual</li>
+</ul>
+
+<h3>Botões de Ação</h3>
+<ul>
+<li><strong>📥 Capturar Página Completa</strong></li>
+<li>Converte toda a página, incluindo conteúdo que precisa de rolagem</li>
+<li>Ideal para artigos longos, páginas extensas</li>
+</ul>
+
+<ul>
+<li><strong>👁️ Capturar Área Visível</strong></li>
+<li>Converte apenas o que está visível na tela no momento</li>
+<li>Mais rápido, ideal para capturas específicas</li>
+</ul>
+
+<h3>Indicadores de Status</h3>
+<ul>
+<li><strong>⏳ Processando...</strong>: Mostra quando a conversão está em andamento</li>
+<li><strong>✅ Concluído</strong>: Confirma quando o PDF foi gerado com sucesso</li>
+<li><strong>❌ Erro</strong>: Informa se houve algum problema</li>
+</ul>
+
+<p>---</p>
+
+<h2>📁 Onde Encontrar os PDFs</h2>
+
+<p>Os arquivos PDF são salvos automaticamente na sua <strong>pasta de Downloads</strong> do Chrome com nomes automáticos:</p>
+
+<h3>Formato do Nome</h3>
+<ul>
+<li><strong>Página Completa</strong>: <code>titulo-da-pagina-2025-08-26T11-53-30.pdf</code></li>
+<li><strong>Área Visível</strong>: <code>titulo-da-pagina-visivel-2025-08-26T11-53-30.pdf</code></li>
+</ul>
+
+<h3>Exemplo</h3>
+<p>Se você capturar a página &quot;Google - Pesquisa&quot; em 26/08/2025 às 11:53:30, o arquivo será:</p>
+<p><code>Google-Pesquisa-2025-08-26T11-53-30.pdf</code></p>
+
+<p>---</p>
+
+<h2>✅ Páginas Compatíveis</h2>
+
+<h3>✅ Funciona com:</h3>
+<ul>
+<li>Páginas HTTP (http://exemplo.com)</li>
+<li>Páginas HTTPS (https://exemplo.com)</li>
+<li>Sites de notícias</li>
+<li>Blogs e artigos</li>
+<li>Redes sociais</li>
+<li>Lojas online</li>
+<li>Documentos online</li>
+</ul>
+
+<h3>❌ NÃO funciona com:</h3>
+<ul>
+<li>Páginas internas do Chrome (chrome://...)</li>
+<li>Arquivos locais (file://...)</li>
+<li>Páginas de erro do navegador</li>
+<li>Extensões do Chrome</li>
+</ul>
+
+<p>---</p>
+
+<h2>🔧 Configurações do PDF</h2>
+
+<h3>Formato Padrão</h3>
+<ul>
+<li><strong>Tamanho</strong>: A4</li>
+<li><strong>Orientação</strong>: Retrato</li>
+<li><strong>Margens</strong>: 0,4 polegadas em todos os lados</li>
+<li><strong>Qualidade</strong>: Alta resolução</li>
+<li><strong>Fundo</strong>: Incluído (cores e imagens)</li>
+</ul>
+
+<h3>Características</h3>
+<ul>
+<li><strong>Texto selecionável</strong>: Sim, você pode copiar texto do PDF</li>
+<li><strong>Links funcionais</strong>: Links da página original funcionam no PDF</li>
+<li><strong>Imagens</strong>: Incluídas em alta qualidade</li>
+<li><strong>Formatação</strong>: Preservada conforme a página original</li>
+</ul>
+
+<p>---</p>
+
+<h2>🚨 Solução de Problemas</h2>
+
+<h3>&quot;Esta extensão só funciona em páginas HTTP/HTTPS&quot;</h3>
+<p><strong>Problema</strong>: Você está tentando usar em uma página não suportada</p>
+<p><strong>Solução</strong>: Navegue para um site normal (como google.com, youtube.com, etc.)</p>
+
+<h3>PDF não foi baixado</h3>
+<p><strong>Problema</strong>: O arquivo não apareceu na pasta Downloads</p>
+<p><strong>Soluções</strong>:</p>
+<ol>
+<li>Verifique se o Chrome tem permissão para baixar arquivos</li>
+<li>Olhe na pasta Downloads padrão do seu computador</li>
+<li>Verifique se não há bloqueadores de download ativos</li>
+</ol>
+
+<h3>Extensão não aparece na barra</h3>
+<p><strong>Problema</strong>: Ícone da extensão não está visível</p>
+<p><strong>Soluções</strong>:</p>
+<ol>
+<li>Clique no ícone de &quot;extensões&quot; (quebra-cabeça) na barra do Chrome</li>
+<li>Encontre &quot;Capturar Página para PDF&quot; e clique no &quot;alfinete&quot;</li>
+<li>Recarregue a página atual</li>
+</ol>
+
+<h3>Erro durante o processamento</h3>
+<p><strong>Problema</strong>: Mensagem de erro aparece</p>
+<p><strong>Soluções</strong>:</p>
+<ol>
+<li>Recarregue a página e tente novamente</li>
+<li>Aguarde a página carregar completamente antes de capturar</li>
+<li>Tente com uma página mais simples primeiro</li>
+</ol>
+
+<h3>PDF com qualidade ruim</h3>
+<p><strong>Problema</strong>: Texto ou imagens aparecem borrados</p>
+<p><strong>Soluções</strong>:</p>
+<ol>
+<li>Aguarde a página carregar completamente</li>
+<li>Certifique-se de que as imagens carregaram</li>
+<li>Tente ajustar o zoom da página (100% é ideal)</li>
+</ol>
+
+<p>---</p>
+
+<h2>💡 Dicas de Uso</h2>
+
+<h3>Para Melhores Resultados</h3>
+<ol>
+<li><strong>Aguarde o carregamento completo</strong> da página antes de capturar</li>
+<li><strong>Use zoom 100%</strong> para melhor qualidade</li>
+<li><strong>Feche popups ou modais</strong> que possam atrapalhar</li>
+<li><strong>Para páginas longas</strong>, use &quot;Capturar Página Completa&quot;</li>
+<li><strong>Para capturas rápidas</strong>, use &quot;Capturar Área Visível&quot;</li>
+</ol>
+
+<h3>Casos de Uso Ideais</h3>
+<ul>
+<li><strong>Salvar artigos</strong> para leitura offline</li>
+<li><strong>Arquivar páginas importantes</strong> para referência</li>
+<li><strong>Criar relatórios</strong> com conteúdo web</li>
+<li><strong>Salvar comprovantes</strong> de compras online</li>
+<li><strong>Documentar pesquisas</strong> acadêmicas</li>
+<li><strong>Preservar conteúdo</strong> que pode ser alterado</li>
+</ul>
+
+<p>---</p>
+
+<h2>🔒 Privacidade e Segurança</h2>
+
+<h3>O que a extensão faz:</h3>
+<ul>
+<li>✅ Acessa apenas a página atual quando você solicita</li>
+<li>✅ Processa tudo localmente no seu computador</li>
+<li>✅ Não envia dados para servidores externos</li>
+<li>✅ Não armazena histórico de páginas visitadas</li>
+</ul>
+
+<h3>O que a extensão NÃO faz:</h3>
+<ul>
+<li>❌ Não monitora sua navegação</li>
+<li>❌ Não coleta dados pessoais</li>
+<li>❌ Não envia informações para terceiros</li>
+<li>❌ Não funciona em abas privadas/incógnitas</li>
+</ul>
+
+<p>---</p>
+
+<h2>📞 Suporte</h2>
+
+<h3>Se você encontrar problemas:</h3>
+
+<ol>
+<li><strong>Primeiro</strong>: Consulte a seção &quot;Solução de Problemas&quot; acima</li>
+<li><strong>Segundo</strong>: Tente desinstalar e reinstalar a extensão</li>
+<li><strong>Terceiro</strong>: Verifique se você tem a versão mais recente do Chrome</li>
+</ol>
+
+<h3>Informações para Suporte:</h3>
+<p>Ao reportar um problema, inclua:</p>
+<ul>
+<li>Versão do Chrome</li>
+<li>Sistema operacional</li>
+<li>URL da página que estava tentando capturar</li>
+<li>Mensagem de erro exata (se houver)</li>
+</ul>
+
+<p>---</p>
+
+<h2>📈 Atualizações</h2>
+
+<h3>Como atualizar:</h3>
+<ol>
+<li>Baixe a nova versão dos arquivos</li>
+<li>Substitua os arquivos antigos</li>
+<li>Vá para <code>chrome://extensions/</code></li>
+<li>Clique em &quot;Recarregar&quot; na extensão</li>
+</ol>
+
+<h3>Histórico de Versões:</h3>
+<ul>
+<li><strong>v2.0</strong>: Versão atual com interface melhorada e captura offline</li>
+<li><strong>v1.0</strong>: Versão inicial (dependia de servidor externo)</li>
+</ul>
+
+<p>---</p>
+
+<h2>❓ Perguntas Frequentes</h2>
+
+<h3>P: A extensão funciona offline?</h3>
+<p><strong>R</strong>: Sim! Uma vez instalada, funciona sem conexão com a internet.</p>
+
+<h3>P: Posso editar o PDF depois?</h3>
+<p><strong>R</strong>: Sim, você pode abrir o PDF em qualquer editor de PDF para fazer alterações.</p>
+
+<h3>P: Há limite de páginas que posso capturar?</h3>
+<p><strong>R</strong>: Não há limite. Capture quantas páginas quiser.</p>
+
+<h3>P: O PDF mantém a formatação original?</h3>
+<p><strong>R</strong>: Sim, cores, fontes e layout são preservados.</p>
+
+<h3>P: Funciona em qualquer site?</h3>
+<p><strong>R</strong>: Funciona na maioria dos sites públicos HTTP/HTTPS.</p>
+
+<h3>P: Posso escolher onde salvar o PDF?</h3>
+<p><strong>R</strong>: O PDF é salvo na pasta Downloads padrão do Chrome automaticamente.</p>
+
+<p>---</p>
+
+<p><strong>🎉 Aproveite sua nova extensão de captura de PDF!</strong></p>
+
+<p><em></em></p></main>
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+  // Decode HTML entities inside .mermaid blocks (because we escaped content)
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.mermaid').forEach(el => {
+      el.textContent = el.textContent; // keeps raw text for mermaid
+    });
+    if (window.mermaid) {
+      mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+    }
+  });
+</script>
+</body></html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>MANUAL_USUARIO_HORAS</title>
+  <style>
+    body {
+  margin: 0;
+  background: #0b1220;
+  color: #e6eaf3;
+  font: 16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+}
+
+main {
+  max-width: 960px;
+  margin: 32px auto 72px;
+  background: #121a2b;
+  border: 1px solid #1f2a44;
+  border-radius: 14px;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, .35);
+  padding: 28px;
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+  margin: 24px 0 12px;
+}
+
+h1 {
+  font-size: 2.1rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  border-bottom: 1px solid #1f2a44;
+  padding-bottom: 6px;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+a {
+  color: #60a5fa;
+}
+
+blockquote {
+  background: #0f172a;
+  border-left: 4px solid #60a5fa;
+  color: #b5c0d1;
+  padding: 10px 14px;
+  border-radius: 10px;
+}
+
+pre {
+  background: #0f172a;
+  color: #dbe7ff;
+  border: 1px solid #1f2a44;
+  border-radius: 10px;
+  padding: 12px;
+  overflow: auto;
+}
+
+code {
+  background: #0f172a;
+  color: #dbe7ff;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+ul, ol {
+  padding-left: 1.25rem;
+}
+
+.mermaid {
+  background: #0f172a;
+  border: 1px solid #1f2a44;
+  border-radius: 10px;
+  padding: 12px;
+  overflow: auto;
+}
+
+  </style>
+</head>
+<body>
+<main>
+<h1
+id="manual-do-usuário---sistema-de-processamento-de-horas-extras">Manual
+do Usuário - Sistema de Processamento de Horas Extras</h1>
+<h2 id="visão-geral">📋 Visão Geral</h2>
+<p>O <strong>Sistema de Processamento de Horas Extras</strong> é uma
+ferramenta desenvolvida para automatizar o processamento de dados de
+catracas eletrônicas, facilitando o controle e cálculo de horas
+trabalhadas pelos funcionários. O sistema processa arquivos CSV
+exportados das catracas e gera relatórios detalhados com totais de horas
+por funcionário.</p>
+<h3 id="objetivos-do-sistema">🎯 Objetivos do Sistema</h3>
+<ul>
+<li><strong>Automatizar</strong> o processamento de dados de catracas
+eletrônicas</li>
+<li><strong>Calcular</strong> automaticamente horas trabalhadas por
+funcionário</li>
+<li><strong>Gerar</strong> relatórios em formatos CSV e Excel</li>
+<li><strong>Identificar</strong> funcionários com horas extras</li>
+<li><strong>Facilitar</strong> o controle de ponto eletrônico</li>
+</ul>
+<h2 id="como-acessar-o-sistema">🚀 Como Acessar o Sistema</h2>
+<h3 id="url-de-acesso">URL de Acesso</h3>
+<pre><code>http://seu-servidor/folhafacil/horas/</code></pre>
+<h3 id="requisitos-do-navegador">Requisitos do Navegador</h3>
+<ul>
+<li>Google Chrome, Firefox, Safari ou Edge (versões recentes)</li>
+<li>JavaScript habilitado</li>
+<li>Conexão com internet</li>
+</ul>
+<h2 id="interface-principal">📊 Interface Principal</h2>
+<h3 id="cabeçalho">1. Cabeçalho</h3>
+<ul>
+<li><strong>Título</strong>: Sistema de Processamento de Horas
+Extras</li>
+<li><strong>Versão</strong>: Django 3.2.25</li>
+<li><strong>Tipo</strong>: Processamento de Catracas Eletrônicas</li>
+</ul>
+<h3 id="seção-de-upload">2. Seção de Upload</h3>
+<ul>
+<li><strong>Área de arrastar e soltar</strong> para arquivos CSV</li>
+<li><strong>Seletor de tipo de processamento</strong> (Catraca
+Eletrônica)</li>
+<li><strong>Botão de processamento</strong> e <strong>limpeza de
+dados</strong></li>
+</ul>
+<h3 id="dashboard">3. Dashboard</h3>
+<ul>
+<li><strong>Estatísticas</strong> em tempo real</li>
+<li><strong>Lista de arquivos processados</strong></li>
+<li><strong>Tabela de horas trabalhadas</strong></li>
+</ul>
+<h2 id="preparando-os-arquivos">📁 Preparando os Arquivos</h2>
+<h3 id="formato-aceito">Formato Aceito</h3>
+<ul>
+<li><strong>Extensão</strong>: <code>.csv</code></li>
+<li><strong>Origem</strong>: Exportação de catracas eletrônicas</li>
+<li><strong>Codificação</strong>: UTF-8</li>
+</ul>
+<h3 id="estrutura-esperada-do-csv">Estrutura Esperada do CSV</h3>
+<p>O arquivo CSV deve conter as seguintes colunas:</p>
+<pre><code>CPF;Doc. Prov.;Sentido;Cartao;Catraca;Horario do Evento</code></pre>
+<p><strong>Exemplo de dados válidos:</strong></p>
+<pre><code>12345678901;João Silva;Entrada;12345;Catraca 1;01/12/2024 08:00:00
+12345678901;João Silva;Saída;12345;Catraca 1;01/12/2024 17:00:00</code></pre>
+<h3 id="requisitos-dos-dados">📋 Requisitos dos Dados</h3>
+<ul>
+<li><strong>CPF</strong>: Deve ser válido (11 dígitos)</li>
+<li><strong>Horário</strong>: Formato DD/MM/AAAA HH:MM:SS</li>
+<li><strong>Mínimo de registros</strong>: 2 por funcionário (entrada e
+saída)</li>
+<li><strong>Dados obrigatórios</strong>: CPF e Horário do Evento</li>
+</ul>
+<h2 id="processo-de-upload-e-processamento">🔄 Processo de Upload e
+Processamento</h2>
+<h3 id="passo-1-selecionar-arquivo">Passo 1: Selecionar Arquivo</h3>
+<ol type="1">
+<li>Clique na <strong>área de upload</strong> (área tracejada)</li>
+<li>Navegue até a pasta onde está o arquivo CSV</li>
+<li>Selecione o arquivo e clique em <strong>“Abrir”</strong></li>
+<li>O nome do arquivo aparecerá na interface</li>
+</ol>
+<h3 id="passo-2-configurar-processamento">Passo 2: Configurar
+Processamento</h3>
+<ol type="1">
+<li>Verifique se o tipo <strong>“Catraca Eletrônica (CSV)”</strong> está
+selecionado</li>
+<li>Confirme que o arquivo selecionado é um CSV válido</li>
+</ol>
+<h3 id="passo-3-processar-arquivo">Passo 3: Processar Arquivo</h3>
+<ol type="1">
+<li>Clique no botão <strong>“Processar Arquivo”</strong></li>
+<li>Aguarde o processamento (indicador de carregamento aparecerá)</li>
+<li>Uma mensagem de sucesso será exibida</li>
+</ol>
+<h3 id="tempo-de-processamento">⏱️ Tempo de Processamento</h3>
+<ul>
+<li><strong>Arquivos pequenos</strong> (&lt; 1MB): 5-10 segundos</li>
+<li><strong>Arquivos médios</strong> (1-5MB): 10-30 segundos</li>
+<li><strong>Arquivos grandes</strong> (&gt; 5MB): 30-60 segundos</li>
+</ul>
+<h2 id="resultados-do-processamento">📊 Resultados do Processamento</h2>
+<h3 id="arquivos-gerados">Arquivos Gerados</h3>
+<p>O sistema gera automaticamente dois tipos de arquivo:</p>
+<h4 id="arquivo-csv-total_horas_cpf.csv">1. Arquivo CSV
+(<code>Total_Horas_[CPF].csv</code>)</h4>
+<ul>
+<li><strong>Formato</strong>: CSV com codificação UTF-8</li>
+<li><strong>Colunas</strong>:
+<ul>
+<li><code>CPF</code>: CPF formatado (XXX.XXX.XXX-XX)</li>
+<li><code>Data_Dia</code>: Data do registro (DD/MM/AAAA)</li>
+<li><code>Total_Horas_Trabalhadas</code>: Total em formato HH:MM:SS</li>
+</ul></li>
+</ul>
+<h4 id="arquivo-excel-total_horas_cpf.xlsx">2. Arquivo Excel
+(<code>Total_Horas_[CPF].xlsx</code>)</h4>
+<ul>
+<li><strong>Formato</strong>: Planilha Excel (.xlsx)</li>
+<li><strong>Aba</strong>: “Horas_Trabalhadas”</li>
+<li><strong>Mesmas colunas</strong> do arquivo CSV</li>
+</ul>
+<h3 id="exemplo-de-resultado">Exemplo de Resultado</h3>
+<pre class="csv"><code>CPF,Data_Dia,Total_Horas_Trabalhadas
+123.456.789-01,01/12/2024,09:00:00
+123.456.789-01,02/12/2024,08:30:00
+123.456.789-01,03/12/2024,08:45:00</code></pre>
+<h2 id="dashboard-e-estatísticas">📈 Dashboard e Estatísticas</h2>
+<h3 id="estatísticas-gerais">Estatísticas Gerais</h3>
+<ul>
+<li><strong>Funcionários Processados</strong>: Total de CPFs únicos</li>
+<li><strong>Arquivos Gerados</strong>: Quantidade de relatórios
+criados</li>
+</ul>
+<h3 id="tabela-de-horas-trabalhadas">Tabela de Horas Trabalhadas</h3>
+<p>Exibe para cada funcionário: - <strong>CPF</strong>: Identificação do
+funcionário - <strong>Data</strong>: Dia do registro - <strong>Total de
+Horas</strong>: Horas trabalhadas no formato HH:MM:SS -
+<strong>Status</strong>: - 🟢 <strong>Normal</strong>: ≤ 8 horas - 🔴
+<strong>Horas Extras</strong>: &gt; 8 horas</p>
+<h3 id="interpretação-dos-status">Interpretação dos Status</h3>
+<ul>
+<li><strong>Normal</strong>: Funcionário trabalhou 8 horas ou menos</li>
+<li><strong>Horas Extras</strong>: Funcionário trabalhou mais de 8
+horas</li>
+</ul>
+<h2 id="download-de-arquivos">💾 Download de Arquivos</h2>
+<h3 id="como-baixar">Como Baixar</h3>
+<ol type="1">
+<li>Na seção <strong>“Arquivos Processados”</strong></li>
+<li>Clique no botão <strong>“Download”</strong> ao lado do arquivo
+desejado</li>
+<li>O arquivo será baixado automaticamente</li>
+</ol>
+<h3 id="local-de-download">Local de Download</h3>
+<ul>
+<li><strong>Navegador</strong>: Pasta de downloads padrão</li>
+<li><strong>Nome</strong>: Mantém o nome original do arquivo</li>
+<li><strong>Formato</strong>: CSV ou Excel conforme gerado</li>
+</ul>
+<h2 id="limpeza-de-dados">🧹 Limpeza de Dados</h2>
+<h3 id="quando-usar">Quando Usar</h3>
+<ul>
+<li><strong>Antes de processar novos dados</strong></li>
+<li><strong>Para liberar espaço no servidor</strong></li>
+<li><strong>Para evitar confusão entre diferentes
+processamentos</strong></li>
+</ul>
+<h3 id="como-limpar">Como Limpar</h3>
+<ol type="1">
+<li>Clique no botão <strong>“Limpar Dados”</strong></li>
+<li>Confirme a ação na caixa de diálogo</li>
+<li>Todos os arquivos processados serão removidos</li>
+</ol>
+<h3 id="atenção">⚠️ Atenção</h3>
+<ul>
+<li><strong>Ação irreversível</strong>: Os dados não podem ser
+recuperados</li>
+<li><strong>Confirmação obrigatória</strong>: Sistema pede confirmação
+antes de limpar</li>
+</ul>
+<h2 id="solução-de-problemas">🔍 Solução de Problemas</h2>
+<h3 id="erro-nenhum-arquivo-enviado">Erro: “Nenhum arquivo enviado”</h3>
+<p><strong>Causa</strong>: Nenhum arquivo foi selecionado
+<strong>Solução</strong>: Selecione um arquivo CSV antes de
+processar</p>
+<h3 id="erro-tipo-de-arquivo-não-suportado">Erro: “Tipo de arquivo não
+suportado”</h3>
+<p><strong>Causa</strong>: Arquivo não é CSV <strong>Solução</strong>:
+Verifique se o arquivo tem extensão <code>.csv</code></p>
+<h3 id="erro-arquivo-csv-vazio-ou-sem-dados-válidos">Erro: “Arquivo CSV
+vazio ou sem dados válidos”</h3>
+<p><strong>Causas possíveis</strong>: - Arquivo está vazio - Formato
+incorreto - Dados corrompidos</p>
+<p><strong>Soluções</strong>: 1. Verifique se o arquivo contém dados 2.
+Confirme o formato das colunas 3. Tente re-exportar o arquivo da
+catraca</p>
+<h3 id="erro-nenhum-registro-com-horário-válido-encontrado">Erro:
+“Nenhum registro com horário válido encontrado”</h3>
+<p><strong>Causa</strong>: Formato de data/hora incorreto
+<strong>Solução</strong>: Verifique se as datas estão no formato
+DD/MM/AAAA HH:MM:SS</p>
+<h3 id="erro-nenhum-registro-válido-encontrado-para-processamento">Erro:
+“Nenhum registro válido encontrado para processamento”</h3>
+<p><strong>Causas possíveis</strong>: - CPFs inválidos - Falta de pares
+entrada/saída - Dados inconsistentes</p>
+<p><strong>Soluções</strong>: 1. Verifique se todos os CPFs têm 11
+dígitos 2. Confirme que cada funcionário tem entrada e saída 3.
+Verifique a consistência dos dados</p>
+<h2 id="dicas-de-uso">📋 Dicas de Uso</h2>
+<h3 id="boas-práticas">✅ Boas Práticas</h3>
+<ol type="1">
+<li><strong>Faça backup</strong> dos arquivos originais antes de
+processar</li>
+<li><strong>Verifique os dados</strong> antes do upload</li>
+<li><strong>Limpe dados antigos</strong> antes de processar novos</li>
+<li><strong>Baixe os resultados</strong> logo após o processamento</li>
+<li><strong>Verifique o status</strong> dos funcionários no
+dashboard</li>
+</ol>
+<h3 id="otimizações">⚡ Otimizações</h3>
+<ul>
+<li><strong>Arquivos menores</strong> processam mais rapidamente</li>
+<li><strong>Dados limpos</strong> evitam erros de processamento</li>
+<li><strong>CPFs válidos</strong> garantem resultados corretos</li>
+</ul>
+<h3 id="fluxo-recomendado">🔄 Fluxo Recomendado</h3>
+<ol type="1">
+<li>Exportar dados da catraca</li>
+<li>Verificar formato do arquivo CSV</li>
+<li>Fazer upload no sistema</li>
+<li>Processar arquivo</li>
+<li>Verificar resultados no dashboard</li>
+<li>Baixar relatórios gerados</li>
+<li>Limpar dados (opcional)</li>
+</ol>
+<h2 id="suporte-técnico">📞 Suporte Técnico</h2>
+<h3 id="informações-para-suporte">Informações para Suporte</h3>
+<p>Quando precisar de ajuda, tenha em mãos: - <strong>Versão do
+navegador</strong> - <strong>Mensagem de erro</strong> (se houver) -
+<strong>Tamanho do arquivo</strong> processado - <strong>Data e
+hora</strong> do problema</p>
+<h3 id="contatos">Contatos</h3>
+<ul>
+<li><strong>Equipe de TI</strong>: [email/telefone]</li>
+<li><strong>Documentação</strong>: Este manual</li>
+<li><strong>Logs do sistema</strong>:
+<code>/var/www/html/sistemas/folhafacil/logs/</code></li>
+</ul>
+<h2 id="segurança-e-privacidade">🔒 Segurança e Privacidade</h2>
+<h3 id="proteção-de-dados">Proteção de Dados</h3>
+<ul>
+<li><strong>CPFs</strong>: São mascarados nos relatórios
+(XXX.XXX.XXX-XX)</li>
+<li><strong>Arquivos temporários</strong>: São removidos
+automaticamente</li>
+<li><strong>Sessões</strong>: Expiram após inatividade</li>
+</ul>
+<h3 id="recomendações">Recomendações</h3>
+<ul>
+<li><strong>Não compartilhe</strong> arquivos com dados pessoais</li>
+<li><strong>Use conexão segura</strong> (HTTPS) quando disponível</li>
+<li><strong>Faça logout</strong> ao terminar de usar o sistema</li>
+</ul>
+<h2 id="glossário">📝 Glossário</h2>
+<h3 id="termos-técnicos">Termos Técnicos</h3>
+<ul>
+<li><strong>CSV</strong>: Comma-Separated Values (valores separados por
+vírgula)</li>
+<li><strong>CPF</strong>: Cadastro de Pessoa Física</li>
+<li><strong>Dashboard</strong>: Painel de controle com estatísticas</li>
+<li><strong>Upload</strong>: Envio de arquivo para o servidor</li>
+<li><strong>Download</strong>: Download de arquivo do servidor</li>
+<li><strong>Processamento</strong>: Análise e cálculo dos dados</li>
+</ul>
+<h3 id="status-do-sistema">Status do Sistema</h3>
+<ul>
+<li><strong>Normal</strong>: Horas trabalhadas dentro do padrão</li>
+<li><strong>Horas Extras</strong>: Horas trabalhadas acima do
+padrão</li>
+<li><strong>Processando</strong>: Sistema executando cálculos</li>
+<li><strong>Sucesso</strong>: Operação concluída com êxito</li>
+<li><strong>Erro</strong>: Problema durante a operação</li>
+</ul>
+<hr />
+<p><strong>Versão do Manual</strong>: 1.0<br />
+<strong>Data</strong>: Dezembro 2024<br />
+<strong>Sistema</strong>: FolhaFácil - Módulo de Processamento de Horas
+Extras<br />
+<strong>Desenvolvido por</strong>: Equipe de TI - TRF</p>
+</main>
+</body>
+</html>
