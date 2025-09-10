@@ -8,6 +8,19 @@
   <link rel="stylesheet" href="../components/template/template.css">
   <link rel="stylesheet" href="../components/navmenu/navmenu.css">
   <link rel="stylesheet" href="../components/footer/footer.css">
+
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <style>
+    .md-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin: 16px 0; }
+    .md-tabs button { cursor:pointer; border:1px solid #ccc; background:#f7f7f7; padding:8px 12px; border-radius:8px; }
+    .md-tabs button.active { background:#fff; border-color:#888; }
+    #mdTarget { line-height:1.65; }
+    #mdTarget pre { background:#f6f8fa; padding:12px; border-radius:8px; overflow:auto; }
+    #mdTarget table { border-collapse: collapse; }
+    #mdTarget th, #mdTarget td { border:1px solid #e5e7eb; padding:6px 8px; }
+  </style>
 </head>
 <body>
   <div id="navmenu-slot"></div>
@@ -18,7 +31,7 @@
         <div class="hero-content">
           <div class="header-with-button">
             <h1>FrotaFácil - Automação e Gerência da Frota de Veículos</h1>
-            <a href="https://172.22.3.95/frotafacil" target="_blank" class="access-button">Testar Serviço</a>
+            <a href="https://172.22.3.57/frotafacil" target="_blank" class="access-button">Testar Serviço</a>
           </div>
           <p class="hero-description">Solução completa para digitalização de processos de gestão de frota, eliminando controles manuais e garantindo rastreabilidade total de veículos, motoristas e recursos operacionais.</p>
 
@@ -37,11 +50,17 @@
 
       <section class="template-section">
         <div class="section-header">
-          <a href="../assets/PGP_Controle_Frota_assinado[1].pdf" target="_blank" class="documentation-button">Documentação PGP</a>
-          <a href="https://github.com/ViniciusBenevides/Projetos-JF/blob/frotafacil/CLIENT.md" target="_blank" class="documentation-button">Documentação de Usuário</a>
-          <a href="https://github.com/ViniciusBenevides/Projetos-JF/blob/frotafacil/README.md" target="_blank" class="documentation-button">Documentação Técnica</a>
-           <a href="https://github.com/ViniciusBenevides/Projetos-JF/archive/refs/heads/frotafacil.zip" target="_blank" class="documentation-button">Código Fonte</a>
+          <h2>Documentação</h2>
         </div>
+
+        <div class="md-tabs">
+          <a href="../assets/PGP_Controle_Frota_assinado[1].pdf" target="_blank" class="documentation-button">Documentação PGP</a>
+          <a href="docs.html?doc=README.md" target="_blank" class="documentation-button">Documentação Técnica</a>
+          <a href="docs.html?doc=CLIENT.md" target="_blank" class="documentation-button">Documentação de Usuário</a>
+
+        </div>
+
+
 
       <section class="template-section">
         <div class="section-header"><h2>Equipe Responsável</h2></div>
@@ -99,6 +118,7 @@
   <div id="footer-slot"></div>
 
   <script>
+
     (async () => {
       try {
         const nav = await (await fetch('../components/navmenu/navmenu.html')).text();
@@ -113,6 +133,34 @@
         document.getElementById('footer-slot').innerHTML = footer;
       } catch(e){ console.error('Footer falhou', e); }
     })();
+
+    async function carregarMd(caminho) {
+      const alvo = document.getElementById('mdTarget');
+      alvo.innerHTML = 'Carregando…';
+      try {
+        const resp = await fetch(caminho, { cache: 'no-store' });
+        if (!resp.ok) throw new Error('HTTP ' + resp.status);
+        const texto = await resp.text();
+        alvo.innerHTML = marked.parse(texto);
+        window.scrollTo({ top: alvo.offsetTop - 24, behavior: 'smooth' });
+      } catch (e) {
+        alvo.innerHTML = `<p>Não foi possível carregar <code>${caminho}</code>.</p>`;
+        console.error('Erro ao carregar MD:', caminho, e);
+      }
+    }
+
+    const btnReadme = document.getElementById('btnReadme');
+    const btnClient = document.getElementById('btnClient');
+
+    btnReadme?.addEventListener('click', () => {
+      btnReadme.classList.add('active'); btnClient.classList.remove('active');
+      carregarMd('../docs/README.md'); 
+    });
+
+    btnClient?.addEventListener('click', () => {
+      btnClient.classList.add('active'); btnReadme.classList.remove('active');
+      carregarMd('../docs/CLIENT.md'); 
+    });
   </script>
 </body>
 </html>

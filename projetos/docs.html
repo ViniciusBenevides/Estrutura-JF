@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Documentação FrotaFácil</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      background: #0b1220;
+      color: #e6eaf3;
+      font: 16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 32px auto 72px;
+      background: #121a2b;
+      border: 1px solid #1f2a44;
+      border-radius: 14px;
+      box-shadow: 0 8px 26px rgba(0, 0, 0, .35);
+      padding: 28px;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.25;
+      margin: 24px 0 12px;
+    }
+
+    h1 { font-size: 2.1rem; }
+    h2 { font-size: 1.6rem; border-bottom: 1px solid #1f2a44; padding-bottom: 6px; }
+    h3 { font-size: 1.25rem; }
+
+    a { color: #60a5fa; }
+
+    blockquote {
+      background: #0f172a;
+      border-left: 4px solid #60a5fa;
+      color: #b5c0d1;
+      padding: 10px 14px;
+      border-radius: 10px;
+    }
+
+    pre {
+      background: #0f172a;
+      color: #dbe7ff;
+      border: 1px solid #1f2a44;
+      border-radius: 10px;
+      padding: 12px;
+      overflow: auto;
+    }
+
+    code {
+      background: #0f172a;
+      color: #dbe7ff;
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+
+    ul, ol { padding-left: 1.25rem; }
+
+    .mermaid {
+      background: #0f172a;
+      border: 1px solid #1f2a44;
+      border-radius: 10px;
+      padding: 12px;
+      overflow: auto;
+    }
+    
+  </style>
+</head>
+<body>
+  <main>
+    <div id="mdTarget">Carregando…</div>
+  </main>
+
+  <script>
+    async function carregarMd() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const doc = urlParams.get('doc') || 'README.md'; 
+      try {
+        const resp = await fetch('../docs/' + doc, { cache: "no-store" });
+        if (!resp.ok) throw new Error("Erro HTTP " + resp.status);
+        const texto = await resp.text();
+        document.getElementById('mdTarget').innerHTML = marked.parse(texto);
+      } catch (e) {
+        document.getElementById('mdTarget').innerHTML = `<p>Erro ao carregar <code>${doc}</code>.</p>`;
+      }
+    }
+    carregarMd();
+  </script>
+</body>
+</html>
