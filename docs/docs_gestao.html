@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Documentação Projetos JF</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      background: #0b1220;
+      color: #e6eaf3;
+      font: 16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 32px auto 72px;
+      background: #121a2b;
+      border: 1px solid #1f2a44;
+      border-radius: 14px;
+      box-shadow: 0 8px 26px rgba(0, 0, 0, .35);
+      padding: 28px;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.25;
+      margin: 24px 0 12px;
+    }
+
+    h1 { font-size: 2.1rem; }
+    h2 { font-size: 1.6rem; border-bottom: 1px solid #1f2a44; padding-bottom: 6px; }
+    h3 { font-size: 1.25rem; }
+
+    a { color: #60a5fa; }
+
+    blockquote {
+      background: #0f172a;
+      border-left: 4px solid #60a5fa;
+      color: #b5c0d1;
+      padding: 10px 14px;
+      border-radius: 10px;
+    }
+
+    pre {
+      background: #0f172a;
+      color: #dbe7ff;
+      border: 1px solid #1f2a44;
+      border-radius: 10px;
+      padding: 12px;
+      overflow: auto;
+    }
+
+    code {
+      background: #0f172a;
+      color: #dbe7ff;
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+
+    ul, ol { padding-left: 1.25rem; }
+
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 8px 0;
+      cursor: zoom-in;
+      transition: transform .2s;
+      display: block;
+    }
+
+    img:hover { transform: scale(1.02); }
+
+    /* Modal */
+    #imageModal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      cursor: zoom-out;
+    }
+
+    #imageModal img {
+      max-width: 95%;
+      max-height: 95%;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(255,255,255,0.2);
+      animation: zoomIn 0.25s ease;
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.9); opacity: 0.5; }
+      to { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div id="mdTarget">Carregando…</div>
+  </main>
+
+  <!-- Modal de imagem -->
+  <div id="imageModal">
+    <img id="modalImg" src="" alt="Imagem ampliada">
+  </div>
+
+  <script>
+    async function carregarMd() {
+      const urlParams = new URLSearchParams(window.location.search);
+
+      // Pega os parâmetros dinâmicos da URL
+      const repo = urlParams.get('repo') || 'gestao-facil';
+      const doc = urlParams.get('doc') || 'README.md';
+
+      const GITHUB_BASE = `https://raw.githubusercontent.com/ViniciusBenevides/Projetos-JF/${repo}/`;
+
+      let docPath = doc.trim();
+
+      // Ajustes automáticos de nome / localização
+      if (/client\.md/i.test(docPath)) {
+        docPath = "CLIENT.md";
+      } else if (/readme\.md/i.test(docPath)) {
+        docPath = "README.md";
+      } else if (!docPath.includes("/")) {
+        // se não tiver pasta, assume que está na raiz do repositório
+        docPath = doc;
+      }
+
+      try {
+        const resp = await fetch(GITHUB_BASE + docPath, { cache: "no-store" });
+        if (!resp.ok) throw new Error("Erro HTTP " + resp.status);
+        const texto = await resp.text();
+
+        // Converte Markdown → HTML
+        let html = marked.parse(texto);
+
+        // Corrige imagens: mantém o modal, evita redirecionamento
+        html = html.replace(/<img\s+[^>]*src=["']([^"']+)["'][^>]*>/g, (match, src) => {
+          const fileName = src.split("/").pop();
+          const fixedSrc = "../assets/docs/" + fileName;
+          return `<img src="${fixedSrc}" alt="${fileName}">`;
+        });
+
+        // Remove caracteres indesejados
+        html = html.replace(/≥/g, "").replace(/&gt;/g, "").replace(/>\s*(?=<)/g, ">");
+
+        // Renderiza o HTML
+        document.getElementById("mdTarget").innerHTML = html;
+
+        // === Modal ===
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImg");
+
+        document.querySelectorAll("#mdTarget img").forEach(img => {
+          img.addEventListener("click", e => {
+            e.preventDefault(); // impede redirecionamento
+            modal.style.display = "flex";
+            modalImg.src = img.src;
+          });
+        });
+
+        modal.addEventListener("click", e => {
+          if (e.target === modal) modal.style.display = "none";
+        });
+
+      } catch (e) {
+        document.getElementById("mdTarget").innerHTML =
+          `<p style="color:#ccc;text-align:center;">Erro ao carregar <code>${doc}</code> do repositório <b>${repo}</b>.</p>`;
+        console.error(e);
+      }
+    }
+
+    carregarMd();
+  </script>
+</body>
+</html>
