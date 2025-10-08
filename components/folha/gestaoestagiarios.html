@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FolhaFácil - Gestão de Estagiários</title>
+
+  <base href="/">
+
+  <link rel="stylesheet" href="/components/TCU/tcu.css">
+  <link rel="stylesheet" href="/components/navmenu/navmenu.css">
+  <link rel="stylesheet" href="/components/footer/footer.css">
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <div class="tcu-container-pai">
+    <div class="tcu-container">
+      <section class="tcu-hero">
+        <div class="hero-content">
+          <div class="header-with-button">
+            <h1>FolhaFácil - Gestão de Estagiários</h1>
+            <a href="https://172.22.3.95/folhafacil/estagiarios/" target="_blank" class="access-button">Testar Serviço</a>
+          </div>
+
+          <p class="hero-description">
+            Sistema desenvolvido para automatizar o controle e acompanhamento dos estagiários da Justiça Federal, abrangendo cadastro, supervisão, frequência e relatórios de estágio.
+          </p>
+
+          <div class="meta-grid">
+            <div class="meta-item" id="first"><span class="meta-label">Setor</span><span class="meta-value">Justiça Federal - TRF1ª Região</span></div>
+            <div class="meta-item" id="second"><span class="meta-label">Tipo de Serviço</span><span class="meta-value">Gestão de Estágios</span></div>
+            <div class="meta-item" id="third"><span class="meta-label">Ferramentas</span><span class="meta-value">Django, PostgreSQL, React, Bootstrap</span></div>
+            <div class="meta-item" id="last"><span class="meta-label">Timeline</span><span class="meta-value">Nov/2024 - Out/2025 (12 meses)</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tcu-section">
+        <div class="section-header">
+           <a href="../docs/docs.html?doc=MANUAL_USUARIO_ESTAGIARIOS.md" target="_blank" class="documentation-button">
+            Manual de Usuário Gestão de Estagiários
+          </a>
+        </div>
+      </section>
+
+      <div class="team-cards">
+        <div class="team-card">
+          <h3>Stakeholders</h3>
+          <ul>
+            <li>Jean Marcos Cabral (Diretor DIGEP)</li>
+            <li>Kleuber Rodrigues (Supervisor SEPAG)</li>
+            <li>Equipe de Gestão de Estágios</li>
+          </ul>
+        </div>
+        <div class="team-card"><h3>Gestor</h3><p>JEAN MARCOS CABRAL</p></div>
+        <div class="team-card"><h3>Docente</h3><p>IWENS GERVASIO SENE JUNIOR</p></div>
+        <div class="team-card"><h3>Residentes</h3><ul><li>PATRICK FERNANDES MARINS</li><li>PAULO ROBERTO VIEIRA</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="tcu-section">
+    <h2>Contexto do Projeto</h2>
+    <div class="content-card">
+      <p>
+        O sistema Gestão de Estagiários foi criado para centralizar e automatizar o controle das informações de estagiários na Justiça Federal, substituindo planilhas manuais e processos descentralizados.
+        A ferramenta permite o acompanhamento da jornada, supervisão e emissão de relatórios, além de gerar alertas automáticos para renovações e encerramentos de contratos.
+      </p>
+    </div>
+  </section>
+
+  <section class="tcu-section">
+    <h2>Etapas de Desenvolvimento</h2>
+    <div class="process-steps">
+      <div class="process-step"><div class="step-number">01</div><div class="step-content"><h3>Levantamento de Requisitos</h3><p>Mapeamento dos fluxos administrativos e das regras aplicáveis aos contratos de estágio.</p></div></div>
+      <div class="process-step"><div class="step-number">02</div><div class="step-content"><h3>Desenvolvimento de Módulos</h3><p>Criação de funcionalidades para cadastro, controle de frequência e geração de relatórios automáticos.</p></div></div>
+      <div class="process-step"><div class="step-number">03</div><div class="step-content"><h3>Integração e Validação</h3><p>Implementação de mecanismos de validação de dados e autenticação integrada com sistemas internos.</p></div></div>
+      <div class="process-step"><div class="step-number">04</div><div class="step-content"><h3>Testes e Treinamento</h3><p>Testes com usuários e capacitação dos responsáveis pelo uso do sistema.</p></div></div>
+    </div>
+  </section>
+
+  <section class="tcu-section">
+    <h2>Aplicações Desenvolvidas</h2>
+    <div class="features-grid">
+      <a href="/assets/estagiarios.jpeg" target="_blank">
+        <img src="/assets/estagiarios.jpeg" alt="Gestão de Estagiários - Tela principal" class="featured-image">
+      </a>
+    </div>
+  </section>
+
+  <section class="tcu-section">
+    <h2>Resultados Alcançados</h2>
+    <div class="content-card">
+      <p>
+        O sistema reduziu em 80% o tempo gasto na gestão de estágios, eliminou inconsistências de cadastro e facilitou a emissão de relatórios. 
+        Agora o setor de gestão de pessoas possui visibilidade total sobre o ciclo de vida de cada estagiário, desde a entrada até o término do contrato.
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer-custom">
+    <div class="footer-row"><p>© SJGO - 2025 • Todos os direitos reservados</p></div>
+  </footer>
+
+  <script src="/js/tcu.js"></script>
+
+  <script>
+    (async () => {
+      try {
+        const res = await fetch('/components/navmenu/navmenu.html');
+        document.getElementById('nav-placeholder').innerHTML = await res.text();
+        if (!document.querySelector('script[src="/components/navmenu/navmenu.js"]')) {
+          const s = document.createElement('script');
+          s.src = '/components/navmenu/navmenu.js';
+          document.body.appendChild(s);
+        }
+      } catch (e) { console.error('Falha ao carregar o nav:', e); }
+    })();
+  </script>
+</body>
+</html>

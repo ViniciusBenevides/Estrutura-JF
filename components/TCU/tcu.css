@@ -8,20 +8,25 @@
 }
 
 body {
-    background-color: #00020f;
-    color: #A7ADBE;
+  background-color: #00020f;
+  color: #A7ADBE;
+  margin: 0;
+  padding: 0;
 }
 
 .tcu-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 3rem; 
 }
 
 .tcu-section {
-    margin: 5rem 0;
+  margin: 5rem auto;
+  max-width: 1200px;
+  padding: 0 3rem;   
 }
+
 
 .tcu-section h2 {
     font-size: 36px;
@@ -31,7 +36,6 @@ body {
     letter-spacing: -0.02em;
 }
 
-/* ================= HERO ================= */
 .tcu-hero {
     margin-top: 80px;
     margin-bottom: 4rem;
@@ -66,7 +70,6 @@ body {
     object-fit: cover;
 }
 
-/* ================= META GRID ================= */
 .meta-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -95,7 +98,6 @@ body {
     font-size: 18px;
 }
 
-/* ================= EQUIPE ================= */
 .team-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -130,7 +132,6 @@ body {
     color: #c9cee4;
 }
 
-/* LISTAS COM BOLINHAS */
 .team-card ul {
     list-style: disc;
     padding-left: 1.25rem;
@@ -141,7 +142,6 @@ body {
     margin: 6px 0;
 }
 
-/* ================= BOTÕES ================= */
 .docs-row{
   display:flex;
   gap:16px;
@@ -167,7 +167,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* bolinha do ícone (opcional, só estiliza o SVG) */
 .documentation-button .icon{
   display:inline-flex;
   width:20px;
@@ -182,15 +181,14 @@ body {
 }
 .docs-row {
     display: flex;
-    gap: 16px; /* Adiciona espaçamento horizontal e vertical */
+    gap: 16px; 
     flex-wrap: wrap;
     margin: 24px 0 48px;
 }
 
 .documentation-button {
-    margin-bottom: 10px; /* Espaço extra abaixo de cada botão */
+    margin-bottom: 10px;  
 }
-/* ================= CONTENT CARD ================= */
 .content-card {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -205,7 +203,6 @@ body {
     margin: 0;
 }
 
-/* ================= ETAPAS ================= */
 .process-steps {
     margin-top: 2rem;
 }
@@ -241,7 +238,6 @@ body {
     line-height: 1.7;
 }
 
-/* ================= FEATURES ================= */
 .features-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -295,7 +291,6 @@ body {
     line-height: 1.6;
 }
 
-/* ================= RESPONSIVO ================= */
 @media (max-width: 1024px) {
     .features-grid {
         grid-template-columns: 1fr;
@@ -364,4 +359,24 @@ body {
 .access-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(255,255,255,0.4);
+}
+.features-grid {
+  display: flex;
+  justify-content: center; 
+  align-items: center;    
+  gap: 20px;             
+}
+
+.features-grid img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.features-grid img:hover {
+  transform: scale(1.02);
 }

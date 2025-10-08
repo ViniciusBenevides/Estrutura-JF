@@ -1,4 +1,3 @@
-// components/nossosSoftwares/nossosSoftwares.js
 (function initNossosSoftwares() {
   const services = [
     {
@@ -6,9 +5,8 @@
       image: "assets/carteira-de-trabalho.webp",
       title: "TCU Monitor",
       description: "Sistema para verificação automática de status de aposentadoria no TCU.",
-      link: "components/TCU/tcu.html" // sem barra inicial (index.html está na raiz)
+      link: "components/TCU/tcu.html" 
     }
-    // adicione mais softwares se quiser
   ];
 
   function buildCard(s) {

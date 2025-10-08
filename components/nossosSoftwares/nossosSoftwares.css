@@ -5,7 +5,6 @@
   justify-content: center;
 }
 
-/* Card do serviço */
 .service-card {
   background: #fff;
   border-radius: 18px;
@@ -18,14 +17,13 @@
   flex-direction: column;
   align-items: center;
   transition: box-shadow 0.3s;
-  text-decoration: none; /* garante que nada dentro do card tenha sublinhado */
+  text-decoration: none;
 }
 
 .service-card:hover {
   box-shadow: 0 8px 48px 0 rgba(0,0,0,0.16);
 }
 
-/* Container da imagem */
 .card-image-container {
   width: 100%;
   border-radius: 18px 18px 0 0;
@@ -38,7 +36,6 @@
   display: block;
 }
 
-/* Título do card */
 .card-title {
   font-weight: bold;
   font-size: 1.15rem;
@@ -47,7 +44,6 @@
   width: 85%;
 }
 
-/* Descrição do card */
 .card-description {
   color: #5A5A5A;
   font-size: 1rem;
@@ -57,7 +53,6 @@
 }
 
 
-/* Link/botão para o projeto */
 .project-button-link {
   background: #000;
   color: #fff;
@@ -66,7 +61,7 @@
   border-radius: 30px;
   padding: 12px 24px 12px 18px;
   font-size: 1rem;
-  text-decoration: none; /* remove sublinhado */
+  text-decoration: none; 
   display: flex;
   align-items: center;
   gap: 8px;
@@ -75,10 +70,9 @@
 
 .project-button-link:hover {
   background: #222;
-  text-decoration: none; /* garante que no hover também não volte */
+  text-decoration: none;
 }
 
-/* Ícone dentro do botão */
 .icon-container {
   display: flex;
   align-items: center;
@@ -90,8 +84,6 @@
   margin-right: 6px;
   filter: invert(1);
 }
-
-/* Remove sublinhado de qualquer link dentro dessa grade */
 .servicos-grid a {
   text-decoration: none;
 }

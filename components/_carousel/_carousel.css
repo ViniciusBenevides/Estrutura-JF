@@ -6,14 +6,12 @@
     font-family: "Rethink Sans", sans-serif;
 }
 
-/* Container principal */
 .carousel-container {
     position: relative;
     width: 100%;
     overflow: hidden;
 }
 
-/* Carousel wrapper */
 .carousel-wrapper {
     position: relative;
     height: 100vh;
@@ -26,7 +24,6 @@
     }
 }
 
-/* Carousel items */
 .carousel-item {
     position: absolute;
     top: 0;
@@ -55,7 +52,6 @@
     transform: translate(-50%, -50%);
 }
 
-/* Overlay */
 .overlay {
     position: absolute;
     top: 0;
@@ -104,7 +100,6 @@
     }
 }
 
-/* Slider indicators */
 .indicators {
     position: absolute;
     z-index: 30;
@@ -129,7 +124,6 @@
     background-color: white;
 }
 
-/* Fancy Button Styles */
 .fancy-button {
     all: unset;
     margin-top: 30px;

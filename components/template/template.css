@@ -61,7 +61,6 @@
     border-radius: 1.25rem;
 }
 
-/* Grid de Metadados */
 .meta-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -118,7 +117,6 @@
     gap: 1rem;
 }
 
-/* Cards de Equipe */
 .team-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -168,7 +166,6 @@
     left: 0;
 }
 
-/* Botão de Documentação */
 .documentation-button {
     display: inline-block;
     padding: 0.75rem 1.5rem;
@@ -187,7 +184,6 @@
     transform: translateY(-2px);
 }
 
-/* Cards de História e Conclusão */
 .story-card,
 .conclusion-card {
     background: rgba(255, 255, 255, 0.05);
@@ -204,7 +200,6 @@
     line-height: 1.6;
 }
 
-/* Processo */
 .process-steps {
     margin-top: 2rem;
 }
@@ -247,7 +242,6 @@
     line-height: 1.6;
 }
 
-/* Features */
 .features-grid {
     display: grid;
     gap: 2rem;
@@ -299,7 +293,6 @@
     object-fit: fill;
 }
 
-/* Botão de Acesso */
 .access-button-container {
     margin: 4rem 0;
     text-align: center;
@@ -339,7 +332,6 @@
     }
 }
 
-/* Responsividade */
 @media (max-width: 1024px) {
     .meta-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -512,3 +504,104 @@
   background: #1f2a44;
   transform: translateY(-2px);
 }
+/* === FolhaFácil - Seção de Serviços (ajustada com azul escuro institucional) === */
+
+.folhafacil-servicos {
+  text-align: center;
+  margin: 60px auto 40px;
+  max-width: 1200px;
+  padding: 0 20px;
+  color: #fff;
+}
+
+.folhafacil-servicos h2 {
+  font-size: 1.8rem;
+  color: #0d6efd; /* azul institucional escuro e elegante */
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+
+/* === Grade responsiva com 5 colunas fixas no desktop === */
+
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 colunas fixas */
+  gap: 25px;
+  justify-items: center;
+  align-items: stretch;
+  width: 100%;
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 1200px) {
+  .servicos-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .servicos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .servicos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.servico-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 25px 20px;
+  text-align: center;
+  min-height: 220px;
+  width: 100%;
+  transition: all 0.25s ease;
+}
+
+.servico-card:hover {
+  transform: translateY(-4px);
+  border-color: #0d6efd;
+  box-shadow: 0 4px 18px rgba(13, 110, 253, 0.2);
+}
+
+
+.servico-card h3 {
+  font-size: 1.1rem;
+  color: #0d6efd;
+  margin-bottom: 12px;
+}
+
+.servico-card p {
+  color: #d0d0d0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.servico-btn {
+  display: inline-block;
+  background-color: #0d6efd;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+  margin-top: auto;
+}
+
+.servico-btn:hover {
+  background-color: #084298;
+  transform: translateY(-2px);
+}
+

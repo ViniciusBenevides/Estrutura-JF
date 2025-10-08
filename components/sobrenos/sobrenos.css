@@ -60,7 +60,6 @@
     aspect-ratio: 3/2;
 }
 
-/* Responsividade */
 @media (max-width: 1200px) {
     .sobre-nos-container {
         width: 90%;

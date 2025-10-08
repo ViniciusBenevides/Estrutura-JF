@@ -1,8 +1,8 @@
-// === Configuração dos slides (equivalente ao array do React) ===
+
 const _carouselItems = [
   {
     id: 1,
-    imageSrc: "assets/carousel-1.jpg", // ajuste de caminho p/ sua estrutura
+    imageSrc: "assets/carousel-1.jpg",
     altText: "Slide 1",
     title: "Projeto de Residência em Sistemas e Agentes Inteligentes para o Judiciário Federal",
   },
@@ -25,7 +25,7 @@ const _carouselItems = [
   const indicators = document.getElementById("_carouselIndicators");
   if (!wrapper || !indicators) return;
 
-  // Renderiza slides dinamicamente (como o map do React)
+
   wrapper.innerHTML = _carouselItems
     .map((item, index) => {
       const activeClass = index === 0 ? "active-item" : "inactive-item";
@@ -53,12 +53,10 @@ const _carouselItems = [
     })
     .join("");
 
-  // Estado
   let currentIndex = 0;
   let isAutoPlaying = true;
   let autoInterval = null;
 
-  // Funções equivalentes às do React
   function setActiveSlide(index) {
     const items = wrapper.querySelectorAll(".carousel-item");
     const dots = indicators.querySelectorAll(".indicator");
@@ -84,7 +82,7 @@ const _carouselItems = [
     autoInterval = setInterval(() => {
       const next = currentIndex === _carouselItems.length - 1 ? 0 : currentIndex + 1;
       setActiveSlide(next);
-    }, 10000); // 10s (igual ao React)
+    }, 10000);
   }
 
   function stopAutoPlay() {
@@ -94,10 +92,10 @@ const _carouselItems = [
 
   function pauseAutoPlay() {
     stopAutoPlay();
-    setTimeout(() => startAutoPlay(), 10000); // pausa 10s e volta a tocar
+    setTimeout(() => startAutoPlay(), 10000); 
   }
 
-  // Mouse follow effect no botão (equivalente ao useRef + mousemove)
+
   function attachFancyButtonEffect(scope) {
     const buttons = scope.querySelectorAll(".fancy-button");
     buttons.forEach((btn) => {
@@ -111,11 +109,9 @@ const _carouselItems = [
     });
   }
 
-  // Clique em "Saiba mais"
+
   function handleSaibaMaisClick(e) {
     e.preventDefault();
-    // Comportamento idêntico ao React:
-    // se estiver na home, scroll suave; senão, navega para index e ancora
     const onHome =
       window.location.pathname.endsWith("/index.html") ||
       window.location.pathname === "/" ||
@@ -129,7 +125,6 @@ const _carouselItems = [
     }
   }
 
-  // Listeners
   indicators.addEventListener("click", (e) => {
     const btn = e.target.closest(".indicator");
     if (!btn) return;
@@ -143,9 +138,7 @@ const _carouselItems = [
     handleSaibaMaisClick(e);
   });
 
-  // Efeito hover do botão
   attachFancyButtonEffect(wrapper);
 
-  // Inicia autoplay
   startAutoPlay();
 })();

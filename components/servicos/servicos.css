@@ -44,7 +44,6 @@
   gap: 2rem;
 }
 
-/* o CARD é um <a> (clicável inteiro) */
 .service-card-link {
   display: flex;
   justify-content: center;
@@ -115,7 +114,6 @@
   flex-grow: 1;
 }
 
-/* “botão” visual (fica embaixo, como nos outros) */
 .project-button-container {
   margin-top: auto;
 }
@@ -137,7 +135,6 @@
   max-width: 200px;
   margin: 0 auto;
   box-shadow: 0 8px 18px rgba(0, 0, 0, .12);
-  /* importantíssimo: o clique passa para o <a> do card */
   pointer-events: none;
 }
 
@@ -157,14 +154,6 @@
 .service-card-link:hover .project-button2 img {
   transform: translateX(3px);
 }
-
-/* ========== REMOVIDO o botão flutuante antigo ==========
-   (garantimos que todos os cards, inclusive o TCU, usem o mesmo botão de baixo)
-   .project-button { ... }
-   .service-card-link:hover .project-button { ... }
-*/
-
-/* Responsividade */
 @media (max-width: 1200px) {
   .servicos-grid {
     grid-template-columns: repeat(2, 1fr);

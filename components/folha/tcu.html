@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FolhaFácil - Monitor TCU</title>
+
+  <base href="/">
+
+  <link rel="stylesheet" href="/components/TCU/tcu.css">
+  <link rel="stylesheet" href="/components/navmenu/navmenu.css">
+  <link rel="stylesheet" href="/components/footer/footer.css">
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <div class="tcu-container-pai">
+    <div class="tcu-container">
+      <section class="tcu-hero">
+        <div class="hero-content">
+          <div class="header-with-button">
+            <h1>FolhaFácil - Monitor TCU</h1>
+            <a href="https://172.22.3.95/folhafacil/monitor/" target="_blank" class="access-button">Testar Serviço</a>
+          </div>
+
+          <p class="hero-description">
+            Sistema automatizado para monitorar e validar informações de aposentadoria junto ao Tribunal de Contas da União (TCU), garantindo a conformidade e atualização contínua dos dados de servidores.
+          </p>
+
+          <div class="meta-grid">
+            <div class="meta-item" id="first"><span class="meta-label">Setor</span><span class="meta-value">Justiça Federal - TRF1ª Região</span></div>
+            <div class="meta-item" id="second"><span class="meta-label">Tipo de Serviço</span><span class="meta-value">Sistema de Monitoramento</span></div>
+            <div class="meta-item" id="third"><span class="meta-label">Ferramentas</span><span class="meta-value">React, Node.js, PostgreSQL, API TCU, Sistema de Notificações</span></div>
+            <div class="meta-item" id="last"><span class="meta-label">Timeline</span><span class="meta-value">Mai/2025 - Jun/2025 (2 meses)</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tcu-section">
+        <div class="section-header">
+                   <a href="../docs/docs_folha.html?doc=MANUAL_USUARIO_MONITOR.md" target="_blank" class="documentation-button">Manual de Usuário Monitor TCU</a>
+          </a>
+        </div>
+      </section>
+
+      <div class="team-cards">
+        <div class="team-card">
+          <h3>Stakeholders</h3>
+          <ul>
+            <li>Jean Marcos Cabral (Diretor DIGEP)</li>
+            <li>Kleuber Rodrigues (Supervisor SEPAG)</li>
+            <li>Equipe de Folha de Pagamento</li>
+          </ul>
+        </div>
+        <div class="team-card"><h3>Gestor</h3><p>JEAN MARCOS CABRAL</p></div>
+        <div class="team-card"><h3>Docente</h3><p>IWENS GERVASIO SENE JUNIOR</p></div>
+        <div class="team-card"><h3>Residentes</h3><ul><li>PATRICK FERNANDES MARINS</li><li>PAULO ROBERTO VIEIRA</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="tcu-section">
+    <h2>Contexto do Projeto</h2>
+    <div class="content-card">
+      <p>
+        O Monitor TCU foi desenvolvido para eliminar o processo manual de consulta ao sistema do Tribunal de Contas da União (TCU), automatizando a verificação do status de aposentadorias. 
+        O sistema realiza consultas periódicas e notifica automaticamente os gestores sobre mudanças no status dos servidores.
+      </p>
+    </div>
+  </section>
+
+  <section class="tcu-section">
+    <h2>Etapas de Desenvolvimento</h2>
+    <div class="process-steps">
+      <div class="process-step"><div class="step-number">01</div><div class="step-content"><h3>Integração com API TCU</h3><p>Implementação de conexão segura com a API do TCU para consultas automatizadas.</p></div></div>
+      <div class="process-step"><div class="step-number">02</div><div class="step-content"><h3>Monitoramento Contínuo</h3><p>Criação de rotina automatizada de verificação e atualização dos status dos servidores.</p></div></div>
+      <div class="process-step"><div class="step-number">03</div><div class="step-content"><h3>Sistema de Notificações</h3><p>Configuração de alertas automáticos para os gestores quando há alteração de status.</p></div></div>
+      <div class="process-step"><div class="step-number">04</div><div class="step-content"><h3>Interface de Gestão</h3><p>Desenvolvimento de painéis intuitivos para visualização dos servidores monitorados e seu histórico.</p></div></div>
+    </div>
+  </section>
+
+  <section class="tcu-section">
+    <h2>Aplicações Desenvolvidas</h2>
+    <div class="features-grid">
+      <a href="/assets/monitor.jpeg" target="_blank">
+        <img src="/assets/monitor.jpeg" alt="Monitor TCU - Tela principal" class="featured-image">
+      </a>
+    </div>
+  </section>
+
+  <section class="tcu-section">
+    <h2>Resultados Alcançados</h2>
+    <div class="content-card">
+      <p>
+        O Monitor TCU reduziu em 90% o tempo de verificação manual e eliminou atrasos na identificação de servidores com aposentadoria deferida. 
+        O sistema permite que o setor de folha de pagamento atue proativamente, aumentando a eficiência e a precisão dos processos.
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer-custom">
+    <div class="footer-row"><p>© SJGO - 2025 • Todos os direitos reservados</p></div>
+  </footer>
+
+  <script src="/js/tcu.js"></script>
+
+  <script>
+    (async () => {
+      try {
+        const res = await fetch('/components/navmenu/navmenu.html');
+        document.getElementById('nav-placeholder').innerHTML = await res.text();
+        if (!document.querySelector('script[src="/components/navmenu/navmenu.js"]')) {
+          const s = document.createElement('script');
+          s.src = '/components/navmenu/navmenu.js';
+          document.body.appendChild(s);
+        }
+      } catch (e) { console.error('Falha ao carregar o nav:', e); }
+    })();
+  </script>
+</body>
+</html>

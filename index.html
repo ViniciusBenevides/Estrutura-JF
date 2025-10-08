@@ -8,7 +8,7 @@
 
   <link rel="icon" type="image/png" href="assets/favicon.ico">
 
-  <!-- CSS Global (opcional) -->
+  <!-- CSS Global -->
   <link rel="stylesheet" href="css/global.css">
 
   <!-- CSS dos Componentes -->
@@ -21,25 +21,26 @@
 </head>
 
 <body>
+  <!-- ✅ Agora o navmenu é carregado dinamicamente -->
+  <div id="navmenu-slot"></div>
 
-
+  <!-- Carrossel -->
   <div id="carousel-slot"></div>
 
+  <!-- Seção "Sobre Nós" -->
   <section id="sobre-nos">
     <div id="sobrenos-slot"></div>
   </section>
 
-  <section id="softwares">
-    <div id="nossossoftwares-slot"></div>
-  </section>
-
+  <!-- Seção "Projetos / Softwares" -->
   <section id="projetos">
     <div id="servicos-slot"></div>
   </section>
 
+  <!-- Rodapé -->
   <div id="footer-slot"></div>
 
-  <!-- Loader de parciais + scripts -->
+    <!-- Loader de parciais + scripts -->
   <script>
     const includes = [
       { selector: "#navmenu-slot", file: "./components/navmenu/navmenu.html" },
@@ -55,7 +56,9 @@
         const host = document.querySelector(inc.selector);
         if (!host) continue;
         try {
-          const res = await fetch(inc.file);
+          // 👇 adiciona ?v=Date.now() para forçar recarregamento e evitar cache
+          const res = await fetch(inc.file + "?v=" + Date.now(), { cache: "no-store" });
+          if (!res.ok) throw new Error("Falha ao carregar " + inc.file);
           host.innerHTML = await res.text();
         } catch (e) {
           host.innerHTML = "<!-- erro ao carregar " + inc.file + " -->";
@@ -64,6 +67,7 @@
       }
     }
 
+    // Depois que carregar o HTML dos componentes, carrega os JS correspondentes
     loadPartials().then(() => {
       const scripts = [
         "components/navmenu/navmenu.js",
@@ -75,11 +79,12 @@
       ];
       for (const src of scripts) {
         const s = document.createElement("script");
-        s.src = src;
+        // 👇 também força o JS a recarregar, sem cache
+        s.src = src + "?v=" + Date.now();
         document.body.appendChild(s);
       }
     });
   </script>
 </body>
-
 </html>
+

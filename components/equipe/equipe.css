@@ -6,7 +6,7 @@
     font-family: "Rethink Sans", sans-serif;
 }
 
-/* Estilos gerais */
+
 .equipe-container {
     width: 1200px;
     margin: 0 auto;
@@ -15,7 +15,7 @@
     font-family: 'Nunito', sans-serif;
 }
 
-/* Cabeçalho */
+
 .equipe-header {
     text-align: center;
     margin-bottom: 3rem;
@@ -45,7 +45,7 @@
     line-height: 1.6;
 }
 
-/* Grid de membros */
+
 .equipe-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -53,7 +53,7 @@
     margin-top: 2rem;
 }
 
-/* Cards de membros */
+
 .member-card {
     background: white;
     border-radius: 8px;
@@ -103,7 +103,7 @@
     margin-bottom: 1.5rem;
 }
 
-/* Links sociais */
+
 .social-links {
     display: flex;
     justify-content: center;
@@ -131,7 +131,6 @@
     transform: scale(1.1);
 }
 
-/* Responsividade */
 @media (max-width: 1200px) {
     .equipe-container {
         width: 90%;
