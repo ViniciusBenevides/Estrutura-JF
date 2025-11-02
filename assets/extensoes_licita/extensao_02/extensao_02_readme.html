@@ -1,0 +1,266 @@
+<!DOCTYPE html><html lang='pt-BR'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Documento</title>
+<style>
+body {
+  margin: 0;
+  background: #0b1220;
+  color: #e6eaf3;
+  font: 16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+}
+
+main {
+  max-width: 960px;
+  margin: 32px auto 72px;
+  background: #121a2b;
+  border: 1px solid #1f2a44;
+  border-radius: 14px;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, .35);
+  padding: 28px;
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+  margin: 24px 0 12px;
+}
+
+h1 {
+  font-size: 2.1rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  border-bottom: 1px solid #1f2a44;
+  padding-bottom: 6px;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+a {
+  color: #60a5fa;
+}
+
+blockquote {
+  background: #0f172a;
+  border-left: 4px solid #60a5fa;
+  color: #b5c0d1;
+  padding: 10px 14px;
+  border-radius: 10px;
+}
+
+pre {
+  background: #0f172a;
+  color: #dbe7ff;
+  border: 1px solid #1f2a44;
+  border-radius: 10px;
+  padding: 12px;
+  overflow: auto;
+}
+
+code {
+  background: #0f172a;
+  color: #dbe7ff;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+ul, ol {
+  padding-left: 1.25rem;
+}
+
+.mermaid {
+  background: #0f172a;
+  border: 1px solid #1f2a44;
+  border-radius: 10px;
+  padding: 12px;
+  overflow: auto;
+}
+
+</style>
+</head><body><main><h1>Extensão Chrome - Capturar Página para PDF</h1>
+
+<p>Uma extensão do Chrome que permite capturar páginas web completas e convertê-las em PDF diretamente no navegador, sem necessidade de servidores externos.</p>
+
+<h2>🚀 Funcionalidades</h2>
+
+<ul>
+<li><strong>Captura de página completa</strong>: Converte toda a página web em PDF, incluindo conteúdo fora da área visível</li>
+<li><strong>Captura de área visível</strong>: Gera PDF apenas da área atualmente visível na tela</li>
+<li><strong>Interface amigável</strong>: Popup moderno e intuitivo</li>
+<li><strong>Notificações</strong>: Feedback visual do progresso da operação</li>
+<li><strong>Nomes automáticos</strong>: Arquivos PDF nomeados automaticamente com título da página e timestamp</li>
+<li><strong>Funciona offline</strong>: Não requer conexão com servidores externos</li>
+</ul>
+
+<h2>📦 Instalação</h2>
+
+<h3>Método 1: Instalação Manual (Modo Desenvolvedor)</h3>
+
+<ol>
+<li><strong>Clone ou baixe os arquivos</strong> da extensão para uma pasta local</li>
+<li><strong>Abra o Chrome</strong> e navegue para <code>chrome://extensions/</code></li>
+<li><strong>Ative o &quot;Modo do desenvolvedor&quot;</strong> no canto superior direito</li>
+<li><strong>Clique em &quot;Carregar sem compactação&quot;</strong></li>
+<li><strong>Selecione a pasta</strong> onde estão os arquivos da extensão</li>
+<li>A extensão será instalada e aparecerá na barra de ferramentas</li>
+</ol>
+
+<h3>Método 2: Instalação via arquivo .crx (se disponível)</h3>
+
+<ol>
+<li>Baixe o arquivo <code>.crx</code> da extensão</li>
+<li>Arraste o arquivo para a página <code>chrome://extensions/</code></li>
+<li>Confirme a instalação</li>
+</ol>
+
+<h2>🎯 Como Usar</h2>
+
+<h3>Captura via Popup</h3>
+
+<ol>
+<li><strong>Clique no ícone da extensão</strong> na barra de ferramentas</li>
+<li>Escolha uma das opções:</li>
+</ol>
+<ul>
+<li><strong>&quot;Capturar Página Completa&quot;</strong>: Gera PDF de toda a página</li>
+<li><strong>&quot;Capturar Área Visível&quot;</strong>: Gera PDF apenas da área visível</li>
+</ul>
+<ol>
+<li><strong>Aguarde o processamento</strong> (você verá uma notificação)</li>
+<li><strong>O PDF será baixado automaticamente</strong> na pasta de downloads</li>
+</ol>
+
+<h3>Captura via Atalho</h3>
+
+<ul>
+<li>A extensão também pode ser ativada clicando diretamente no ícone (sem popup)</li>
+<li>Isso executará a captura completa da página automaticamente</li>
+</ul>
+
+<h2>📋 Requisitos</h2>
+
+<ul>
+<li><strong>Google Chrome</strong> versão 88 ou superior</li>
+<li><strong>Páginas HTTP/HTTPS</strong>: A extensão só funciona em páginas web (não em páginas internas do Chrome)</li>
+<li><strong>Permissões</strong>: A extensão precisa de acesso à aba ativa e permissão para downloads</li>
+</ul>
+
+<h2>🔧 Estrutura dos Arquivos</h2>
+
+<pre><code>prtscr02/
+├── manifest.json          # Configuração da extensão
+├── background.js          # Script de background (geração de PDF)
+├── content.js            # Script de conteúdo (captura de página)
+├── popup.html            # Interface do popup
+├── popup.js              # Lógica do popup
+├── icon.png              # Ícone da extensão
+└── README.md             # Este arquivo</code></pre>
+
+<h2>⚙️ Configurações Técnicas</h2>
+
+<h3>Permissões Utilizadas</h3>
+
+<ul>
+<li><code>activeTab</code>: Acesso à aba ativa</li>
+<li><code>downloads</code>: Permissão para baixar arquivos</li>
+<li><code>notifications</code>: Exibir notificações de status</li>
+<li><code>scripting</code>: Injetar scripts nas páginas</li>
+<li><code>&amp;lt;all_urls&amp;gt;</code>: Acesso a todas as URLs HTTP/HTTPS</li>
+</ul>
+
+<h3>Formato do PDF</h3>
+
+<ul>
+<li><strong>Formato</strong>: A4</li>
+<li><strong>Margens</strong>: 0.4 polegadas em todos os lados</li>
+<li><strong>Fundo</strong>: Incluído (cores e imagens de fundo)</li>
+<li><strong>Qualidade</strong>: Alta resolução</li>
+</ul>
+
+<h2>🐛 Solução de Problemas</h2>
+
+<h3>A extensão não funciona em uma página</h3>
+
+<ul>
+<li><strong>Verifique se a URL é HTTP/HTTPS</strong>: A extensão não funciona em páginas <code>chrome://</code>, <code>file://</code> ou outras páginas internas</li>
+<li><strong>Recarregue a página</strong>: Às vezes é necessário recarregar a página após instalar a extensão</li>
+</ul>
+
+<h3>PDF não é gerado</h3>
+
+<ul>
+<li><strong>Verifique as permissões</strong>: Certifique-se de que o Chrome tem permissão para baixar arquivos</li>
+<li><strong>Desative outras extensões</strong>: Conflitos com outras extensões podem causar problemas</li>
+<li><strong>Verifique o console</strong>: Pressione F12 e veja se há erros no console</li>
+</ul>
+
+<h3>Qualidade do PDF está ruim</h3>
+
+<ul>
+<li><strong>Aguarde o carregamento completo</strong>: Certifique-se de que a página carregou completamente antes de capturar</li>
+<li><strong>Verifique o zoom</strong>: PDFs são gerados com base no zoom atual da página</li>
+</ul>
+
+<h2>🔄 Atualizações</h2>
+
+<p>Para atualizar a extensão:</p>
+
+<ol>
+<li>Substitua os arquivos na pasta da extensão</li>
+<li>Vá para <code>chrome://extensions/</code></li>
+<li>Clique no botão &quot;Recarregar&quot; na extensão</li>
+</ol>
+
+<h2>📝 Changelog</h2>
+
+<h3>v2.0</h3>
+<ul>
+<li>Remoção da dependência de servidor externo</li>
+<li>Interface popup melhorada</li>
+<li>Captura de área visível</li>
+<li>Melhor tratamento de erros</li>
+<li>Nomes de arquivo automáticos</li>
+</ul>
+
+<h3>v1.0</h3>
+<ul>
+<li>Versão inicial com servidor Flask externo</li>
+</ul>
+
+<h2>🤝 Contribuição</h2>
+
+<p>Para contribuir com melhorias:</p>
+
+<ol>
+<li>Faça um fork do projeto</li>
+<li>Crie uma branch para sua feature</li>
+<li>Commit suas mudanças</li>
+<li>Abra um Pull Request</li>
+</ol>
+
+<h2>📄 Licença</h2>
+
+<p>Este projeto está sob licença MIT. Veja o arquivo LICENSE para mais detalhes.</p>
+
+<h2>🆘 Suporte</h2>
+
+<p>Se encontrar problemas ou tiver sugestões:</p>
+
+<ol>
+<li>Verifique a seção &quot;Solução de Problemas&quot; acima</li>
+<li>Abra uma issue no repositório</li>
+<li>Inclua informações sobre seu sistema e o erro encontrado</li>
+</ol></main>
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+  // Decode HTML entities inside .mermaid blocks (because we escaped content)
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.mermaid').forEach(el => {
+      el.textContent = el.textContent; // keeps raw text for mermaid
+    });
+    if (window.mermaid) {
+      mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+    }
+  });
+</script>
+</body></html>
