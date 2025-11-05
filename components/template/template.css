@@ -522,38 +522,20 @@
 }
 
 
-/* === Grade responsiva com 5 colunas fixas no desktop === */
-
+/* === Grade de Serviços Centralizada === */
 .servicos-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 colunas fixas */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  /* Centraliza os cards horizontalmente */
   gap: 25px;
-  justify-items: center;
-  align-items: stretch;
   width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
-/* Responsivo para telas menores */
-@media (max-width: 1200px) {
-  .servicos-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 800px) {
-  .servicos-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 500px) {
-  .servicos-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-
+/* Cada card ocupa largura fixa e centraliza naturalmente */
 .servico-card {
+  width: 240px; /* largura fixa pra manter alinhamento perfeito */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -563,15 +545,15 @@
   padding: 25px 20px;
   text-align: center;
   min-height: 220px;
-  width: 100%;
   transition: all 0.25s ease;
 }
 
 .servico-card:hover {
   transform: translateY(-4px);
   border-color: #0d6efd;
-  box-shadow: 0 4px 18px rgba(13, 110, 253, 0.2);
+  box-shadow: 0 4px 18px rgba(13, 110, 253, 0.25);
 }
+
 
 
 .servico-card h3 {

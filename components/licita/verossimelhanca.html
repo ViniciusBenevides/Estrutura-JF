@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verossimelhança</title>
+
+  <link rel="stylesheet" href="/components/template/template.css">
+  <link rel="stylesheet" href="/components/navmenu/navmenu.css">
+  <link rel="stylesheet" href="/components/footer/footer.css">
+</head>
+<body>
+  <div id="navmenu-slot"></div>
+
+  <div class="template-container-pai">
+    <div class="template-container">
+      <section class="template-hero">
+        <div class="hero-content">
+          <div class="header-content">
+            <h1>LicitaFácil - Sistema de Verificação de semelhança</h1>
+          </div>
+
+          <p class="hero-description">
+            O <strong>VeroSemelhança</strong> é um sistema de reconhecimento facial desenvolvido pelos Residentes da Justiça Federal da 1ª Região
+            com o objetivo de auxiliar na identificação de pessoas a partir de imagens, utilizando inteligência artificial e técnicas de visão computacional.
+          </p>
+
+          <div class="meta-grid">
+            <div class="meta-item" id="first"><span class="meta-label">Setor</span><span class="meta-value">Justiça Federal - TRF1ª Região</span></div>
+            <div class="meta-item" id="second"><span class="meta-label">Tipo de Serviço</span><span class="meta-value">Sistema de Reconhecimento Facial</span></div>
+            <div class="meta-item" id="third"><span class="meta-label">Ferramentas</span><span class="meta-value">Python, OpenCV, Dlib, Face Recognition, Flask, SQLite, HTML/CSS/JS</span></div>
+            <div class="meta-item" id="last"><span class="meta-label">Timeline</span><span class="meta-value">Ago/2024 - Jul/2025 (12 meses)</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="template-section">
+        <div class="docs-buttons">
+          <a href="../../assets/extensoes_licita/verossemelhanca/manual_usuario.html" target="_blank" class="documentation-button">
+            Manual do Usuário
+          </a>
+          <a href="../../assets/extensoes_licita/verossemelhanca/readme.html" target="_blank" class="documentation-button">
+            Documentação Técnica (README)
+          </a>
+          <a href="../../assets/extensoes_licita/verossemelhanca/verosemelhanca-main.zip" target="_blank" class="documentation-button">
+            Repositório GitHub
+          </a>
+        </div>
+      </section>
+
+      <section class="template-section">
+        <div class="story-card">
+          <h2>Contexto do Projeto</h2>
+          <p>
+            O projeto <strong>VeroSemelhança</strong> foi criado com a proposta de facilitar a comparação facial em procedimentos judiciais e administrativos,
+            permitindo verificar semelhanças entre imagens com rapidez e precisão. Ele surgiu no contexto de demandas crescentes por automação e uso de IA
+            em atividades de identificação visual.
+          </p>
+          <p>
+            O sistema realiza o reconhecimento facial a partir de fotografias enviadas pelo usuário, calculando a distância entre as características faciais
+            e gerando uma medida percentual de semelhança. Também possui interface web simples e suporte a banco de dados local para histórico de comparações.
+          </p>
+        </div>
+      </section>
+
+      <section class="template-section">
+        <h2>Etapas de Desenvolvimento</h2>
+        <div class="process-steps">
+          <div class="process-card">
+            <div class="step-number">01</div>
+            <div class="step-content">
+              <h3>Planejamento e Estruturação</h3>
+              <p>Definição dos requisitos funcionais, tecnologias de reconhecimento facial e arquitetura do sistema.</p>
+            </div>
+          </div>
+          <div class="process-card">
+            <div class="step-number">02</div>
+            <div class="step-content">
+              <h3>Implementação do Backend</h3>
+              <p>Desenvolvimento da API em Flask para processamento das imagens, extração de embeddings e cálculo de similaridade.</p>
+            </div>
+          </div>
+          <div class="process-card">
+            <div class="step-number">03</div>
+            <div class="step-content">
+              <h3>Desenvolvimento da Interface Web</h3>
+              <p>Criação da interface para upload de imagens, exibição dos resultados de comparação e registro no banco de dados SQLite.</p>
+            </div>
+          </div>
+          <div class="process-card">
+            <div class="step-number">04</div>
+            <div class="step-content">
+              <h3>Testes e Validação</h3>
+              <p>Execução de testes unitários e validação prática dos resultados, ajustando parâmetros de tolerância e precisão dos modelos faciais.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="template-section">
+        <h2>Principais Funcionalidades</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-content">
+              <h3>Comparação Facial</h3>
+              <p>Permite o upload de duas imagens para análise e cálculo da taxa de semelhança entre os rostos detectados.</p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-content">
+              <h3>Visualização de Resultados</h3>
+              <p>Mostra a porcentagem de semelhança, imagens analisadas e o resultado visual da detecção facial em tempo real.</p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-content">
+              <h3>Banco de Dados Local</h3>
+              <p>Registra as comparações realizadas, permitindo consultas e auditoria posterior.</p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-content">
+              <h3>Processamento Offline</h3>
+              <p>O sistema funciona localmente, sem necessidade de conexão à internet, garantindo segurança e confidencialidade.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="template-section">
+        <div class="conclusion-card">
+          <h2>Resultados Alcançados</h2>
+          <p>
+            O VeroSemelhança proporcionou uma redução significativa no tempo de análise de imagens e aumentou a precisão nas comparações manuais,
+            tornando o processo mais ágil e confiável.
+          </p>
+          <p>
+            Sua aplicação prática demonstra o potencial de integração entre IA e a Justiça Federal, fomentando o desenvolvimento de soluções inovadoras
+            e seguras para a análise de dados visuais.
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div id="footer-slot"></div>
+
+  <script>
+    (async () => {
+      try {
+        const nav = await (await fetch('../navmenu/navmenu.html')).text();
+        document.getElementById('navmenu-slot').innerHTML = nav;
+        const s = document.createElement('script');
+        s.src = '../navmenu/navmenu.js';
+        document.body.appendChild(s);
+      } catch(e){ console.error('Nav falhou', e); }
+
+      try {
+        const footer = await (await fetch('../footer/footer.html')).text();
+        document.getElementById('footer-slot').innerHTML = footer;
+      } catch(e){ console.error('Footer falhou', e); }
+    })();
+  </script>
+</body>
+</html>

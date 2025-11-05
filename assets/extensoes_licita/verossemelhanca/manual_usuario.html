@@ -1,0 +1,180 @@
+<!DOCTYPE html><html lang='pt-BR'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Manual do Usuário - Sistema de Verificação de Verossimilhança</title>
+<style>
+body {
+  margin: 0;
+  background: #0b1220;
+  color: #e6eaf3;
+  font: 16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+}
+
+main {
+  max-width: 960px;
+  margin: 32px auto 72px;
+  background: #121a2b;
+  border: 1px solid #1f2a44;
+  border-radius: 14px;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, .35);
+  padding: 28px;
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+  margin: 24px 0 12px;
+}
+
+h1 {
+  font-size: 2.1rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  border-bottom: 1px solid #1f2a44;
+  padding-bottom: 6px;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+a {
+  color: #60a5fa;
+}
+
+blockquote {
+  background: #0f172a;
+  border-left: 4px solid #60a5fa;
+  color: #b5c0d1;
+  padding: 10px 14px;
+  border-radius: 10px;
+}
+
+pre {
+  background: #0f172a;
+  color: #dbe7ff;
+  border: 1px solid #1f2a44;
+  border-radius: 10px;
+  padding: 12px;
+  overflow: auto;
+}
+
+code {
+  background: #0f172a;
+  color: #dbe7ff;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+ul, ol {
+  padding-left: 1.25rem;
+}
+
+.mermaid {
+  background: #0f172a;
+  border: 1px solid #1f2a44;
+  border-radius: 10px;
+  padding: 12px;
+  overflow: auto;
+}
+</style>
+</head><body><main>
+
+<h1>📘 Manual do Usuário - Sistema de Verificação de Verossimilhança</h1>
+
+<h2>1. Introdução</h2>
+<p>Bem-vindo ao <strong>Sistema de Verificação de Verossimilhança</strong>. Este manual orienta sobre como utilizar a ferramenta para analisar arquivos Excel, comparar a descrição de itens com o <strong>Catálogo Nacional de Bens e Serviços (CNBS)</strong> e obter um relatório de itens com baixa similaridade.</p>
+
+<h2>2. Acesso ao Sistema</h2>
+<p>Para acessar o sistema, abra seu navegador de internet (Google Chrome, Firefox, etc.) e navegue até o endereço fornecido pela sua equipe de TI. A página inicial será exibida.</p>
+
+<h2>3. Interface Principal</h2>
+<p>A tela principal contém os seguintes elementos:</p>
+<ul>
+<li><strong>Logo da Justiça Federal</strong>: Identificação visual do sistema.</li>
+<li><strong>Título</strong>: "Verificar Verossimilhança".</li>
+<li><strong>Formulário de Upload</strong>: Área para selecionar e enviar seu arquivo Excel.</li>
+<li><strong>Informações do Processamento</strong>: Detalhes sobre como a análise é realizada.</li>
+<li><strong>Botão de Ajuda</strong>: Um ícone de interrogação (<code>?</code>) no canto inferior direito que abre um modal com instruções rápidas.</li>
+</ul>
+
+<p><img src="static/images/arte03.png" alt="Tela Inicial"></p>
+
+<h2>4. Passo a Passo para Usar o Sistema</h2>
+
+<h3>Passo 1: Preparar o Arquivo Excel</h3>
+<p>Antes de fazer o upload, garanta que seu arquivo <code>.xlsx</code> contenha as seguintes colunas, exatamente nesta ordem e com estes nomes:</p>
+<ol>
+<li><code>Item</code></li>
+<li><code>Cód. SIASG</code></li>
+<li><code>Un.</code></li>
+<li><code>Discriminação</code></li>
+</ol>
+<p>O sistema usará a coluna <strong>Discriminação</strong> para a análise de similaridade.</p>
+
+<h3>Passo 2: Fazer o Upload do Arquivo</h3>
+<ol>
+<li>Na página inicial, clique no botão <strong>"Escolher arquivo"</strong>.</li>
+<li>Selecione o arquivo Excel preparado no seu computador.</li>
+<li>Após selecionar, o nome do arquivo aparecerá ao lado do botão.</li>
+</ol>
+
+<h3>Passo 3: Enviar para Processamento</h3>
+<ol>
+<li>Clique no botão azul <strong>"Enviar Arquivo"</strong>.</li>
+<li>O sistema iniciará o upload e, em seguida, o processamento. Uma mensagem de "Enviando arquivo..." e depois "Arquivo enviado com sucesso! Processando..." será exibida.</li>
+<li>Uma barra de progresso animada indicará que a análise está em andamento. <strong>Não feche a página</strong> durante esta etapa.</li>
+</ol>
+
+<h3>Passo 4: Aguardar e Acompanhar o Resultado</h3>
+<ul>
+<li>O tempo de processamento pode variar dependendo do tamanho do arquivo e da carga do servidor.</li>
+<li>Durante a análise, a seção <strong>"Informações do Processamento"</strong> será atualizada com:
+  <ul>
+    <li><strong>Total de itens</strong>: Quantidade de linhas analisadas.</li>
+    <li><strong>Similaridades baixas</strong>: Itens cuja descrição teve baixa correspondência com o CNBS.</li>
+    <li><strong>Percentual</strong>: Proporção de itens com baixa similaridade.</li>
+    <li><strong>Tempo</strong>: Duração do processamento.</li>
+  </ul>
+</li>
+</ul>
+
+<h3>Passo 5: Baixar o Arquivo de Resultados</h3>
+<ol>
+<li>Quando o processamento for concluído, uma mensagem de <strong>"Processamento concluído com sucesso!"</strong> aparecerá.</li>
+<li>O botão <strong>"Baixar Resultados"</strong> ficará visível.</li>
+<li>Clique neste botão para fazer o download de um novo arquivo Excel. Este arquivo conterá <strong>apenas os itens que foram identificados com baixa similaridade</strong>, permitindo uma análise focada.</li>
+</ol>
+
+<h2>5. Histórico de Processamentos</h2>
+<p>Você pode visualizar todos os arquivos que já foram processados clicando no link <strong>"Histórico"</strong> no menu superior.</p>
+
+<p>Nesta página, você encontrará uma tabela com as seguintes informações:</p>
+<ul>
+<li><strong>ID</strong>: Identificador único de cada processamento.</li>
+<li><strong>Arquivo</strong>: Nome do arquivo original.</li>
+<li><strong>Status</strong>: Se o processamento foi <code>CONCLUÍDO</code>, está <code>PENDENTE</code> ou resultou em <code>ERRO</code>.</li>
+<li><strong>Data</strong>: Data e hora do envio.</li>
+<li><strong>Ações</strong>: Botões para <strong>baixar</strong> o resultado (se disponível) ou ver <strong>detalhes</strong>.</li>
+</ul>
+
+<h2>6. Detalhes do Processamento</h2>
+<p>Na tela de histórico, ao clicar no botão de detalhes (ícone de olho), você será levado a uma página com todas as informações de um processamento específico, incluindo a lista completa de itens com baixa similaridade e suas respectivas descrições e pontuações.</p>
+
+<h2>7. Solução de Problemas</h2>
+<ul>
+<li><strong>Erro no Upload</strong>: Verifique se o seu arquivo está no formato <code>.xlsx</code> e se não excede o tamanho máximo permitido (informado na tela inicial).</li>
+<li><strong>Processamento com Erro</strong>: Se o status de um processamento for <code>ERRO</code>, tente enviar o arquivo novamente. Se o problema persistir, verifique se o arquivo está formatado corretamente. Caso o erro continue, contate o suporte técnico informando o ID do processamento.</li>
+<li><strong>Página não carrega</strong>: Verifique sua conexão com a internet e tente recarregar a página.</li>
+</ul>
+
+<h2>8. Contato</h2>
+<p>Para dúvidas ou problemas não abordados neste manual, entre em contato com a equipe de suporte de TI.</p>
+
+</main>
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.mermaid').forEach(el => { el.textContent = el.textContent; });
+  if (window.mermaid) mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+});
+</script>
+</body></html>

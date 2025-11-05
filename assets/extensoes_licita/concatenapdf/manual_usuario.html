@@ -1,0 +1,118 @@
+<!DOCTYPE html><html lang='pt-BR'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>📘 Manual do Usuário - Concatenador de PDFs</title>
+<style>
+body {
+  margin: 0;
+  background: #0b1220;
+  color: #e6eaf3;
+  font: 16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+}
+main {
+  max-width: 960px;
+  margin: 32px auto 72px;
+  background: #121a2b;
+  border: 1px solid #1f2a44;
+  border-radius: 14px;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, .35);
+  padding: 28px;
+}
+h1, h2, h3 {
+  line-height: 1.25;
+  margin: 24px 0 12px;
+}
+h1 { font-size: 2.1rem; }
+h2 { font-size: 1.6rem; border-bottom: 1px solid #1f2a44; padding-bottom: 6px; }
+h3 { font-size: 1.25rem; }
+a { color: #60a5fa; }
+pre {
+  background: #0f172a;
+  color: #dbe7ff;
+  border: 1px solid #1f2a44;
+  border-radius: 10px;
+  padding: 12px;
+  overflow: auto;
+}
+code {
+  background: #0f172a;
+  color: #dbe7ff;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+ul, ol { padding-left: 1.25rem; }
+</style></head><body><main>
+
+<h1>📘 Manual do Usuário - Concatenador de PDFs</h1>
+
+<h2>📖 Sobre o Sistema</h2>
+<p>O <strong>Concatenador de PDFs</strong> é uma ferramenta web desenvolvida para unir múltiplos arquivos PDF em um único documento de forma rápida e intuitiva. O sistema foi projetado para ser simples e acessível.</p>
+
+<h2>🎯 Para que serve?</h2>
+<ul>
+<li>Unir múltiplos documentos PDF em um só.</li>
+<li>Facilitar o envio e arquivamento de documentos relacionados.</li>
+<li>Otimizar a organização de arquivos digitais.</li>
+</ul>
+
+<h2>🚀 Como usar o sistema</h2>
+
+<h3>1. Acessando o Sistema</h3>
+<ol>
+<li>Abra seu navegador (Chrome, Firefox, etc.).</li>
+<li>Acesse <code>http://127.0.0.1:8000/</code>.</li>
+<li>A interface principal de concatenação será exibida.</li>
+</ol>
+
+<p><img src="static/images/arte03.png" alt="Interface do Sistema"></p>
+
+<h3>🖥️ Interface do Sistema</h3>
+<ul>
+<li><strong>Área de Upload</strong>: arraste e solte arquivos PDF.</li>
+<li><strong>Botão de Seleção</strong>: selecione arquivos manualmente.</li>
+<li><strong>Enviar e Concatenar</strong>: inicia o processo.</li>
+<li><strong>Área de Mensagens</strong>: exibe status, erros e link de download.</li>
+</ul>
+
+<h3>💡 Fluxo de Uso</h3>
+<pre><code>📄 Selecionar PDFs → ⚡ Enviar e Concatenar → 📊 Baixar Resultado</code></pre>
+
+<h3>2. Selecionando os Arquivos</h3>
+<ul>
+<li>Arraste e solte múltiplos arquivos PDF na área pontilhada.</li>
+<li>Ou clique para selecionar manualmente no seu computador.</li>
+</ul>
+
+<h3>3. Processando os Arquivos</h3>
+<ol>
+<li>Selecione pelo menos dois arquivos PDF.</li>
+<li>Clique em <strong>"Enviar e Concatenar"</strong>.</li>
+<li>O botão indicará “Processando...” até a conclusão.</li>
+</ol>
+
+<h3>4. Baixando o Resultado</h3>
+<ol>
+<li>Após o processamento, uma mensagem de sucesso será exibida.</li>
+<li>O download iniciará automaticamente, ou clique no link manualmente.</li>
+</ol>
+
+<h2>⚠️ Requisitos e Limitações</h2>
+<ul>
+<li>✅ Formato: apenas <code>.pdf</code></li>
+<li>✅ Mínimo: 2 arquivos</li>
+<li>✅ Tamanho máximo: 10MB por arquivo</li>
+<li>❌ Não processa PDFs protegidos por senha</li>
+<li>❌ Ordem segue a seleção dos arquivos</li>
+</ul>
+
+<h2>🔧 Solução de Problemas</h2>
+<ul>
+<li><strong>“Selecione pelo menos dois arquivos PDF.”</strong> → Escolha dois ou mais arquivos.</li>
+<li><strong>“Apenas arquivos PDF são permitidos.”</strong> → Certifique-se de enviar somente PDFs.</li>
+<li><strong>“Erro na comunicação com o servidor.”</strong> → Verifique sua internet e recarregue.</li>
+<li><strong>O arquivo não baixa automaticamente</strong> → Clique com o botão direito e escolha “Salvar link como...”.</li>
+</ul>
+
+<h2>📞 Suporte</h2>
+<p>Em caso de problemas persistentes, entre em contato com a equipe de TI responsável.</p>
+
+<p><strong>Versão:</strong> 1.0 — <strong>Data:</strong> Outubro/2025 — <strong>Sistema:</strong> Concatenador de PDFs (Django)</p>
+
+</main></body></html>

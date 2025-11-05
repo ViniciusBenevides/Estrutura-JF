@@ -1,0 +1,270 @@
+<!DOCTYPE html><html lang='pt-BR'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Sistema de Verificação de Verossimilhança</title>
+<style>
+body {
+  margin: 0;
+  background: #0b1220;
+  color: #e6eaf3;
+  font: 16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+}
+
+main {
+  max-width: 960px;
+  margin: 32px auto 72px;
+  background: #121a2b;
+  border: 1px solid #1f2a44;
+  border-radius: 14px;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, .35);
+  padding: 28px;
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+  margin: 24px 0 12px;
+}
+
+h1 {
+  font-size: 2.1rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  border-bottom: 1px solid #1f2a44;
+  padding-bottom: 6px;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+a {
+  color: #60a5fa;
+}
+
+blockquote {
+  background: #0f172a;
+  border-left: 4px solid #60a5fa;
+  color: #b5c0d1;
+  padding: 10px 14px;
+  border-radius: 10px;
+}
+
+pre {
+  background: #0f172a;
+  color: #dbe7ff;
+  border: 1px solid #1f2a44;
+  border-radius: 10px;
+  padding: 12px;
+  overflow: auto;
+}
+
+code {
+  background: #0f172a;
+  color: #dbe7ff;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+ul, ol {
+  padding-left: 1.25rem;
+}
+
+.mermaid {
+  background: #0f172a;
+  border: 1px solid #1f2a44;
+  border-radius: 10px;
+  padding: 12px;
+  overflow: auto;
+}
+</style>
+</head><body><main>
+
+<h1>📊 Sistema de Verificação de Verossimilhança</h1>
+
+<p><img src="https://img.shields.io/badge/Python-3.11+-blue.svg"> <img src="https://img.shields.io/badge/Django-3.2.25-green.svg"> <img src="https://img.shields.io/badge/License-MIT-yellow.svg"></p>
+
+<p>Sistema web desenvolvido em Django para análise de similaridade entre descrições de itens e o Catálogo Nacional de Bens e Serviços (CNBS). O sistema processa arquivos Excel, compara descrições usando técnicas de processamento de linguagem natural e gera relatórios com itens de baixa verossimilhança.</p>
+
+<h2>📋 Índice</h2>
+<ul>
+<li><a href="#características">Características</a></li>
+<li><a href="#pré-requisitos">Pré-requisitos</a></li>
+<li><a href="#instalação">Instalação</a></li>
+<li><a href="#configuração">Configuração</a></li>
+<li><a href="#execução">Execução</a></li>
+<li><a href="#uso">Uso</a></li>
+<li><a href="#estrutura-do-projeto">Estrutura do Projeto</a></li>
+<li><a href="#api">API</a></li>
+<li><a href="#testes">Testes</a></li>
+<li><a href="#deployment">Deployment</a></li>
+<li><a href="#contribuição">Contribuição</a></li>
+<li><a href="#suporte">Suporte</a></li>
+</ul>
+
+<h2 id="características">🚀 Características</h2>
+<ul>
+<li><strong>Upload de Arquivos Excel</strong>: Interface web para upload de arquivos .xlsx</li>
+<li><strong>Análise de Similaridade</strong>: Comparação usando modelos de transformers e NLTK</li>
+<li><strong>Integração com CNBS</strong>: Consulta automática à API do Catálogo Nacional de Bens e Serviços</li>
+<li><strong>Processamento Assíncrono</strong>: Processamento em background para arquivos grandes</li>
+<li><strong>Relatórios Detalhados</strong>: Geração de relatórios Excel com resultados da análise</li>
+<li><strong>Histórico de Processamentos</strong>: Acompanhamento de todos os processamentos realizados</li>
+<li><strong>Interface Responsiva</strong>: Design moderno e responsivo</li>
+<li><strong>Logs Detalhados</strong>: Sistema de logging para monitoramento e debug</li>
+</ul>
+
+<h2 id="pré-requisitos">📋 Pré-requisitos</h2>
+<p>Antes de iniciar a instalação, certifique-se de ter os seguintes requisitos:</p>
+
+<h3>Sistema Operacional</h3>
+<ul>
+<li>Windows 10/11, macOS 10.14+, ou Linux (Ubuntu 18.04+)</li>
+</ul>
+
+<h3>Software Necessário</h3>
+<ul>
+<li><strong>Python 3.11 ou superior</strong> - <a href="https://www.python.org/downloads/">Download Python</a></li>
+<li><strong>Git</strong> - <a href="https://git-scm.com/downloads/">Download Git</a></li>
+<li><strong>Editor de código</strong> (recomendado: VS Code, PyCharm)</li>
+</ul>
+
+<h3>Verificação dos Pré-requisitos</h3>
+<pre><code>python --version
+pip --version
+git --version
+</code></pre>
+
+<h2 id="instalação">🔧 Instalação</h2>
+<h3>1. Clone o Repositório</h3>
+<pre><code>git clone https://github.com/seu-usuario/verossimilhanca.git
+cd verossimilhanca
+</code></pre>
+
+<h3>2. Criar Ambiente Virtual</h3>
+<pre><code>python -m venv venv
+venv\Scripts\activate
+# ou
+source venv/bin/activate
+</code></pre>
+
+<h3>3. Instalar Dependências</h3>
+<pre><code>pip install --upgrade pip
+pip install -r requirements.txt
+</code></pre>
+
+<h3>4. Configurar Banco de Dados</h3>
+<pre><code>python manage.py migrate
+python manage.py createsuperuser
+</code></pre>
+
+<h3>5. Coletar Arquivos Estáticos</h3>
+<pre><code>python manage.py collectstatic --noinput
+</code></pre>
+
+<h2 id="configuração">⚙️ Configuração</h2>
+<h3>Variáveis de Ambiente (Opcional)</h3>
+<pre><code>DEBUG=True
+SECRET_KEY=sua-chave-secreta-aqui
+ALLOWED_HOSTS=localhost,127.0.0.1
+CNBS_API_BASE_URL=https://cnbs.estaleiro.serpro.gov.br/cnbs-api/material/v1/
+SIMILARITY_THRESHOLD=0.65
+MAX_FILE_SIZE=10485760
+</code></pre>
+
+<h2 id="execução">🚀 Execução</h2>
+<pre><code>python manage.py runserver
+</code></pre>
+<p>Acesse <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a></p>
+
+<h2 id="uso">📖 Uso</h2>
+<ol>
+<li>Acesse a página inicial e envie um arquivo Excel válido (.xlsx)</li>
+<li>Acompanhe o processamento</li>
+<li>Baixe o resultado gerado</li>
+</ol>
+
+<h2 id="estrutura-do-projeto">📁 Estrutura do Projeto</h2>
+<pre><code>verossimilhanca/
+├── manage.py
+├── requirements.txt
+├── test_sistema.py
+├── verossimilhanca/
+│   ├── models.py
+│   ├── views.py
+│   ├── urls.py
+│   ├── forms.py
+│   ├── services.py
+│   ├── admin.py
+│   ├── pvero01.py
+│   ├── pvero02.py
+│   └── pvero03.py
+├── verossimilhanca_project/
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+└── templates/
+</code></pre>
+
+<h2 id="api">🔌 API</h2>
+<h3>Upload de Arquivo</h3>
+<pre><code>POST /api/upload/
+Content-Type: multipart/form-data
+{
+  "arquivo": &lt;arquivo.xlsx&gt;
+}
+</code></pre>
+
+<h3>Status do Processamento</h3>
+<pre><code>GET /api/status/{processamento_id}/
+{
+  "status": "CONCLUIDO",
+  "progresso": 100,
+  "total_itens": 150,
+  "total_baixas": 25,
+  "arquivo_resultado": "/media/downloads/resultado.xlsx"
+}
+</code></pre>
+
+<h2 id="testes">🧪 Testes</h2>
+<pre><code>python test_sistema.py
+python manage.py test
+</code></pre>
+
+<h2 id="deployment">🚀 Deployment</h2>
+<pre><code>DEBUG=False
+SECRET_KEY=chave-secreta-forte
+ALLOWED_HOSTS=seu-dominio.com
+</code></pre>
+
+<h2 id="contribuição">🤝 Contribuição</h2>
+<ol>
+<li>Fork o projeto</li>
+<li>Crie uma branch</li>
+<li>Commit e abra um Pull Request</li>
+</ol>
+
+<h2 id="suporte">🆘 Suporte</h2>
+<p>Email: suporte@exemplo.com</p>
+<p>Issues: <a href="https://github.com/seu-usuario/verossimilhanca/issues">GitHub Issues</a></p>
+
+<h2>📄 Licença</h2>
+<p>Licenciado sob MIT.</p>
+
+<h2>🙏 Agradecimentos</h2>
+<ul>
+<li>Equipe de desenvolvimento da Justiça Federal</li>
+<li>Comunidade Django</li>
+<li>Contribuidores do projeto sentence-transformers</li>
+<li>API do CNBS</li>
+</ul>
+
+<p><strong>Desenvolvido com ❤️ para a Justiça Federal</strong></p>
+
+</main>
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.mermaid').forEach(el => { el.textContent = el.textContent; });
+  if (window.mermaid) mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+});
+</script>
+</body></html>

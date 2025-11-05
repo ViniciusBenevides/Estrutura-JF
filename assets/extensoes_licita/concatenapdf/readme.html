@@ -1,0 +1,186 @@
+<!DOCTYPE html><html lang='pt-BR'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>📄 Concatenador de PDFs - Documentação Técnica</title>
+<style>
+body {
+  margin: 0;
+  background: #0b1220;
+  color: #e6eaf3;
+  font: 16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+}
+main {
+  max-width: 960px;
+  margin: 32px auto 72px;
+  background: #121a2b;
+  border: 1px solid #1f2a44;
+  border-radius: 14px;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, .35);
+  padding: 28px;
+}
+h1, h2, h3 {
+  line-height: 1.25;
+  margin: 24px 0 12px;
+}
+h1 { font-size: 2.1rem; }
+h2 { font-size: 1.6rem; border-bottom: 1px solid #1f2a44; padding-bottom: 6px; }
+h3 { font-size: 1.25rem; }
+a { color: #60a5fa; }
+blockquote {
+  background: #0f172a;
+  border-left: 4px solid #60a5fa;
+  color: #b5c0d1;
+  padding: 10px 14px;
+  border-radius: 10px;
+}
+pre {
+  background: #0f172a;
+  color: #dbe7ff;
+  border: 1px solid #1f2a44;
+  border-radius: 10px;
+  padding: 12px;
+  overflow: auto;
+}
+code {
+  background: #0f172a;
+  color: #dbe7ff;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+ul, ol { padding-left: 1.25rem; }
+.mermaid {
+  background: #0f172a;
+  border: 1px solid #1f2a44;
+  border-radius: 10px;
+  padding: 12px;
+  overflow: auto;
+}
+</style></head><body><main>
+
+<h1>📄 Concatenador de PDFs - Sistema Web</h1>
+
+<p>Sistema web desenvolvido em Django para concatenação (junção) de múltiplos arquivos PDF em um único documento. Ideal para unificar documentos relacionados de forma rápida e eficiente.</p>
+
+<h2>🚀 Funcionalidades</h2>
+<ul>
+<li>✅ Upload de múltiplos arquivos PDF via drag & drop ou seleção manual</li>
+<li>✅ Concatenação automática mantendo a qualidade original</li>
+<li>✅ Interface moderna e responsiva</li>
+<li>✅ Download automático do arquivo concatenado</li>
+<li>✅ Validação de arquivos (apenas PDFs aceitos)</li>
+<li>✅ Limite de tamanho configurável (10MB por padrão)</li>
+<li>✅ Histórico de processamentos</li>
+<li>✅ Interface em português brasileiro</li>
+</ul>
+
+<h2>🛠️ Tecnologias Utilizadas</h2>
+<ul>
+<li><strong>Backend</strong>: Django 3.2.25</li>
+<li><strong>Processamento PDF</strong>: PyPDF2 3.0.1</li>
+<li><strong>Imagens</strong>: Pillow 10.4.0</li>
+<li><strong>Frontend</strong>: HTML5, CSS3, JavaScript</li>
+<li><strong>Banco de dados</strong>: SQLite</li>
+</ul>
+
+<h2>📋 Pré-requisitos</h2>
+<p>Certifique-se de ter:</p>
+<ul>
+<li>Python 3.8+</li>
+<li>pip</li>
+<li>Git</li>
+</ul>
+<pre><code>python --version
+pip --version
+git --version
+</code></pre>
+
+<h2>🔧 Instalação</h2>
+<h3>1. Clone o Repositório</h3>
+<pre><code>git clone &lt;URL_DO_REPOSITORIO&gt;
+cd concatenapdf
+</code></pre>
+<h3>2. Crie um Ambiente Virtual</h3>
+<pre><code>python -m venv venv
+source venv/bin/activate  # Linux/macOS
+venv\Scripts\activate     # Windows
+</code></pre>
+<h3>3. Instale Dependências</h3>
+<pre><code>pip install -r requirements.txt
+</code></pre>
+<h3>4. Configure o Banco de Dados</h3>
+<pre><code>python manage.py makemigrations
+python manage.py migrate
+</code></pre>
+<h3>5. Crie um Superusuário (opcional)</h3>
+<pre><code>python manage.py createsuperuser
+</code></pre>
+<h3>6. Execute o Servidor</h3>
+<pre><code>python manage.py runserver
+</code></pre>
+<p>➡️ Acesse <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a></p>
+
+<h2>📁 Estrutura do Projeto</h2>
+<pre><code>concatenapdf/
+├── manage.py
+├── requirements.txt
+├── pdf_processor_project/
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── pdf_processor/
+│   ├── models.py
+│   ├── views.py
+│   ├── forms.py
+│   ├── urls.py
+│   └── migrations/
+├── templates/
+│   └── home.html
+├── static/
+│   ├── css/
+│   ├── js/
+│   └── images/
+└── media/uploads/
+</code></pre>
+
+<h2>🎯 Como Usar</h2>
+<ol>
+<li>Acesse o sistema em <code>http://127.0.0.1:8000/</code></li>
+<li>Arraste e solte os arquivos PDF ou selecione-os manualmente</li>
+<li>Aguarde o processamento</li>
+<li>O download do arquivo concatenado iniciará automaticamente</li>
+</ol>
+
+<h2>⚙️ Configurações</h2>
+<pre><code># settings.py
+FILE_UPLOAD_MAX_MEMORY_SIZE = 10 * 1024 * 1024
+DATA_UPLOAD_MAX_MEMORY_SIZE = 10 * 1024 * 1024
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+</code></pre>
+
+<h2>🐛 Solução de Problemas</h2>
+<ul>
+<li>Erro <em>“Couldn't import Django”</em>: reative o venv e reinstale dependências</li>
+<li>Erro <em>“No module named 'PyPDF2'”</em>: instale PyPDF2</li>
+<li>Erro de permissão: crie e permita gravação em <code>media/uploads/</code></li>
+</ul>
+
+<h2>🔒 Segurança</h2>
+<ul>
+<li>Defina <code>DEBUG=False</code></li>
+<li>Configure <code>SECRET_KEY</code> e <code>ALLOWED_HOSTS</code></li>
+<li>Use PostgreSQL/MySQL em produção</li>
+<li>Implemente Nginx + Gunicorn</li>
+</ul>
+
+<h2>🤝 Contribuição</h2>
+<ol>
+<li>Fork o projeto</li>
+<li>Crie uma branch</li>
+<li>Commit suas alterações</li>
+<li>Abra um Pull Request</li>
+</ol>
+
+<h2>📞 Suporte</h2>
+<p>Consulte a documentação do Django ou abra uma issue no repositório.</p>
+
+<p><strong>Desenvolvido para Justiça Federal 🏛️</strong></p>
+
+</main></body></html>
