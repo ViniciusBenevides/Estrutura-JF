@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📘 Manual do Usuário - Transcrição</title>
+  <style>
+body {
+  margin: 0;
+  background: #0b1220;
+  color: #e6eaf3;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  line-height: 1.65;
+}
+main {
+  max-width: 960px;
+  margin: 32px auto 72px;
+  background: #121a2b;
+  border: 1px solid #1f2a44;
+  border-radius: 14px;
+  box-shadow: 0 8px 26px rgba(0,0,0,.35);
+  padding: 28px;
+}
+h1, h2, h3, h4 {
+  color: #fff;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+h2 {
+  border-bottom: 1px solid #1f2a44;
+  padding-bottom: 6px;
+}
+a { color: #58a6ff; }
+pre {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 12px;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-family: 'Fira Code', monospace;
+  color: #c9d1d9;
+  white-space: pre-wrap;
+}
+code {
+  background: #161b22;
+  border-radius: 4px;
+  padding: 2px 6px;
+  color: #c9d1d9;
+  font-family: 'Fira Code', monospace;
+}
+blockquote {
+  color: #8b949e;
+  border-left: 4px solid #30363d;
+  margin: 0;
+  padding-left: 1em;
+}
+img {
+  max-width: 100%;
+  border-radius: 8px;
+  display: block;
+  margin: 16px auto;
+}
+ul, ol {
+  margin-left: 1.25rem;
+}
+</style>
+</head>
+<body>
+<main>
+<p><h1>Manual do Usuário - Sistema de Transcrição Jurídica Django</h1></p><p><h2>📖 Introdução</h2></p><p>O Sistema de Transcrição Jurídica é uma aplicação web desenvolvida em Django que permite a análise automatizada de transcrições de sentenças jurídicas utilizando inteligência artificial. Este manual irá guiá-lo através de todas as funcionalidades do sistema.</p><p><h2>🚀 Primeiros Passos</h2></p><p><h3>Acessando o Sistema</h3>
+<ol><li>Abra seu navegador web</li></ol>
+<ol><li>Digite o endereço: <code>http://127.0.0.1:8000/</code> (desenvolvimento) ou o endereço fornecido pelo administrador</li></ol>
+<ol><li>A página inicial será exibida</li></ol></p><p><h3>Interface Principal</h3></p><p>A interface é composta por:
+<ul><li><strong>Cabeçalho</strong>: Logo e navegação</li></ul>
+<ul><li><strong>Área de Upload</strong>: Para envio de arquivos</li></ul>
+<ul><li><strong>Instruções</strong>: Como usar o sistema</li></ul>
+<ul><li><strong>Rodapé</strong>: Informações de copyright</li></ul></p><p><h2>📁 Upload de Arquivos</h2></p><p><h3>Tipos de Arquivo Suportados</h3></p><p>O sistema aceita os seguintes formatos:
+<ul><li><strong>PDF</strong>: Arquivos de transcrição em formato PDF</li></ul>
+<ul><li><strong>TXT</strong>: Arquivos de texto simples</li></ul></p><p><h3>Como Fazer Upload</h3>
+<ol><li>Na página inicial, clique no botão <strong>"Escolher arquivo"</strong></li></ol>
+<ol><li>Selecione o arquivo desejado em seu computador</li></ol>
+<ol><li>Clique em <strong>"Analisar"</strong></li></ol>
+<ol><li>Aguarde o processamento (o botão ficará desabilitado durante o processo)</li></ol></p><p><h3>Dicas para Upload</h3>
+<ul><li>Certifique-se de que o arquivo contém texto legível</li></ul>
+<ul><li>Arquivos muito grandes podem demorar mais para processar</li></ul>
+<ul><li>Verifique se o arquivo não está corrompido</li></ul></p><p><h2>🔍 Análise e Resultados</h2></p><p><h3>Processamento</h3></p><p>Durante o processamento, o sistema:
+<ol><li>Extrai o texto do arquivo enviado</li></ol>
+<ol><li>Limpa e formata o conteúdo</li></ol>
+<ol><li>Envia para análise via IA (DeepSeek)</li></ol>
+<ol><li>Processa e estrutura o resultado</li></ol></p><p><h3>Visualização dos Resultados</h3></p><p>Após o processamento, você verá:
+<ul><li><strong>Informações do Processo</strong>: Número, status e data</li></ul>
+<ul><li><strong>Resultado da Análise</strong>: Texto formatado e estruturado</li></ul>
+<ul><li><strong>Botões de Ação</strong>: Para baixar PDF ou iniciar novo processo</li></ul></p><p><h3>Estrutura do Resultado</h3></p><p>O resultado inclui:
+<ul><li>Resumo executivo</li></ul>
+<ul><li>Pontos principais da sentença</li></ul>
+<ul><li>Análise jurídica detalhada</li></ul>
+<ul><li>Conclusões e recomendações</li></ul></p><p><h2>📄 Geração de PDF</h2></p><p><h3>Como Baixar PDF</h3>
+<ol><li>Na página de resultados, clique em <strong>"Baixar como PDF"</strong></li></ol>
+<ol><li>O arquivo será gerado automaticamente</li></ol>
+<ol><li>O download iniciará com o nome baseado no número do processo</li></ol></p><p><h3>Características do PDF</h3>
+<ul><li>Formatação profissional</li></ul>
+<ul><li>Texto estruturado e legível</li></ul>
+<ul><li>Nome do arquivo baseado no número do processo</li></ul>
+<ul><li>Pronto para impressão ou compartilhamento</li></ul></p><p><h2>📚 Histórico de Processos</h2></p><p><h3>Acessando o Histórico</h3>
+<ol><li>No menu superior, clique em <strong>"Histórico"</strong></li></ol>
+<ol><li>Visualize todos os processos anteriores</li></ol>
+<ol><li>Use os filtros para encontrar processos específicos</li></ol></p><p><h3>Informações do Histórico</h3></p><p>Para cada processo, você verá:
+<ul><li><strong>Número do Processo</strong>: Identificação única</li></ul>
+<ul><li><strong>Status</strong>: Pendente, Processando, Concluído ou Erro</li></ul>
+<ul><li><strong>Data de Criação</strong>: Quando foi enviado</li></ul>
+<ul><li><strong>Ações</strong>: Botões para visualizar resultados</li></ul></p><p><h3>Status dos Processos</h3>
+<ul><li>🟡 <strong>Pendente</strong>: Aguardando processamento</li></ul>
+<ul><li>🔵 <strong>Processando</strong>: Em análise pela IA</li></ul>
+<ul><li>🟢 <strong>Concluído</strong>: Processamento finalizado</li></ul>
+<ul><li>🔴 <strong>Erro</strong>: Problema durante o processamento</li></ul></p><p><h2>🔧 Funcionalidades Avançadas</h2></p><p><h3>Navegação</h3>
+<ul><li><strong>Início</strong>: Retorna à página principal</li></ul>
+<ul><li><strong>Histórico</strong>: Lista todos os processos</li></ul>
+<ul><li><strong>Novo Processo</strong>: Inicia uma nova análise</li></ul></p><p><h3>Mensagens do Sistema</h3></p><p>O sistema exibe mensagens para:
+<ul><li>Confirmação de ações</li></ul>
+<ul><li>Avisos importantes</li></ul>
+<ul><li>Erros e problemas</li></ul></p><p><h2>❗ Solução de Problemas</h2></p><p><h3>Problemas Comuns</h3></p><p><strong>Arquivo não é aceito</strong>
+<ul><li>Verifique se o formato é PDF ou TXT</li></ul>
+<ul><li>Certifique-se de que o arquivo não está corrompido</li></ul></p><p><strong>Processamento muito lento</strong>
+<ul><li>Arquivos grandes demoram mais</li></ul>
+<ul><li>Verifique sua conexão com a internet</li></ul>
+<ul><li>Aguarde alguns minutos antes de tentar novamente</li></ul></p><p><strong>Erro durante o processamento</strong>
+<ul><li>Verifique se o arquivo contém texto legível</li></ul>
+<ul><li>Tente com um arquivo menor</li></ul>
+<ul><li>Entre em contato com o suporte se o problema persistir</li></ul></p><p><strong>PDF não é gerado</strong>
+<ul><li>Verifique se o wkhtmltopdf está instalado</li></ul>
+<ul><li>Tente gerar o PDF novamente</li></ul>
+<ul><li>Entre em contato com o administrador</li></ul></p><p><h3>Mensagens de Erro</h3>
+<ul><li><strong>"Nenhum arquivo enviado"</strong>: Selecione um arquivo antes de clicar em Analisar</li></ul>
+<ul><li><strong>"Arquivo inválido"</strong>: O arquivo está corrompido ou em formato não suportado</li></ul>
+<ul><li><strong>"Erro ao processar"</strong>: Problema durante a análise - tente novamente</li></ul></p><p><h2>💡 Dicas de Uso</h2></p><p><h3>Para Melhores Resultados</h3>
+<ol><li><strong>Use arquivos de qualidade</strong>: Textos claros e bem formatados</li></ol>
+<ol><li><strong>Verifique o conteúdo</strong>: Certifique-se de que é uma transcrição jurídica</li></ol>
+<ol><li><strong>Aguarde o processamento</strong>: Não interrompa o processo</li></ol>
+<ol><li><strong>Salve os resultados</strong>: Baixe o PDF para seus arquivos</li></ol></p><p><h3>Boas Práticas</h3>
+<ul><li>Organize seus arquivos antes do upload</li></ul>
+<ul><li>Use nomes descritivos para identificar processos</li></ul>
+<ul><li>Mantenha backup dos arquivos originais</li></ul>
+<ul><li>Revise sempre os resultados gerados</li></ul></p><p><h2>🔒 Segurança e Privacidade</h2></p><p><h3>Proteção de Dados</h3>
+<ul><li>Todos os uploads são protegidos</li></ul>
+<ul><li>Dados são processados de forma segura</li></ul>
+<ul><li>Informações não são compartilhadas com terceiros</li></ul></p><p><h3>Recomendações</h3>
+<ul><li>Não compartilhe links de resultados</li></ul>
+<ul><li>Faça logout ao usar computadores compartilhados</li></ul>
+<ul><li>Mantenha suas credenciais seguras</li></ul></p><p><h2>📞 Suporte</h2></p><p><h3>Quando Entrar em Contato</h3>
+<ul><li>Erros persistentes no sistema</li></ul>
+<ul><li>Problemas com geração de PDF</li></ul>
+<ul><li>Dúvidas sobre funcionalidades</li></ul>
+<ul><li>Sugestões de melhorias</li></ul></p><p><h3>Informações para o Suporte</h3></p><p>Ao entrar em contato, forneça:
+<ul><li>Descrição detalhada do problema</li></ul>
+<ul><li>Tipo e tamanho do arquivo</li></ul>
+<ul><li>Mensagens de erro exibidas</li></ul>
+<ul><li>Navegador e sistema operacional utilizados</li></ul></p><p>---</p><p><h2>📋 Resumo de Funcionalidades</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Funcionalidade</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Upload de Arquivos</td><td>PDF e TXT</td></tr>
+    <tr><td>Análise com IA</td><td>DeepSeek API</td></tr>
+    <tr><td>Geração de PDF</td><td>Download automático</td></tr>
+    <tr><td>Histórico</td><td>Acompanhamento de processos</td></tr>
+    <tr><td>Interface Responsiva</td><td>Funciona em desktop e mobile</td></tr>
+    <tr><td>Segurança</td><td>Proteção CSRF e validações</td></tr>
+  </tbody>
+</table>
+
+<hr>
+
+<p><strong>Versão do Manual:</strong> 1.0<br>
+<strong>Última Atualização:</strong> Outubro 2025<br>
+<strong>Sistema:</strong> Django 5.1.5</p>
+
+</main>
+</body>
+</html>

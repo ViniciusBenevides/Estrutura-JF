@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📖 Documentação Técnica - Transcrição</title>
+  <style>
+body {
+  margin: 0;
+  background: #0b1220;
+  color: #e6eaf3;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  line-height: 1.65;
+}
+main {
+  max-width: 960px;
+  margin: 32px auto 72px;
+  background: #121a2b;
+  border: 1px solid #1f2a44;
+  border-radius: 14px;
+  box-shadow: 0 8px 26px rgba(0,0,0,.35);
+  padding: 28px;
+}
+h1, h2, h3, h4 {
+  color: #fff;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+h2 {
+  border-bottom: 1px solid #1f2a44;
+  padding-bottom: 6px;
+}
+a { color: #58a6ff; }
+pre {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 12px;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-family: 'Fira Code', monospace;
+  color: #c9d1d9;
+  white-space: pre-wrap;
+}
+code {
+  background: #161b22;
+  border-radius: 4px;
+  padding: 2px 6px;
+  color: #c9d1d9;
+  font-family: 'Fira Code', monospace;
+}
+blockquote {
+  color: #8b949e;
+  border-left: 4px solid #30363d;
+  margin: 0;
+  padding-left: 1em;
+}
+img {
+  max-width: 100%;
+  border-radius: 8px;
+  display: block;
+  margin: 16px auto;
+}
+ul, ol {
+  margin-left: 1.25rem;
+}
+</style>
+</head>
+<body>
+<main>
+<p><h1>Sistema de Transcrição Jurídica - Django</h1></p><p>Sistema web para análise automatizada de transcrições de sentenças jurídicas utilizando inteligência artificial.</p><p><h2>📋 Descrição</h2></p><p>Este sistema permite o upload de arquivos PDF ou TXT contendo transcrições de sentenças jurídicas e realiza análise automatizada utilizando a API da DeepSeek. O resultado é apresentado em formato HTML estruturado e pode ser exportado como PDF.</p><p><h2>🚀 Funcionalidades</h2>
+<ul><li><strong>Upload de Arquivos</strong>: Suporte para arquivos PDF e TXT</li></ul>
+<ul><li><strong>Análise com IA</strong>: Processamento automatizado usando DeepSeek API</li></ul>
+<ul><li><strong>Interface Web</strong>: Interface moderna e responsiva</li></ul>
+<ul><li><strong>Exportação PDF</strong>: Geração de relatórios em PDF</li></ul>
+<ul><li><strong>Histórico</strong>: Acompanhamento de processos anteriores</li></ul>
+<ul><li><strong>Admin Panel</strong>: Interface administrativa Django</li></ul></p><p><h2>🛠️ Tecnologias Utilizadas</h2>
+<ul><li><strong>Backend</strong>: Django 5.1.5</li></ul>
+<ul><li><strong>Frontend</strong>: HTML5, CSS3, JavaScript</li></ul>
+<ul><li><strong>IA</strong>: DeepSeek API</li></ul>
+<ul><li><strong>PDF</strong>: pdfkit, pdfplumber</li></ul>
+<ul><li><strong>Banco de Dados</strong>: SQLite (desenvolvimento)</li></ul>
+<ul><li><strong>Servidor</strong>: Gunicorn (produção)</li></ul></p><p><h2>📦 Instalação</h2></p><p><h3>Pré-requisitos</h3>
+<ul><li>Python 3.8+</li></ul>
+<ul><li>pip</li></ul>
+<ul><li>wkhtmltopdf (para geração de PDFs)</li></ul></p><p><h3>Passo a passo</h3>
+<ol><li><strong>Clone o repositório</strong></li></ol>
+<pre><code>bash
+git clone <url-do-repositorio>
+cd ProjetoTranscricao
+</code></pre>
+<ol><li><strong>Crie um ambiente virtual</strong></li></ol>
+<pre><code>bash
+python -m venv venv
+</code></pre>
+<ol><li><strong>Ative o ambiente virtual</strong></li></ol>
+<pre><code>bash
+<h1>Windows</h1>
+venv\Scripts\activate</p><p><h1>Linux/Mac</h1>
+source venv/bin/activate
+</code></pre>
+<ol><li><strong>Instale as dependências</strong></li></ol>
+<pre><code>bash
+pip install -r requirements.txt
+</code></pre>
+<ol><li><strong>Configure as variáveis de ambiente</strong></li></ol>
+Crie um arquivo <code>.env</code> na raiz do projeto:
+<pre><code>env
+SECRET_KEY=sua_chave_secreta_django
+DEBUG=True
+DEEPSEEK_API_KEY=sua_chave_api_deepseek
+OPENAI_API_KEY=sua_chave_api_openai
+WKHTMLTOPDF_PATH=caminho_para_wkhtmltopdf
+</code></pre>
+<ol><li><strong>Execute as migrações</strong></li></ol>
+<pre><code>bash
+python manage.py makemigrations
+python manage.py migrate
+</code></pre>
+<ol><li><strong>Crie um superusuário (opcional)</strong></li></ol>
+<pre><code>bash
+python manage.py createsuperuser
+</code></pre>
+<ol><li><strong>Inicie o servidor</strong></li></ol>
+<pre><code>bash
+python manage.py runserver
+</code></pre></p><p>O sistema estará disponível em <code>http://127.0.0.1:8000/</code></p><p><h2>🔧 Configuração</h2></p><p><h3>wkhtmltopdf</h3></p><p>Para geração de PDFs, instale o wkhtmltopdf:
+<ul><li><strong>Windows</strong>: Baixe de https://wkhtmltopdf.org/downloads.html</li></ul>
+<ul><li><strong>Ubuntu/Debian</strong>: <code>sudo apt-get install wkhtmltopdf</code></li></ul>
+<ul><li><strong>CentOS/RHEL</strong>: <code>sudo yum install wkhtmltopdf</code></li></ul></p><p>Configure o caminho no arquivo <code>.env</code>:
+<pre><code>env
+WKHTMLTOPDF_PATH=C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe
+</code></pre></p><p><h3>APIs de IA</h3></p><p>Configure suas chaves de API no arquivo <code>.env</code>:
+<ul><li><strong>DeepSeek</strong>: Obtenha em https://platform.deepseek.com/</li></ul>
+<ul><li><strong>OpenAI</strong>: Obtenha em https://platform.openai.com/</li></ul></p><p><h2>📁 Estrutura do Projeto</h2></p><p><pre><code>
+ProjetoTranscricao/
+├── manage.py
+├── requirements.txt
+├── .env
+├── transcricao_project/          # Configurações Django
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── wsgi.py
+│   └── asgi.py
+├── transcricao_app/              # App principal
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── views.py
+│   ├── urls.py
+│   ├── utils.py
+│   └── migrations/
+├── templates/                    # Templates HTML
+│   └── transcricao_app/
+│       ├── base.html
+│       ├── index.html
+│       ├── resultado.html
+│       └── historico.html
+└── static/                       # Arquivos estáticos
+    ├── css/
+    │   └── style.css
+    └── images/
+        └── arte03.png
+</code></pre></p><p><h2>🎯 Como Usar</h2>
+<ol><li><strong>Acesse a página inicial</strong> em <code>http://127.0.0.1:8000/</code></li></ol>
+<ol><li><strong>Faça upload</strong> de um arquivo PDF ou TXT</li></ol>
+<ol><li><strong>Aguarde o processamento</strong> da análise</li></ol>
+<ol><li><strong>Visualize o resultado</strong> formatado</li></ol>
+<ol><li><strong>Baixe o PDF</strong> se necessário</li></ol>
+<ol><li><strong>Consulte o histórico</strong> de processos anteriores</li></ol></p><p><h2>🔒 Segurança</h2>
+<ul><li>Chaves de API armazenadas em variáveis de ambiente</li></ul>
+<ul><li>Validação de tipos de arquivo</li></ul>
+<ul><li>Proteção CSRF habilitada</li></ul>
+<ul><li>Sanitização de dados de entrada</li></ul></p><p><h2>🚀 Deploy em Produção</h2></p><p><h3>Usando Gunicorn</h3></p><p><pre><code>bash
+<h1>Instalar Gunicorn</h1>
+pip install gunicorn</p><p><h1>Executar</h1>
+gunicorn transcricao_project.wsgi:application --bind 0.0.0.0:8000
+</code></pre></p><p><h3>Configurações de Produção</h3></p><p>No arquivo <code>settings.py</code>, configure:</p><p><pre><code>python
+DEBUG = False
+ALLOWED_HOSTS = ['seu-dominio.com']
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+</code></pre></p><p><h2>🤝 Contribuição</h2>
+<ol><li>Fork o projeto</li></ol>
+<ol><li>Crie uma branch para sua feature (<code>git checkout -b feature/AmazingFeature</code>)</li></ol>
+<ol><li>Commit suas mudanças (<code>git commit -m 'Add some AmazingFeature'</code>)</li></ol>
+<ol><li>Push para a branch (<code>git push origin feature/AmazingFeature</code>)</li></ol>
+<ol><li>Abra um Pull Request</li></ol></p><p><h2>📄 Licença</h2></p><p>Este projeto está sob a licença MIT. Veja o arquivo <code>LICENSE</code> para mais detalhes.</p><p><h2>👨‍💻 Autor</h2></p><p><strong>Hailton David Lemos</strong></p><p><h2>📞 Suporte</h2></p><p>Para suporte, entre em contato através do email ou abra uma issue no repositório.</p><p>---</p><p>⭐ Se este projeto foi útil para você, considere dar uma estrela no repositório!</p>
+</main>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📖 Documentação Técnica - Transcrição</title>
+  <style>
+body {
+  margin: 0;
+  background: #0b1220;
+  color: #e6eaf3;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  line-height: 1.65;
+}
+main {
+  max-width: 960px;
+  margin: 32px auto 72px;
+  background: #121a2b;
+  border: 1px solid #1f2a44;
+  border-radius: 14px;
+  box-shadow: 0 8px 26px rgba(0,0,0,.35);
+  padding: 28px;
+}
+h1, h2, h3, h4 {
+  color: #fff;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+h2 {
+  border-bottom: 1px solid #1f2a44;
+  padding-bottom: 6px;
+}
+a { color: #58a6ff; }
+pre {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 12px;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-family: 'Fira Code', monospace;
+  color: #c9d1d9;
+  white-space: pre-wrap;
+}
+code {
+  background: #161b22;
+  border-radius: 4px;
+  padding: 2px 6px;
+  color: #c9d1d9;
+  font-family: 'Fira Code', monospace;
+}
+blockquote {
+  color: #8b949e;
+  border-left: 4px solid #30363d;
+  margin: 0;
+  padding-left: 1em;
+}
+img {
+  max-width: 100%;
+  border-radius: 8px;
+  display: block;
+  margin: 16px auto;
+}
+ul, ol {
+  margin-left: 1.25rem;
+}
+</style>
+</head>
+<body>
+<main>
+<p><h1>Sistema de Transcrição Jurídica - Django</h1></p><p>Sistema para transcrição e resumo de audiências judiciais, com geração de relatório estruturado e exportação em PDF nomeado pelo número do processo.</p><p><h2>Funcionalidades</h2>
+<ul><li>Aceita arquivos PDF e TXT de ata ou transcrição de audiência.</li></ul>
+<ul><li>Gera resumo jurídico detalhado usando IA (DeepSeek API).</li></ul>
+<ul><li>Exporta o resultado em PDF, nomeado com o número do processo.</li></ul>
+<ul><li>Interface web moderna desenvolvida em Django.</li></ul>
+<ul><li>Sistema de histórico de processos.</li></ul>
+<ul><li>Interface responsiva e intuitiva.</li></ul></p><p><h2>Como usar</h2>
+<ol><li>Acesse <code>http://localhost:8000</code> no navegador.</li></ol>
+<ol><li>Envie o arquivo da audiência (PDF ou TXT).</li></ol>
+<ol><li>Visualize o resumo gerado.</li></ol>
+<ol><li>Baixe o PDF do resultado.</li></ol>
+<ol><li>Consulte o histórico de processos anteriores.</li></ol></p><p><h2>Instalação</h2></p><p>Veja a seção abaixo para instruções detalhadas.</p><p>---</p><p><h2>Documentação Técnica de Instalação</h2></p><p><h3>Requisitos</h3>
+<ul><li>Python 3.9+</li></ul>
+<ul><li>Pip</li></ul>
+<ul><li>Navegador web</li></ul>
+<ul><li>wkhtmltopdf instalado</li></ul></p><p><h3>Dependências Python</h3>
+<ul><li>Django 5.1.5</li></ul>
+<ul><li>pdfplumber</li></ul>
+<ul><li>pdfkit</li></ul>
+<ul><li>openai</li></ul>
+<ul><li>python-dotenv</li></ul>
+<ul><li>E outras (veja requirements.txt)</li></ul></p><p><h3>Instalação</h3></p><p><pre><code>bash
+git clone https://github.com/Residentes-JF/transcricao.git
+cd transcricao</p><p>python -m venv venv
+<h1>Windows:</h1>
+.\venv\Scripts\Activate.ps1
+<h1>Linux/Mac:</h1>
+source venv/bin/activate</p><p>pip install -r requirements.txt</p><p><h1>Instale o wkhtmltopdf:</h1>
+<h1>Windows: https://wkhtmltopdf.org/downloads.html</h1>
+<h1>Linux: sudo apt install wkhtmltopdf</h1>
+<h1>Mac: brew install wkhtmltopdf</h1></p><p><h1>Configure sua chave da API DeepSeek:</h1>
+echo "DEEPSEEK_API_KEY=sua_chave_aqui" > .env</p><p><h1>Execute as migrações:</h1>
+python manage.py migrate</p><p><h1>Inicie o servidor:</h1>
+python manage.py runserver
+</code></pre></p><p>O sistema estará disponível em <code>http://localhost:8000</code>.</p><p>---</p><p><h2>Documentação do Usuário</h2></p><p><h3>Passo a Passo</h3>
+<ol><li>Abra o navegador e acesse <code>http://localhost:8000</code>.</li></ol>
+<ol><li>Clique em "Escolher arquivo" e envie o arquivo da audiência (PDF ou TXT).</li></ol>
+<ol><li>Clique em "Analisar" para gerar o resumo.</li></ol>
+<ol><li>Visualize o resultado na tela.</li></ol>
+<ol><li>Clique em "Baixar como PDF" para salvar o relatório.</li></ol>
+<ol><li>Use o menu "Histórico" para consultar processos anteriores.</li></ol></p><p><h3>Funcionalidades Principais</h3>
+<ul><li><strong>Upload de Arquivos</strong>: Suporte para PDF e TXT</li></ul>
+<ul><li><strong>Análise com IA</strong>: Processamento usando DeepSeek API</li></ul>
+<ul><li><strong>Geração de PDF</strong>: Download automático com nome do processo</li></ul>
+<ul><li><strong>Histórico</strong>: Acompanhamento de todos os processos</li></ul>
+<ul><li><strong>Interface Responsiva</strong>: Funciona em desktop e mobile</li></ul></p><p><h3>Observações</h3>
+<ul><li>O sistema aceita arquivos PDF e TXT.</li></ul>
+<ul><li>O PDF gerado será nomeado com o número do processo extraído do texto.</li></ul>
+<ul><li>Todos os processos ficam salvos no histórico para consulta posterior.</li></ul>
+<ul><li>Para dúvidas técnicas, consulte a documentação completa em <code>README_DJANGO.md</code>.</li></ul></p><p>---</p><p><h2>Tecnologias Utilizadas</h2>
+<ul><li><strong>Backend</strong>: Django 5.1.5</li></ul>
+<ul><li><strong>Frontend</strong>: HTML5, CSS3, JavaScript</li></ul>
+<ul><li><strong>IA</strong>: DeepSeek API</li></ul>
+<ul><li><strong>PDF</strong>: pdfkit + wkhtmltopdf</li></ul>
+<ul><li><strong>Banco de Dados</strong>: SQLite (desenvolvimento)</li></ul></p><p><h2>Contribuição</h2>
+<ol><li>Fork o projeto</li></ol>
+<ol><li>Crie uma branch para sua feature</li></ol>
+<ol><li>Commit suas mudanças</li></ol>
+<ol><li>Push para a branch</li></ol>
+<ol><li>Abra um Pull Request</li></ol></p><p><h2>Licença</h2></p><p>Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.</p><p><h2>Suporte</h2></p><p>Para suporte técnico ou dúvidas, entre em contato através dos canais oficiais do projeto.
+</p>
+</main>
+</body>
+</html>
