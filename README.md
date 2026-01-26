@@ -9,9 +9,12 @@ Abaixo estão as prévias das principais interfaces do portal institucional.
 
 ### 1. Home & Apresentação
 ![Home Page](./screenshots/home.png)
+![Sobre Nos](./screenshots/sobre-nos.png)
 
 ### 2. Grid de Projetos (O Ecossistema)
-![Projetos](./screenshots/projetos.png)
+![Projetos](./screenshots/projetos1.png)
+![Projetos](./screenshots/projetos2.png)
+![Projetos](./screenshots/projetos3.png)
 
 ### 3. Responsividade (Mobile)
 <div style="display: flex; gap: 10px;">
