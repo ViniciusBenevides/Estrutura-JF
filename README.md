@@ -1,82 +1,77 @@
-# Portal Institucional - Residência em TI (Judiciário Federal)
-
+# Institutional Portal - IT Residency (Federal Judiciary)
 ![Badge Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![Badge TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 
-## 📸 Visualização do Portal
+## 📸 Portal Preview
+Below are previews of the main interfaces of the institutional portal.
 
-Abaixo estão as prévias das principais interfaces do portal institucional.
-
-### 1. Home & Apresentação
+### 1. Home & Presentation
 ![Home Page](./screenshots/home.png)
-![Sobre Nos](./screenshots/sobre-nos.png)
+![About Us](./screenshots/sobre-nos.png)
 
-### 2. Grid de Projetos (O Ecossistema)
-![Projetos](./screenshots/projetos1.png)
-![Projetos](./screenshots/projetos2.png)
-![Projetos](./screenshots/projetos3.png)
+### 2. Projects Grid (The Ecosystem)
+![Projects](./screenshots/projetos1.png)
+![Projects](./screenshots/projetos2.png)
+![Projects](./screenshots/projetos3.png)
 
-### 3. Responsividade (Mobile)
+### 3. Responsiveness (Mobile)
 <div style="display: flex; gap: 10px;">
   <img src="./screenshots/mobile-1.png" width="300" alt="Mobile View">
 </div>
 
 ---
 
-## 💻 Sobre o Projeto
+## 💻 About the Project
+This project is the **Institutional Web Platform** developed to centralize and showcase the innovation ecosystem of the **IT Residency Program of the Federal Judiciary**.
 
-Este projeto é a **Plataforma Web Institucional** desenvolvida para centralizar e apresentar o ecossistema de inovação da **Residência em TI do Judiciário Federal**. 
+The goal was to create a single Hub where civil servants, magistrates, and the public could access detailed information about the 6 major solutions developed in the program (AgendaFácil, LicitaFácil, GestãoFácil, FolhaFácil, FrotaFácil, and RequisiçãoFácil).
 
-O objetivo foi criar um Hub único onde servidores, magistrados e o público pudessem acessar informações detalhadas sobre as 6 grandes soluções desenvolvidas no programa (AgendaFácil, LicitaFácil, GestãoFácil, FolhaFácil, FrotaFácil e RequisiçãoFácil).
+Unlike a common static website, this portal uses **Server-Side Rendering (SSR)** to ensure maximum performance, optimized SEO, and accessibility following strict government standards.
 
-Diferente de um site estático comum, este portal utiliza **Server-Side Rendering (SSR)** para garantir máxima performance, SEO otimizado e acessibilidade seguindo os rigorosos padrões governamentais.
+## 🚀 The Connected Ecosystem
+The portal serves as the entry point for the following systems:
 
-## 🚀 O Ecossistema Conectado
+- **AgendaFácil:** Assistance with hearing scheduling.
+- **LicitaFácil:** Automation and management of purchases and bidding processes.
+- **GestãoFácil:** Contract management and oversight.
+- **FolhaFácil:** Modernization of payroll processing.
+- **FrotaFácil:** Control and management of the official vehicle fleet.
+- **RequisiçãoFácil:** Automation of material requisitions.
 
-O portal serve como porta de entrada para os seguintes sistemas:
+## 🛠 Technologies & Architecture
+The project was built with a modern stack focused on scalability and maintainability:
 
-- **AgendaFácil:** Assistência em agendamento de audiências.
-- **LicitaFácil:** Automação e gerência de compras e licitações.
-- **GestãoFácil:** Gestão e fiscalização de contratos.
-- **FolhaFácil:** Modernização da folha de pagamento.
-- **FrotaFácil:** Controle e gestão da frota de veículos oficiais.
-- **RequisiçãoFácil:** Automação de requisições de materiais.
+- **[Next.js](https://nextjs.org/)**: React framework for production, used for SSR and optimized routing.
+- **[TypeScript](https://www.typescriptlang.org/)**: Static typing for greater code safety and quality.
+- **[React](https://reactjs.org/)**: Library for building component-based interfaces.
+- **[Docker](https://www.docker.com/)**: Application containerization to ensure consistency across environments.
+- **[AWS](https://aws.amazon.com/)**: Cloud infrastructure for hosting and services.
+- **[Vercel](https://vercel.com/)**: Frontend deployment and hosting platform.
 
-## 🛠 Tecnologias & Arquitetura
+## 🏆 Technical Achievements
+During development, the following challenges were overcome:
 
-O projeto foi construído com uma stack moderna focada em escalabilidade e manutenibilidade:
+* **SSR Architecture:** Implementation of server-side rendering for instant loading and better search engine indexing (SEO).
+* **CI/CD Pipeline:** Configuration of an automated deployment pipeline using Docker and AWS, ensuring continuous and secure deliveries.
+* **Design System:** Creation of reusable and responsive components that maintain the Judiciary's visual identity.
+* **Accessibility:** Strict application of web accessibility guidelines (WCAG) for digital inclusion.
 
-- **[Next.js](https://nextjs.org/)**: Framework React para produção, utilizado para SSR e rotas otimizadas.
-- **[TypeScript](https://www.typescriptlang.org/)**: Tipagem estática para maior segurança e qualidade de código.
-- **[React](https://reactjs.org/)**: Biblioteca para construção de interfaces componentizadas.
-- **[Docker](https://www.docker.com/)**: Containerização da aplicação para garantir consistência entre ambientes.
-- **[AWS](https://aws.amazon.com/)**: Infraestrutura de nuvem para hospedagem e serviços.
-- **[Vercel](https://vercel.com/)**: Plataforma de deploy e hosting frontend.
-
-## 🏆 Realizações Técnicas
-
-Durante o desenvolvimento, os seguintes desafios foram superados:
-
-* **Arquitetura SSR:** Implementação de renderização no servidor para carregamento instantâneo e melhor indexação (SEO).
-* **Pipeline CI/CD:** Configuração de esteira de deploy automatizado utilizando Docker e AWS, garantindo entregas contínuas e seguras.
-* **Design System:** Criação de componentes reutilizáveis e responsivos que mantêm a identidade visual do Judiciário.
-* **Acessibilidade:** Aplicação estrita de diretrizes de acessibilidade web (WCAG) para inclusão digital.
-
-## 📦 Como Executar Localmente
+## 📦 How to Run Locally
 
 ```bash
-# Clone este repositório
-git clone [https://github.com/ViniciusBenevides/Estrutura-JF.git](https://github.com/ViniciusBenevides/Estrutura-JF.git)
+# Clone this repository
+git clone https://github.com/ViniciusBenevides/Estrutura-JF.git
 
-# Acesse a pasta do projeto
+# Navigate to the project folder
 cd Estrutura-JF
 
-# Instale as dependências
+# Install dependencies
 npm install
-# ou
+# or
 yarn install
 
-# Execute o servidor de desenvolvimento
+# Start the development server
 npm run dev
-# ou
+# or
 yarn dev
+```
